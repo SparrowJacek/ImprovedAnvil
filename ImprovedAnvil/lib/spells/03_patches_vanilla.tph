@@ -205,6 +205,110 @@ COPY_EXISTING ~SPPR513.spl~ ~override/SPPR513.spl~
       parameter2 = ~%righteous_magic_state%~
   END
 
+// Weaken Undead
+COPY_EXISTING ~SPPR515.spl~ ~override/SPPR515.spl~
+  SAY NAME1 @12080
+  SAY UNIDENTIFIED_DESC @12081
+  // update duration for all effects
+  LPF ~ALTER_SPELL_EFFECT~
+    INT_VAR
+      check_globals = 0
+      match_opcode = ~-1~
+	  duration = 38
+  END
+  LPF ~ALTER_SPELL_EFFECT~
+    INT_VAR
+      check_globals = 0
+      match_opcode = 232
+	  duration = 42
+  END
+
+// Weaken Undead subspell
+COPY_EXISTING ~SPPR515D.spl~ ~override/SPPR515D.spl~
+  SAY NAME1 @12080
+  SAY UNIDENTIFIED_DESC @12081
+  // update duration for all effects
+  LPF ~ALTER_SPELL_EFFECT~
+    INT_VAR
+      check_globals = 0
+      match_opcode = ~-1~
+	  duration = 38
+  END
+  LPF ~ADD_SPELL_EFFECT~
+    INT_VAR
+	  opcode = 321
+	  target = 2
+	  insert_point = 0
+	  resist_dispel = 3
+  STR_VAR
+	resource = ~SPPR515D~
+  END
+  // Delete Wing Buffet effect
+  LPF ~DELETE_EFFECT~
+    INT_VAR
+      check_globals = 0
+      match_opcode = 177
+    STR_VAR
+      match_resource = ~REPDEAD~
+  END
+  // Modify visual effect
+  LPF ~ALTER_SPELL_EFFECT~
+    INT_VAR
+      check_globals = 0
+      match_opcode = 177
+	  duration = 7
+	  timing = 0
+	  resist_dispel = 3
+    STR_VAR
+      match_resource = ~REPVISU~
+  END
+  // Modify sound effect
+  LPF ~ALTER_SPELL_EFFECT~
+    INT_VAR
+      check_globals = 0
+      match_opcode = 177
+	  resist_dispel = 3
+	  timing = 0
+    STR_VAR
+      match_resource = ~COLDHIT~
+  END
+  // Add weakening effects
+  LPF ~CLONE_EFFECT~
+    INT_VAR
+	  match_opcode = 177
+    STR_VAR
+	  match_resource = ~COLDHIT~
+	  resource = ~S!CRTHDC~
+  END
+  LPF ~CLONE_EFFECT~
+    INT_VAR
+	  match_opcode = 177
+    STR_VAR
+	  match_resource = ~COLDHIT~
+	  resource = ~S!SLDMDC~
+  END
+  LPF ~CLONE_EFFECT~
+    INT_VAR
+	  match_opcode = 177
+    STR_VAR
+	  match_resource = ~COLDHIT~
+	  resource = ~S!CRDMDC~
+  END
+  LPF ~CLONE_EFFECT~
+    INT_VAR
+	  match_opcode = 177
+    STR_VAR
+	  match_resource = ~COLDHIT~
+	  resource = ~S!PIDMDC~
+  END  
+  LPF ~CLONE_EFFECT~
+    INT_VAR
+	  match_opcode = 177
+    STR_VAR
+	  match_resource = ~COLDHIT~
+	  resource = ~S!MIDMDC~
+  END
+  
 // Recall Spirit
 COPY_EXISTING ~SPPR550.spl~ ~override/SPPR550.spl~
   SAY UNIDENTIFIED_DESC @10324
