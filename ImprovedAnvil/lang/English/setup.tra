@@ -7617,9 +7617,9 @@ Requires:
 
 Weight: 28~
 
-@12050 = ~Weaken Undead~
+@12080 = ~Weaken Undead~
 
-@12051 = ~Weaken Undead
+@12081 = ~Weaken Undead
 (Abjuration)
 
 Level: 5
