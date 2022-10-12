@@ -326,6 +326,12 @@ COPY_EXISTING ~SPPR709.spl~ ~override/SPPR709.spl~
 
 COPY_EXISTING ~sppr710.spl~ ~override/sppr710.spl~
   WRITE_BYTE  0x27    0xc // secondary type
+  WRITE_BYTE  0x72    2 // change type to ranged
+  LAUNCH_PATCH_FUNCTION ~ALTER_SPELL_HEADER~ INT_VAR
+    header = 1
+    projectile = 209
+	range = 15
+  END
 
 COPY_EXISTING ~sppr715.spl~ ~override/sppr715.spl~
   WRITE_BYTE  0x27    0xc // secondary type

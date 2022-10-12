@@ -339,7 +339,7 @@ COPY ~ImprovedAnvil\resources\spells\SPPR708.spl~ ~override/SPPR708.spl~
 
 COPY ~ImprovedAnvil\resources\spells\SPPR710.spl~ ~override/SPPR710.spl~
   SAY NAME1 @9097
-  SAY UNIDENTIFIED_DESC @9570
+  SAY UNIDENTIFIED_DESC @12082
 
 COPY ~ImprovedAnvil\resources\spells\SPPR713.spl~ ~override/SPPR713.spl~
 
