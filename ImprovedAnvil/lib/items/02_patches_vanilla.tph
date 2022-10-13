@@ -1088,3 +1088,159 @@ COPY_EXISTING ~misc5x.itm~ ~override/misc5x.itm~
   LPF DELETE_ITEM_EQEFFECT INT_VAR opcode_to_delete = 144 END
 
 BUT_ONLY
+
+COPY_EXISTING ~SERIOUS.itm~ ~override/serious.itm~
+  WRITE_SHORT 0x94 0 // charges
+  WRITE_SHORT 0x86 4 // thaco bonus
+  // bypass resistance
+  LPF ALTER_ITEM_EFFECT
+    INT_VAR
+      check_headers = 1
+      match_opcode = 12
+      resist_dispel = 3
+  END
+  // add immunity to this weapon to undead
+  LPF ADD_SPELL_EFFECT
+    INT_VAR
+      insert_point = 0
+      header = 1
+      opcode = 324
+      target = 2
+      parameter2 = 1
+      duration = 1
+    STR_VAR
+      resource = ~SERIOUS~
+  END
+  // add immunity to this weapon to elementals
+  LPF ADD_SPELL_EFFECT
+    INT_VAR
+      insert_point = 0
+      header = 1
+      opcode = 324
+      target = 2
+      parameter2 = 9
+      duration = 1
+    STR_VAR
+      resource = ~SERIOUS~
+  END
+  // add immunity to this weapon to golems
+  LPF ADD_SPELL_EFFECT
+    INT_VAR
+      insert_point = 0
+      header = 1
+      opcode = 324
+      target = 2
+      parameter2 = 17
+      duration = 1
+    STR_VAR
+      resource = ~SERIOUS~
+  END
+  // add the split-second aura cleansing effect
+  LPF ADD_SPELL_EFFECT
+    INT_VAR
+      insert_point = 0
+      header = 1
+      opcode = 146
+      target = 1
+      parameter2 = 1
+    STR_VAR
+      resource = ~SPPRI25~
+  END
+  // set APR to 2,5
+  LPF ADD_ITEM_EQEFFECT
+    INT_VAR
+      type = 1
+      opcode = 1
+      target = 1
+      timing = 2
+      parameter1 = 8
+      parameter2 = 1
+  END
+  // add opcode for item removal after hit
+  LPF ADD_ITEM_EFFECT
+    INT_VAR
+      type = 1
+      opcode = 112
+      target = 1
+      timing = 0
+    STR_VAR
+      resource = ~SERIOUS~
+  END
+
+COPY_EXISTING ~CRITICAL.itm~ ~override/critical.itm~
+  WRITE_SHORT 0x94 0 // charges
+  WRITE_SHORT 0x86 4 // thaco bonus
+  // bypass resistance
+  LPF ALTER_ITEM_EFFECT
+    INT_VAR
+      check_headers = 1
+      match_opcode = 12
+      resist_dispel = 3
+  END
+  // add immunity to this weapon to undead
+  LPF ADD_SPELL_EFFECT
+    INT_VAR
+      insert_point = 0
+      header = 1
+      opcode = 324
+      target = 2
+      parameter2 = 1
+      duration = 1
+    STR_VAR
+      resource = ~CRITICAL~
+  END
+  // add immunity to this weapon to elementals
+  LPF ADD_SPELL_EFFECT
+    INT_VAR
+      insert_point = 0
+      header = 1
+      opcode = 324
+      target = 2
+      parameter2 = 9
+      duration = 1
+    STR_VAR
+      resource = ~CRITICAL~
+  END
+  // add immunity to this weapon to golems
+  LPF ADD_SPELL_EFFECT
+    INT_VAR
+      insert_point = 0
+      header = 1
+      opcode = 324
+      target = 2
+      parameter2 = 27
+      duration = 1
+    STR_VAR
+      resource = ~CRITICAL~
+  END
+  // add the split-second aura cleansing effect
+  LPF ADD_SPELL_EFFECT
+    INT_VAR
+      insert_point = 0
+      header = 1
+      opcode = 146
+      target = 1
+      parameter2 = 1
+    STR_VAR
+      resource = ~SPPRI25~
+  END
+  // set APR to 2,5
+  LPF ADD_ITEM_EQEFFECT
+    INT_VAR
+      type = 1
+      opcode = 1
+      target = 1
+      timing = 2
+      parameter1 = 8
+      parameter2 = 1
+  END
+  // add opcode for item removal after hit
+  LPF ADD_ITEM_EFFECT
+    INT_VAR
+      type = 1
+      opcode = 112
+      target = 1
+      timing = 0
+    STR_VAR
+      resource = ~CRITICAL~
+  END

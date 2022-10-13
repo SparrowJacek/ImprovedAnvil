@@ -170,6 +170,12 @@ COPY_EXISTING ~SPPR350.spl~ ~override/SPPR350.spl~
   LPF DELETE_EFFECT INT_VAR match_opcode = 321 STR_VAR match_resource=~SPPR416~ END
   LPF DELETE_EFFECT INT_VAR match_opcode = 321 STR_VAR match_resource=~BDAURAFE~ END
 
+// Cause Serious Wounds
+COPY_EXISTING ~SPPR414.spl~ ~override/SPPR414.spl~
+  SAY UNIDENTIFIED_DESC @12083
+  // update casting speed
+  LPF ~ALTER_SPELL_HEADER~ INT_VAR speed = 4 END
+
 // Spirit Fire
 COPY_EXISTING ~SPPR450.spl~ ~override/SPPR450.spl~
   SAY UNIDENTIFIED_DESC @10323
@@ -194,6 +200,12 @@ COPY_EXISTING ~sppr506.spl~ ~override/sppr506.spl~
     WRITE_SHORT (%ioffset% + ("%it%" * 0x28) + 0x12) 1
     "it" = "%it%" + 1
   END
+
+// Cause Critical Wounds
+COPY_EXISTING ~SPPR510.spl~ ~override/SPPR510.spl~
+  SAY UNIDENTIFIED_DESC @12084
+  // update casting speed
+  LPF ~ALTER_SPELL_HEADER~ INT_VAR speed = 5 END
 
 // Righteous Magic
 COPY_EXISTING ~SPPR513.spl~ ~override/SPPR513.spl~
