@@ -7645,3 +7645,43 @@ By means of this powerful spell, the pries uses his divine powers to disturb the
 - Skeleton Warlords: 8D6 +8
 - Skeleton Grandlords: 6D6 +6
 - Liches, Master Vampires and Vampire Lords: 5D6 +5~
+
+@12083 = ~Cause Serious Wounds
+(Necromancy)
+
+Level: 4
+Sphere: Healing 
+Range: Touch 
+Duration: Permanent 
+Casting Time: 4 
+Area of Effect: 1 creature 
+Saving Throw: None 
+
+This spell is the reverse of Cure Serious Wounds. Instead of healing the creature touched, it causes damage. On a successful touch from the priest, the spell inflicts 17 points of damage upon the target. The next successful attack that the priest makes will inflict this effect, however, <PRO_HESHE> only has 2 rounds to make the attack before the spell fizzles. This spell directly affects the nervous system of the touched enemy, bypassing Magic Resistance, though enemies resistant to magical damage will be able to withstand the pain better. Because of the nature of this spell, all non-living creatures, such as undead or constructs are immune to its effects.
+
+The spell covers the priest's hand with magical energies, that provide some benefits, which increase with the caster's level:
+- number of attacks per round set to 2,5
+- +4 bonus to hit
+- a successful hit releases the magic not only inside the enemy but also around the caster, cleansing <PRO_HISHER> aura
+- at level 15 bonuses from strength stat are also counted, when determinig caster's chance to hit
+- at level 20 the caster can direct the energy through a punch, instead of a touch, thus enabling <PRO_HIMHER> to deal additional crushing damage, based on <PRO_HISHER> strength stat~
+
+@12084 = ~Cause Critical Wounds
+(Necromancy)
+
+Level: 5
+Sphere: Healing 
+Range: Touch 
+Duration: Permanent 
+Casting Time: 5 
+Area of Effect: 1 creature 
+Saving Throw: None 
+
+This spell is the reverse of Cure Critical Wounds. Instead of healing the creature touched, it causes damage. On a successful touch from the priest, the spell inflicts 27 points of damage upon the target. The next successful attack that the priest makes will inflict this effect, however, <PRO_HESHE> only has 2 rounds to make the attack before the spell fizzles. This spell directly affects the nervous system of the touched enemy, bypassing Magic Resistance, though enemies resistant to magical damage will be able to withstand the pain better. Because of the nature of this spell, all non-living creatures, such as undead or constructs are immune to its effects.
+
+The spell covers the priest's hand with magical energies, that provide some benefits, which increase with the caster's level:
+- number of attacks per round set to 2,5
+- +4 bonus to hit
+- a successful hit releases the magic not only inside the enemy but also around the caster, cleansing <PRO_HISHER> aura
+- at level 15 bonuses from strength stat are also counted, when determinig caster's chance to hit
+- at level 20 the caster can direct the energy through a punch, instead of a touch, thus enabling <PRO_HIMHER> to deal additional crushing damage, based on <PRO_HISHER> strength stat~
