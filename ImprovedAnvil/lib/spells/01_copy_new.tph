@@ -410,6 +410,10 @@ COPY ~ImprovedAnvil\resources\spells\SPPR548.spl~ ~override/SPPR548.spl~
 COPY ~ImprovedAnvil\resources\spells\SPPR549.spl~ ~override/SPPR549.spl~
   SAY NAME1 @10350
 
+COPY ~ImprovedAnvil\resources\spells\SPPR616.spl~ ~override/SPPR616.spl~
+  SAY NAME1 @12085
+  SAY UNIDENTIFIED_DESC @12086
+
 COPY ~ImprovedAnvil\resources\spells\SPPR649.spl~ ~override/SPPR649.spl~
   SAY NAME1 @10354
   SAY UNIDENTIFIED_DESC @10355
