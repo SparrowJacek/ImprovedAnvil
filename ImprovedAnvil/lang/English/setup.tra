@@ -7707,3 +7707,19 @@ Proficient (1 slot): The wielder gets a -1 bonus to AC and additional -1 against
 Proficient (1 slot): The wielder gets a -2 bonus to AC and additional -2 against missile weapons.
 
 NOTE: Despite the name of this style, any one-handed melee weapon in combination with a shield will receive the aforementioned bonuses.~
+
+@12088 = ~CLERIC: The Cleric is a generic priest (of any mythos) who tends to the spiritual needs of a community. Though <PRO_HESHE> is both protector and healer, <PRO_HESHE> is not purely defensive—when evil threatens, the Cleric is well suited to seek it out on its own ground and destroy it. The opposite is true of evil Clerics as well, and there are also many variations in between.
+
+CLASS FEATURES:
+
+– May wear helmets.
+– May wear any armor.
+– May only use non-bladed, non-piercing weapons (war hammer, club, flail, mace, quarterstaff, sling).
+– May only become Proficient (one slot) in any weapon class.
+– May become Specialized (two slots) in Sword and Shield fighting style.
+– May only become Proficient (one slot) in any other fighting style.
+– May Turn Undead.
+– May cast priest spells.
+– Hit Die: d8
+
+Prime Requisites For Dual-Classing: Wisdom~
