@@ -113,6 +113,25 @@ COPY_EXISTING ~SPPR101.spl~ ~override/SPPR101.spl~
       special = 1
   END
 
+// Armor of Faith
+COPY_EXISTING ~SPPR111.spl~ ~override/SPPR111.spl~
+  // additional 5% resistance if caster is Priest of Lathander
+  PATCH_FOR_EACH ~res_name~ IN "S!MDR5" "S!SLDR5" "S!CRDR5" "S!PIDR5" "S!MIDR5" BEGIN
+    LAUNCH_PATCH_FUNCTION ~ADD_SPELL_EFFECT~ 
+      INT_VAR
+	    insert_point = 7
+	    opcode = 177
+	    target = 1
+	    power = 1
+	    parameter1 = 16405
+	    parameter2 = 9
+	    duration = 90
+	    resist_dispel = 3
+      STR_VAR
+	    resource = EVALUATE_BUFFER "%res_name%"
+    END
+  END
+
 // Spirit Ward
 COPY_EXISTING ~SPPR150.spl~ ~override/SPPR150.spl~
   SAY UNIDENTIFIED_DESC @10267

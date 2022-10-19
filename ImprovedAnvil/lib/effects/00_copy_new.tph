@@ -72,3 +72,8 @@ COPY ~ImprovedAnvil\resources/effects/S!SLDMDC.eff~ ~override/S!SLDMDC.eff~
 COPY ~ImprovedAnvil\resources/effects/S!CRDMDC.eff~ ~override/S!CRDMDC.eff~
 COPY ~ImprovedAnvil\resources/effects/S!PIDMDC.eff~ ~override/S!PIDMDC.eff~
 COPY ~ImprovedAnvil\resources/effects/S!MIDMDC.eff~ ~override/S!MIDMDC.eff~
+COPY ~ImprovedAnvil\resources/effects/S!SLDR5.eff~ ~override/S!SLDR5.eff~
+COPY ~ImprovedAnvil\resources/effects/S!CRDR5.eff~ ~override/S!CRDR5.eff~
+COPY ~ImprovedAnvil\resources/effects/S!PIDR5.eff~ ~override/S!PIDR5.eff~
+COPY ~ImprovedAnvil\resources/effects/S!MIDR5.eff~ ~override/S!MIDR5.eff~
+COPY ~ImprovedAnvil\resources/effects/S!MDR5.eff~ ~override/S!MDR5.eff~
