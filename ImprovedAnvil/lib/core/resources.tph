@@ -220,6 +220,7 @@ COPY ~ImprovedAnvil\resources\bam\S!chan3b.BAM~ ~override/S!chan3b.BAM~
 COPY ~ImprovedAnvil\resources\bam\S!chan3d.BAM~ ~override/S!chan3d.BAM~
 COPY ~ImprovedAnvil\resources\bam\S!gangel.BAM~ ~override/S!gangel.BAM~
 COPY ~ImprovedAnvil\resources\bam\sppr616B.BAM~ ~override/sppr616B.BAM~
+COPY ~ImprovedAnvil\resources\bam\sppr616C.BAM~ ~override/sppr616C.BAM~
 COPY ~ImprovedAnvil\resources\bam\S!misc36.BAM~ ~override/S!misc36.BAM~
 COPY ~ImprovedAnvil\resources\bam\IYETI.BAM~ ~override/IYETI.BAM~
 COPY ~ImprovedAnvil\resources\bam\GYETI.BAM~ ~override/GYETI.BAM~
