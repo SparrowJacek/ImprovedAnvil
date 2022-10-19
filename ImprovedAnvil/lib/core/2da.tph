@@ -242,6 +242,23 @@ COPY_EXISTING ~weapprof.2da~  ~override/weapprof.2da~
   SET_2DA_ENTRIES_NOW ~_#_#_#weapprof~ ~colcount~
   PRETTY_PRINT_2DA
 
+// change Sword and Shield description
+COPY_EXISTING ~weapprof.2da~  ~override/weapprof.2da~
+  COUNT_2DA_COLS ~colcount~
+  SET_2DA_ENTRY 29 3 ~colcount~ RESOLVE_STR_REF (@12087)
+  PRETTY_PRINT_2DA
+
+// enable ** in Sword and Shield for all Cleric kits
+COPY_EXISTING ~weapprof.2da~  ~override/weapprof.2da~
+  COUNT_2DA_COLS ~colcount~
+  SET_2DA_ENTRY_LATER ~_#_#_#weapprof~ 29 48 ~2~
+  SET_2DA_ENTRY_LATER ~_#_#_#weapprof~ 29 49 ~2~
+  SET_2DA_ENTRY_LATER ~_#_#_#weapprof~ 29 50 ~2~
+  SET_2DA_ENTRY_LATER ~_#_#_#weapprof~ 29 62 ~2~
+  SET_2DA_ENTRY_LATER ~_#_#_#weapprof~ 29 63 ~2~
+  SET_2DA_ENTRIES_NOW ~_#_#_#weapprof~ ~colcount~
+  PRETTY_PRINT_2DA
+
 // add records for the new portrait icons
 COPY_EXISTING ~statdesc.2da~ ~override/statdesc.2da~
   COUNT_2DA_COLS ~colcount~
@@ -358,6 +375,15 @@ COPY_EXISTING ~clastext.2da~ ~override/clastext.2da~
   END
 
   BUT_ONLY
+
+// give additional AC to Sword and Shield
+COPY_EXISTING ~stylbonu.2da~  ~override/stylbonu.2da~
+  COUNT_2DA_COLS ~colcount~
+  SET_2DA_ENTRY 6 5 ~colcount~ ~-1~
+  SET_2DA_ENTRY 6 6 ~colcount~ ~-1~
+  SET_2DA_ENTRY 10 5 ~colcount~ ~-2~
+  SET_2DA_ENTRY 10 6 ~colcount~ ~-2~
+  PRETTY_PRINT_2DA
 
 // Add projectiles //
 

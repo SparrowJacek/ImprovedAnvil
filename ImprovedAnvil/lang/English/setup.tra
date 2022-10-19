@@ -7699,3 +7699,11 @@ Area of Effect: The caster
 Saving Throw: None
 
 By means of this spell, the caster fills <PRO_HISHER> body with healing energies. Each time <PRO_HESHE> is hit, a part of this energy is immediately directed to the injured part of the body, mitigating the pain and closing the wounds. Each time the caster suffers any damage, <PRO_HESHE> is healed for 8 HP. It is worth noting, that this spell can not prevent death, and will not allow to heal from any fatal injuries.~
+
+@12087 = ~SWORD AND SHIELD: Anyone can pick up a shield and get its basic protection bonuses, but by spending slots on this fighting style, an adventurer can maximize the benefits received.
+
+Proficient (1 slot): The wielder gets a -1 bonus to AC and additional -1 against missile weapons.
+
+Proficient (1 slot): The wielder gets a -2 bonus to AC and additional -2 against missile weapons.
+
+NOTE: Despite the name of this style, any one-handed melee weapon in combination with a shield will receive the aforementioned bonuses.~
