@@ -74,7 +74,74 @@ COPY_EXISTING ~SPIN999.spl~ ~override/SPIN999.spl~
   WRITE_BYTE  0x27    0xb // secondary type
 
 // class level abilities //
+COPY_EXISTING ~SPCL742.spl~ ~override/SPCL742.spl~
+  SAY UNIDENTIFIED_DESC @12089
+  // remove all but one spell abilities
+  PATCH_FOR_EACH ~min_lvl_val~ IN "2" "3" "4" "5" "6" "7" "8" "9" "10" "11" "12" "13" "14" "15" "16" "17" "18" "19" "20" BEGIN
+    LAUNCH_PATCH_FUNCTION ~DELETE_SPELL_HEADER~ 
+      INT_VAR
+	    header_type = ~-1~
+        min_level = ~%min_lvl_val%~
+	END
+  END
+  // change projectile to None, to make it single target
+  LPF ~ALTER_SPELL_HEADER~
+    INT_VAR
+      projectile  = 1
+  END
+  // remove Hold EFF
+  LPF ~DELETE_SPELL_EFFECT~
+    INT_VAR
+      opcode_to_delete = 185
+  END
+  // make all initial effects bypass MR and allow no saving throw
+  LPF ~ALTER_SPELL_EFFECT~
+    INT_VAR
+      check_globals = 0
+      resist_dispel = 3
+	  savingthrow = 0
+  END
+  // Add effects slowing movements and reducing physical resistances with no saving throw
+  PATCH_FOR_EACH ~eff_name~ IN "S!SLD-10" "S!CRD-10" "S!MVM50" BEGIN
+    LAUNCH_PATCH_FUNCTION ~CLONE_EFFECT~ 
+	  INT_VAR
+	    timing = 0
+	  STR_VAR
+	    match_resource = ~HOLDSND~
+		resource = EVALUATE_BUFFER ~%eff_name%~
+	END
+  END
+  // Add effects slowing movements and reducing physical resistances with saving throw
+  PATCH_FOR_EACH ~eff_name~ IN "S!SLD-10" "S!CRD-10" "S!MVM0" BEGIN
+    LAUNCH_PATCH_FUNCTION ~CLONE_EFFECT~ 
+	  INT_VAR
+	    savingthrow = 1
+		savebonus = ~-2~
+		timing = 0
+	  STR_VAR
+	    match_resource = ~HOLDSND~
+		resource = EVALUATE_BUFFER ~%eff_name%~
+	END
+  END
+  // prevent stacking
+  LPF ~ADD_SPELL_EFFECT~
+    INT_VAR
+      opcode = 206
+	  target = 2
+	  resist_dispel = 3
+	  insert_point = ~-1~
+	STR_VAR
+      resource = ~SPCL742~
+  END  
+  // update duration for all effects
+  LPF ~ALTER_SPELL_EFFECT~
+    INT_VAR
+      check_globals = 0
+      match_opcode = ~-1~
+	  duration = 12
+  END
 
+// Resist magic
 COPY_EXISTING ~SPCL904.spl~ ~override/SPCL904.spl~
   WRITE_BYTE  0x27      2 // secondary type
 
