@@ -7,6 +7,7 @@ SILENT
 INCLUDE "ImprovedAnvil/lib/tpa/fl#add_kit_ee.tpa"
 INCLUDE "ImprovedAnvil/lib/tpa/creatures.tpa"
 INCLUDE "ImprovedAnvil/lib/tpa/items.tpa"
+INCLUDE "ImprovedAnvil/lib/tpa/spells.tpa"
 INCLUDE "ImprovedAnvil/lib/tpa/areas.tpa"
 INCLUDE "ImprovedAnvil/lib/tpa/ids.tpa"
 
