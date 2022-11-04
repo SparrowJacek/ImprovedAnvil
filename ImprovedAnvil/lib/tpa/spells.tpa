@@ -71,6 +71,7 @@ END
 DEFINE_PATCH_FUNCTION ~S!CLONE_SPELL_HEADER~
 INT_VAR
   header_to_copy = 0
+  level_req = 1
   
 BEGIN
   READ_LONG  0x64 abil_off
@@ -89,7 +90,6 @@ BEGIN
   READ_BYTE   (%original_header_offset% + 0x00c)   target             // Target type
   READ_BYTE   (%original_header_offset% + 0x00d)   target_count       // Target count
   READ_SHORT  (%original_header_offset% + 0x00e)   range              // Range
-  READ_SHORT  (%original_header_offset% + 0x010)   level_req          // Level required
   READ_SHORT  (%original_header_offset% + 0x012)   cast_time          // cast_time
   READ_SHORT  (%original_header_offset% + 0x014)   casts_per_day      // THAC0 bonus
   READ_SHORT  (%original_header_offset% + 0x01e)   num_effs           // Count of feature blocks
