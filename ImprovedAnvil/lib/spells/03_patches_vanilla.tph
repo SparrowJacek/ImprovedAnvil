@@ -280,8 +280,12 @@ COPY_EXISTING ~SPPR350.spl~ ~override/SPPR350.spl~
 COPY_EXISTING ~SPPR414.spl~ ~override/SPPR414.spl~
   SAY UNIDENTIFIED_DESC @12083
   // update casting speed
-  LPF ~ALTER_SPELL_HEADER~ INT_VAR speed = 4 END
-
+  LPF ~ALTER_SPELL_HEADER~ INT_VAR speed = 2 END
+  LPF ~ALTER_SPELL_EFFECT~
+    INT_VAR
+      match_opcode = 111
+	  duration = 60
+  END
 // Spirit Fire
 COPY_EXISTING ~SPPR450.spl~ ~override/SPPR450.spl~
   SAY UNIDENTIFIED_DESC @10323
@@ -311,7 +315,12 @@ COPY_EXISTING ~sppr506.spl~ ~override/sppr506.spl~
 COPY_EXISTING ~SPPR510.spl~ ~override/SPPR510.spl~
   SAY UNIDENTIFIED_DESC @12084
   // update casting speed
-  LPF ~ALTER_SPELL_HEADER~ INT_VAR speed = 5 END
+  LPF ~ALTER_SPELL_HEADER~ INT_VAR speed = 3 END
+  LPF ~ALTER_SPELL_EFFECT~
+    INT_VAR
+      match_opcode = 111
+	  duration = 60
+  END
 
 // Righteous Magic
 COPY_EXISTING ~SPPR513.spl~ ~override/SPPR513.spl~
