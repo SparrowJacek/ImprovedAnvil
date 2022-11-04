@@ -337,6 +337,7 @@ COPY_EXISTING ~hidespl.2da~ ~override/hidespl.2da~
   INSERT_2DA_ROW ~rowcount~ ~colcount~ ~SPPR447 1 0 0~
   INSERT_2DA_ROW ~rowcount~ ~colcount~ ~SPPR448 1 0 0~
   INSERT_2DA_ROW ~rowcount~ ~colcount~ ~SPPR449 1 0 0~
+  INSERT_2DA_ROW ~rowcount~ ~colcount~ ~SPPR520 1 0 0~
   INSERT_2DA_ROW ~rowcount~ ~colcount~ ~SPPR545 1 0 0~
   INSERT_2DA_ROW ~rowcount~ ~colcount~ ~SPPR546 1 0 0~
   INSERT_2DA_ROW ~rowcount~ ~colcount~ ~SPPR547 1 0 0~
