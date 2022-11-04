@@ -286,6 +286,31 @@ COPY_EXISTING ~SPPR414.spl~ ~override/SPPR414.spl~
       match_opcode = 111
 	  duration = 60
   END
+  LPF ~S!CLONE_SPELL_HEADER~
+    INT_VAR
+      header_to_copy = 0
+      level_req = 15
+  END
+  LPF ~ALTER_SPELL_EFFECT~
+    INT_VAR
+	  header = 2
+	  match_opcode = 111
+	STR_VAR
+	  resource = ~S!serio1~
+  END
+  LPF ~S!CLONE_SPELL_HEADER~
+    INT_VAR
+      header_to_copy = 0
+      level_req = 20
+  END
+  LPF ~ALTER_SPELL_EFFECT~
+    INT_VAR
+	  header = 3
+	  match_opcode = 111
+	STR_VAR
+	  resource = ~S!serio2~
+  END
+
 // Spirit Fire
 COPY_EXISTING ~SPPR450.spl~ ~override/SPPR450.spl~
   SAY UNIDENTIFIED_DESC @10323
@@ -320,6 +345,30 @@ COPY_EXISTING ~SPPR510.spl~ ~override/SPPR510.spl~
     INT_VAR
       match_opcode = 111
 	  duration = 60
+  END
+  LPF ~S!CLONE_SPELL_HEADER~
+    INT_VAR
+      header_to_copy = 0
+      level_req = 15
+  END
+  LPF ~ALTER_SPELL_EFFECT~
+    INT_VAR
+	  header = 2
+	  match_opcode = 111
+	STR_VAR
+	  resource = ~S!criti1~
+  END
+  LPF ~S!CLONE_SPELL_HEADER~
+    INT_VAR
+      header_to_copy = 0
+      level_req = 20
+  END
+  LPF ~ALTER_SPELL_EFFECT~
+    INT_VAR
+	  header = 3
+	  match_opcode = 111
+	STR_VAR
+	  resource = ~S!criti2~
   END
 
 // Righteous Magic

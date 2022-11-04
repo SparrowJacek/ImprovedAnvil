@@ -1294,3 +1294,11 @@ COPY ~ImprovedAnvil/resources/items/new/S!spsh03.itm~ ~override/S!spsh03.itm~
 COPY ~ImprovedAnvil/resources/items/new/S!spsh04.itm~ ~override/S!spsh04.itm~
 
 COPY ~ImprovedAnvil/resources/items/new/S!spsh05.itm~ ~override/S!spsh05.itm~
+
+COPY ~ImprovedAnvil/resources/items/new/S!SERIO1.itm~ ~override/S!serio1.itm~
+
+COPY ~ImprovedAnvil/resources/items/new/S!SERIO2.itm~ ~override/S!serio2.itm~
+
+COPY ~ImprovedAnvil/resources/items/new/S!CRITI1.itm~ ~override/S!criti1.itm~
+
+COPY ~ImprovedAnvil/resources/items/new/S!CRITI2.itm~ ~override/S!criti2.itm~

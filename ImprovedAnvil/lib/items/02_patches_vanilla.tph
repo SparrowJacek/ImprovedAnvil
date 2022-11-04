@@ -1130,7 +1130,7 @@ COPY_EXISTING ~SERIOUS.itm~ ~override/serious.itm~
       header = 1
       opcode = 324
       target = 2
-      parameter2 = 17
+      parameter2 = 27
       duration = 1
     STR_VAR
       resource = ~SERIOUS~
