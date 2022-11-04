@@ -77,7 +77,7 @@ COPY_EXISTING ~SPIN999.spl~ ~override/SPIN999.spl~
 COPY_EXISTING ~SPCL742.spl~ ~override/SPCL742.spl~
   SAY UNIDENTIFIED_DESC @12089
   // remove all but one spell abilities
-  PATCH_FOR_EACH ~min_lvl_val~ IN "2" "3" "4" "5" "6" "7" "8" "9" "10" "11" "12" "13" "14" "15" "16" "17" "18" "19" "20" BEGIN
+  PATCH_FOR_EACH ~min_lvl_val~ IN "2" "3" "4" "5" "6" "7" "8" "9" "10" "11" "12" "13" "14" "15" "16" "17" "18" "19" BEGIN
     LAUNCH_PATCH_FUNCTION ~DELETE_SPELL_HEADER~ 
       INT_VAR
 	    header_type = ~-1~
@@ -102,7 +102,7 @@ COPY_EXISTING ~SPCL742.spl~ ~override/SPCL742.spl~
 	  savingthrow = 0
   END
   // Add effects slowing movements and reducing physical resistances with no saving throw
-  PATCH_FOR_EACH ~eff_name~ IN "S!SLD-10" "S!CRD-10" "S!MVM50" BEGIN
+  PATCH_FOR_EACH ~eff_name~ IN "S!SLD-10" "S!CRD-10" "S!SLD-10" "S!CRD-10" "S!MVM50" BEGIN
     LAUNCH_PATCH_FUNCTION ~CLONE_EFFECT~ 
 	  INT_VAR
 	    timing = 0
@@ -111,18 +111,29 @@ COPY_EXISTING ~SPCL742.spl~ ~override/SPCL742.spl~
 		resource = EVALUATE_BUFFER ~%eff_name%~
 	END
   END
-  // Add effects slowing movements and reducing physical resistances with saving throw
-  PATCH_FOR_EACH ~eff_name~ IN "S!SLD-10" "S!CRD-10" "S!MVM0" BEGIN
+  // Add additional 10% of physical resistances reduction with no saving throw
+  PATCH_FOR_EACH ~eff_name~ IN "S!SLD-10" "S!CRD-10" BEGIN
     LAUNCH_PATCH_FUNCTION ~CLONE_EFFECT~ 
 	  INT_VAR
-	    savingthrow = 1
-		savebonus = ~-2~
-		timing = 0
+	  header = 1
+	    timing = 0
 	  STR_VAR
 	    match_resource = ~HOLDSND~
 		resource = EVALUATE_BUFFER ~%eff_name%~
 	END
   END
+
+  // Add effects slowing movements with saving throw
+  LAUNCH_PATCH_FUNCTION ~CLONE_EFFECT~ 
+	INT_VAR
+	  savingthrow = 1
+      savebonus = ~-2~
+      timing = 0
+	STR_VAR
+	  match_resource = ~HOLDSND~
+      resource = "S!MVM0"
+	END
+
   // prevent stacking
   LPF ~ADD_SPELL_EFFECT~
     INT_VAR
@@ -138,8 +149,9 @@ COPY_EXISTING ~SPCL742.spl~ ~override/SPCL742.spl~
     INT_VAR
       check_globals = 0
       match_opcode = ~-1~
-	  duration = 12
+	  duration = 18
   END
+
 
 // Resist magic
 COPY_EXISTING ~SPCL904.spl~ ~override/SPCL904.spl~
@@ -182,21 +194,29 @@ COPY_EXISTING ~SPPR101.spl~ ~override/SPPR101.spl~
 
 // Armor of Faith
 COPY_EXISTING ~SPPR111.spl~ ~override/SPPR111.spl~
-  // additional 5% resistance if caster is Priest of Lathander
-  PATCH_FOR_EACH ~res_name~ IN "S!MDR5" "S!SLDR5" "S!CRDR5" "S!PIDR5" "S!MIDR5" BEGIN
-    LAUNCH_PATCH_FUNCTION ~ADD_SPELL_EFFECT~ 
+  PATCH_FOR_EACH ~min_lvl_val~ IN "12" "24" BEGIN
+    LPF  ~S!CLONE_SPELL_HEADER~
       INT_VAR
-	    insert_point = 7
-	    opcode = 177
-	    target = 1
-	    power = 1
-	    parameter1 = 16405
-	    parameter2 = 9
-	    duration = 90
-	    resist_dispel = 3
-      STR_VAR
-	    resource = EVALUATE_BUFFER "%res_name%"
-    END
+        header_to_copy = (%min_lvl_val% - 12)/12
+        level_req = %min_lvl_val%
+	END
+    // additional 5% resistance if caster is Priest of Lathander
+    PATCH_FOR_EACH ~res_name~ IN "S!MDR5" "S!SLDR5" "S!CRDR5" "S!PIDR5" "S!MIDR5" BEGIN
+      LAUNCH_PATCH_FUNCTION ~ADD_SPELL_EFFECT~ 
+        INT_VAR
+		  header = %min_lvl_val%/12 + 1
+	      insert_point = 7
+    	  opcode = 177
+	      target = 1
+	      power = 1
+	      parameter1 = 16405
+	      parameter2 = 9
+	      duration = 90
+	      resist_dispel = 3
+        STR_VAR
+	      resource = EVALUATE_BUFFER "%res_name%"
+      END
+	END
   END
 
 // Spirit Ward

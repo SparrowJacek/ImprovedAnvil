@@ -7729,12 +7729,12 @@ Prime Requisites For Dual-Classing: Wisdom~
 
 Level: 3
 Range: 35 ft.
-Duration: 2 rounds
+Duration: 3 rounds
 Casting Time: 3
 Area of Effect: 1 creature
 Saving Throw: Special
 
-This spell affects movements of one undead creature. It focuses around lower parts of the body, attempting to hold the enemy in place and making it more vulnerable to damage. If the creature does fail a Saving Throw against Spell at -2, its movement speed will be reduced by 100% and its resistance to slashing and crushing damage will be reduced by 20%. A successful Saving Throw will reduce both of those effects by half. Magic Resistance does not protect from this spell, however it is still a 3rd level spell, so powerful Undead like Liches and Demiliches are not affected.~
+This spell affects movements of one undead creature. It focuses around lower parts of the body, attempting to hold the enemy in place and making it more vulnerable to damage. If the creature does fail a Saving Throw against Spell at -2, its movement speed will be reduced by 100%. A successful Saving Throw will reduce both of those effects by half. Additionally the target's resistance to slashing and crushing damage will be reduced by 20% at first and by 30% from level 20. Magic Resistance does not protect from this spell, however it is still a 3rd level spell, so powerful Undead like Liches and Demiliches are not affected.~
 
 @12090 = ~Protective Chant~
 
