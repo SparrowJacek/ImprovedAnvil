@@ -27,6 +27,7 @@ COPY ~ImprovedAnvil/resources/2da/xpcap.2da~ ~override/xpcap.2da~
 
 // customized HLA tables for certain classes
 COPY ~ImprovedAnvil/resources/2da/lucl0.2da~ ~override/lucl0.2da~
+COPY ~ImprovedAnvil/resources/2da/lucl0.2da~ ~override/lucl4.2da~
 COPY ~ImprovedAnvil/resources/2da/lucr0.2da~ ~override/lucr0.2da~
 COPY ~ImprovedAnvil/resources/2da/luba0.2da~ ~override/luba0.2da~
 COPY ~ImprovedAnvil/resources/2da/lucm0.2da~ ~override/lucm0.2da~
@@ -202,6 +203,11 @@ COPY_EXISTING ~abclasrq.2da~  ~override/abclasrq.2da~
 // assign new ludr file to the Avenger kit
 COPY_EXISTING ~luabbr.2da~  ~override/luabbr.2da~
   REPLACE_TEXTUALLY ~BEAST_FRIEND.+Dr0~ ~BEAST_FRIEND              Dr3~
+  PRETTY_PRINT_2DA
+
+// assign new ludr file to the Priest of Lathander kit
+COPY_EXISTING ~luabbr.2da~  ~override/luabbr.2da~
+  REPLACE_TEXTUALLY ~LATHANDER.+Cl0~ ~LATHANDER           Cl4~
   PRETTY_PRINT_2DA
 
 // modify weapon proficiencies for the Avenger kit
