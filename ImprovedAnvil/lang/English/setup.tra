@@ -7777,3 +7777,5 @@ Area of Effect: Party
 Saving Throw: None 
 
 This spell connects the caster directly to <PRO_HISHER> god, granting <PRO_HIMHER> and <PRO_HISHER> party a level of healing, unlike any other spell. Divine Intervention has similar effect to Greater Restoration, however the effect is applied to whole party and it does not wind the caster.~
+
+@12095 = ~Weakening Undead~
