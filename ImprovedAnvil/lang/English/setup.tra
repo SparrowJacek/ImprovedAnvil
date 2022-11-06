@@ -7763,3 +7763,17 @@ BOON OF LATHANDER: This spell lasts 1 round per level of the caster. It gives th
 
 Disadvantages:
 – Alignment restricted to lawful good, neutral good, chaotic good, and true neutral.~
+
+@12093 = ~Divine Intervention~
+
+@12094 = ~Divine Intervention
+(Necromancy)
+
+Level: Quest
+Sphere: Necromantic
+Duration: Permanent
+Casting Time: 3
+Area of Effect: Party
+Saving Throw: None 
+
+This spell connects the caster directly to <PRO_HISHER> god, granting <PRO_HIMHER> and <PRO_HISHER> party a level of healing, unlike any other spell. Divine Intervention has similar effect to Greater Restoration, however the effect is applied to whole party and it does not wind the caster.~

@@ -223,6 +223,8 @@ COPY ~ImprovedAnvil\resources\bam\sppr520B.BAM~ ~override/sppr520B.BAM~
 COPY ~ImprovedAnvil\resources\bam\sppr520C.BAM~ ~override/sppr520C.BAM~
 COPY ~ImprovedAnvil\resources\bam\sppr616B.BAM~ ~override/sppr616B.BAM~
 COPY ~ImprovedAnvil\resources\bam\sppr616C.BAM~ ~override/sppr616C.BAM~
+COPY ~ImprovedAnvil\resources\bam\SPCL942B.BAM~ ~override/spcl942B.BAM~
+COPY ~ImprovedAnvil\resources\bam\SPPR942C.BAM~ ~override/sppr942c.BAM~
 COPY ~ImprovedAnvil\resources\bam\S!misc36.BAM~ ~override/S!misc36.BAM~
 COPY ~ImprovedAnvil\resources\bam\IYETI.BAM~ ~override/IYETI.BAM~
 COPY ~ImprovedAnvil\resources\bam\GYETI.BAM~ ~override/GYETI.BAM~
