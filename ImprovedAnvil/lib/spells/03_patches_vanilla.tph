@@ -390,13 +390,33 @@ COPY_EXISTING ~SPPR515.spl~ ~override/SPPR515.spl~
     INT_VAR
       check_globals = 0
       match_opcode = ~-1~
-	  duration = 38
+	  duration = 36
   END
+  // update icon effect to bypass MR
   LPF ~ALTER_SPELL_EFFECT~
     INT_VAR
       check_globals = 0
-      match_opcode = 232
-	  duration = 42
+      match_opcode = 142
+	  resist_dispel = 2
+  END
+  // Remove original "cast spell on condition", since it's affected by slow/haste
+  LPF ~DELETE_SPELL_EFFECT~
+    INT_VAR
+      opcode_to_delete = 232
+  END
+  PATCH_FOR_EACH ~weaken_wave~ IN "0" "1" "2" "3" "4" "5" "6" BEGIN
+    LAUNCH_PATCH_FUNCTION ~ADD_SPELL_EFFECT~ 
+      INT_VAR
+	    opcode = 146
+	    target = 1
+		parameter2 = 1
+	    resist_dispel = 2
+		timing = 3
+		duration = 6 * %weaken_wave%
+		power = 5
+      STR_VAR
+	    resource = ~SPPR515D~
+	END
   END
 
 // Weaken Undead subspell
