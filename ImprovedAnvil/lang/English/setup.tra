@@ -7780,3 +7780,33 @@ Saving Throw: None
 This spell connects the caster directly to <PRO_HISHER> god, granting <PRO_HIMHER> and <PRO_HISHER> party a level of healing, unlike any other spell. Divine Intervention has similar effect to Greater Restoration, however the effect is applied to whole party and it does not wind the caster.~
 
 @12095 = ~Weakening Undead~
+
+@12096 = ~Aid
+(Necromancy, Conjuration)
+
+Level: 2
+Sphere: Necromantic 
+Range: Touch 
+Duration: 1 round + 1 round/level 
+Casting Time: 5 
+Area of Effect: Special
+Saving Throw: None 
+
+The recipient of this spell gains the benefits of a Bless spell (+1 to attack rolls and Saving Throws) and a special bonus of 1d8 additional Hit Points for the duration of the spell. The Aid spell enables the recipient to actually have more Hit Points than <PRO_HISHER> current maximum. The bonus Hit Points are lost first when the recipient takes damage and may not be regained by curative magic.
+
+Example: A 1st-level Fighter has 8 Hit Points, suffers 2 points of damage (8 - 2 = 6), then receives an Aid spell that grants <PRO_HIMHER> 5 additional Hit Points. The Fighter now has 11 Hit Points, 3 of which are temporary. If <PRO_HESHE> is then hit for 7 points of damage, 4 normal Hit Points and all 3 temporary Hit Points are lost. The Fighter then receives a Cure Light Wounds spell that heals 4 points of damage, restoring <PRO_HIMHER> to <PRO_HISHER> original 8 Hit Points.
+
+At levels 1 to 14 this spell targets only 1 creature, from level 15 it works on every ally of the caster in 15 ft. radius.~
+
+@12097 = ~Bless
+(Conjuration/Summoning)
+
+Level: 1
+Sphere: All
+Range: 40 ft.
+Duration: 1 turn
+Casting Time: 9
+Area of Effect: 15-ft. radius
+Saving Throw: None
+
+Upon uttering the Bless spell, the caster raises the morale of friendly creatures by +1. Furthermore, it raises their attack and damage rolls by +1. The caster determines at what range (up to 40 ft.) the spell will be cast. At the instant the spell is completed, it affects all creatures in a 15-ft. radius centered on the point selected by the caster (thus, affected creatures leaving the area are still subject to the spell's effects; those entering the area after the casting is completed are not).~

@@ -182,6 +182,7 @@ COPY_EXISTING ~SPPR102.spl~ ~override/SPPR102.spl~
 
 // Bless
 COPY_EXISTING ~SPPR101.spl~ ~override/SPPR101.spl~
+  SAY UNIDENTIFIED_DESC @12097
   // add spell state
   LPF ~CLONE_EFFECT~
     INT_VAR
@@ -190,6 +191,12 @@ COPY_EXISTING ~SPPR101.spl~ ~override/SPPR101.spl~
       opcode = 328
       parameter2 = 22
       special = 1
+  END
+  // increase duration to 1 turn
+  LPF ~ALTER_SPELL_EFFECT~
+    INT_VAR
+      check_globals = 0
+      duration_high = 60
   END
 
 // Armor of Faith
@@ -231,6 +238,18 @@ COPY_EXISTING ~SPPR150.spl~ ~override/SPPR150.spl~
     check_headers = 1
     match_opcode = 346
     parameter1 = 6
+  END
+
+// Aid
+COPY_EXISTING ~SPPR201.spl~ ~override/SPPR201.spl~
+  SAY UNIDENTIFIED_DESC @12096
+  // make the spell AoE from lvl 15
+  PATCH_FOR_EACH ~spell_level~ IN "15" "16" "17" "18" "19" "20" BEGIN
+    LPF ~ALTER_SPELL_HEADER~
+      INT_VAR
+        header = %spell_level%
+        projectile = 162
+    END
   END
 
 // Draw Upon Holy Might
