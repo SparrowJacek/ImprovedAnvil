@@ -295,6 +295,13 @@ COPY_EXISTING ~SPPR350.spl~ ~override/SPPR350.spl~
   LPF DELETE_EFFECT INT_VAR match_opcode = 321 STR_VAR match_resource=~SPPR416~ END
   LPF DELETE_EFFECT INT_VAR match_opcode = 321 STR_VAR match_resource=~BDAURAFE~ END
 
+// Remove summon animals from Clerics
+COPY_EXISTING ~SPPR402.spl~ ~override/SPPR402.spl~
+              ~SPPR501.spl~ ~override/SPPR501.spl~
+              ~SPPR602.spl~ ~override/SPPR602.spl~
+              ~SPPR604.spl~ ~override/SPPR604.spl~
+  WRITE_BYTE  0x21      0x40
+
 // Cause Serious Wounds
 COPY_EXISTING ~SPPR414.spl~ ~override/SPPR414.spl~
   SAY UNIDENTIFIED_DESC @12083
