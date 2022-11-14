@@ -402,7 +402,10 @@ COPY_EXISTING ~stylbonu.2da~  ~override/stylbonu.2da~
 // update class description for Clerics
 COPY_EXISTING ~clastext.2da~ ~override/clastext.2da~
   COUNT_2DA_COLS ~colcount~
+  // Pure Cleric class
   SET_2DA_ENTRY 23 4 ~colcount~ RESOLVE_STR_REF (@12088)
+  // Priest of Lathander class
+  SET_2DA_ENTRY 23 4 ~colcount~ RESOLVE_STR_REF (@12092)
 
 // Add projectiles //
 
