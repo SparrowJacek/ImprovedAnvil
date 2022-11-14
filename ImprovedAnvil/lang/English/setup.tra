@@ -7699,7 +7699,7 @@ Casting Time: 5
 Area of Effect: The caster
 Saving Throw: None
 
-By means of this spell, the caster fills <PRO_HISHER> body with healing energies. Each time <PRO_HESHE> is hit, a part of this energy is immediately directed to the injured part of the body, mitigating the pain and closing the wounds. Each time the caster suffers any damage, <PRO_HESHE> his HP is restored. At level 11 the amount is equal to 4, then it increases to 6 at level 17 and finally at level 25 it heals 8HP. It is worth noting, that this spell can not prevent death, and will not allow to heal from any fatal injuries.~
+By means of this spell, the caster fills <PRO_HISHER> body with healing energies. Each time <PRO_HESHE> is hit, a part of this energy is immediately directed to the injured part of the body, mitigating the pain and closing the wounds. Each time the caster suffers any damage, <PRO_HISHER> HP is restored. At level 11 the amount is equal to 4, then it increases to 6 at level 17 and finally at level 25 it heals 8HP. It is worth noting, that this spell can not prevent death, and will not allow to heal from any fatal injuries.~
 
 @12087 = ~SWORD AND SHIELD: Anyone can pick up a shield and get its basic protection bonuses, but by spending slots on this fighting style, an adventurer can maximize the benefits received.
 
@@ -7810,3 +7810,19 @@ Area of Effect: 15-ft. radius
 Saving Throw: None
 
 Upon uttering the Bless spell, the caster raises the morale of friendly creatures by +1. Furthermore, it raises their attack and damage rolls by +1. The caster determines at what range (up to 40 ft.) the spell will be cast. At the instant the spell is completed, it affects all creatures in a 15-ft. radius centered on the point selected by the caster (thus, affected creatures leaving the area are still subject to the spell's effects; those entering the area after the casting is completed are not).~
+
+@12098 = ~Purify Aura~
+
+@12099 = ~Purify Aura
+(Generalist)
+
+Level: Quest
+Sphere: None
+Duration: Instant
+Casting Time: 0
+Area of Effect: Caster
+Saving Throw: None 
+
+Experienced Clerics can send a vast amount of energy from the Positive Energy Plane as a singe impulse emanating from their bodies and minds. By doing so, they can instantly cleanse their aura at any moment they desire. This however is very taxing to the caster, thus only the most powerful Priests can use this skill in a rapid succession. 
+
+The ability is instantaneous but can only be used once every 3 rounds, this time is reduced to 2 rounds and 1 round at levels 20 and 25 and finally at level 30 it has no cooldown.~
