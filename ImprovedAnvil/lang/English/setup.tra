@@ -7744,7 +7744,6 @@ This spell affects movements of one undead creature. It focuses around lower par
 
 Level: 5
 Range: 35 ft.
-Duration: 3 seconds
 Casting Time: 1
 Area of Effect: 15-ft. radius
 Saving Throw: None
@@ -7826,3 +7825,19 @@ Saving Throw: None
 Experienced Clerics can send a vast amount of energy from the Positive Energy Plane as a singe impulse emanating from their bodies and minds. By doing so, they can instantly cleanse their aura at any moment they desire. This however is very taxing to the caster, thus only the most powerful Priests can use this skill in a rapid succession. 
 
 The ability is instantaneous but can only be used once every 3 rounds, this time is reduced to 2 rounds and 1 round at levels 20 and 25 and finally at level 30 it has no cooldown.~
+
+@12100 = ~Demon Hunt~
+
+@12101 = ~Demon Hunt
+(Alteration)
+
+Level: 5
+Range: 30 ft.
+Duration: 1 turn
+Casting Time: 5
+Area of Effect: Allies and demons in 15-ft. radius
+Saving Throw: None
+
+This powerful spell was designed specifically to fight against demons and fiends from Nine Hells. It has different effects based on the target.
+Hunter: when the spell affects an ally of the caster, it gives +2 to thaco and damage against demons. Additionally, each hit done to demons has a 10% chance to increase the demon's chance for Critical Miss by 5% for 2 rounds, this effect is cumulative.
+Prey: when the spell affects a demon, it increases its chance of Critical Miss by 5% and each time the demon scores a Critical Miss, it suffers 10 points of magical damage.~
