@@ -411,8 +411,21 @@ COPY ~ImprovedAnvil\resources\spells\SPPR521.spl~ ~override/SPPR521.spl~
   SAY UNIDENTIFIED_DESC @12101
 
 COPY ~ImprovedAnvil\resources\spells\SPPR521D.spl~ ~override/SPPR521D.spl~
+  SAY NAME1 @12102
+  
+COPY ~ImprovedAnvil\resources\spells\SPPR521E.spl~ ~override/SPPR521E.spl~
+  SAY NAME1 @12103
 
-COPY ~ImprovedAnvil\resources\spells\SPPR521D.spl~ ~override/SPPR521E.spl~
+COPY ~ImprovedAnvil\resources\spells\SPPR521F.spl~ ~override/SPPR521F.spl~
+  SAY NAME1 @12104
+  LPF ~ALTER_SPELL_EFFECT~ INT_VAR
+    check_headers = 1
+    match_opcode = 139
+    parameter1 = RESOLVE_STR_REF (@12104)
+  END
+  
+COPY ~ImprovedAnvil\resources\spells\SPPR521G.spl~ ~override/SPPR521G.spl~
+  SAY NAME1 @12105
 
 COPY ~ImprovedAnvil\resources\spells\SPPR545.spl~ ~override/SPPR545.spl~
   SAY NAME1 @10345
