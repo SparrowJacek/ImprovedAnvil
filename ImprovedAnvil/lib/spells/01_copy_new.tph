@@ -478,8 +478,8 @@ COPY ~ImprovedAnvil\resources\spells\SPPR734D.spl~ ~override/SPPR734D.spl~
   SAY NAME1 @12108
   SAY UNIDENTIFIED_DESC @12109
   
-COPY ~ImprovedAnvil\resources\spells\SPPR734.spl~ ~override/SPPR734.spl~
-  SAY NAME1 @12106
+COPY ~ImprovedAnvil\resources\spells\SPPR734E.spl~ ~override/SPPR734E.spl~
+  SAY NAME1 @12110
   SAY UNIDENTIFIED_DESC @12107
 
 

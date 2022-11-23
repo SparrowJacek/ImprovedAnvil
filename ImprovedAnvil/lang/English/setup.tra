@@ -7870,3 +7870,5 @@ This spell sets casting time of all spells, which have this value higher than 7 
 @12108 = ~Break Spiritual Link~
 
 @12109 = ~This ability allows the caster to cancel Spiritual Link spell without losing the ability to perform some action in current round.~
+
+@12110 = ~Improved Spiritual Link~
