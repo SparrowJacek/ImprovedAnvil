@@ -589,6 +589,19 @@ COPY_EXISTING ~SPPR609.spl~ ~override/SPPR609.spl~
 	  match_resource = ~DAWNVIS2~
 	END
 
+COPY_EXISTING ~SPPR612.spl~ ~override/SPPR612.spl~
+  SAY UNIDENTIFIED_DESC @12112
+  // add effect, which sets magic damage resistance of demons to 0
+  LPF ~CLONE_EFFECT~
+    INT_VAR
+      check_globals = 0
+      match_opcode = 177
+	  timing = 0
+	STR_VAR
+	  match_resource = ~BOLTDEM~
+	  resource = ~S!60mres~
+	END
+
 COPY_EXISTING ~SPPR705.spl~ ~override/SPPR705.spl~
   READ_BYTE 0x19 "splflags"
   WRITE_BYTE 0x19 ("%splflags%" BOR 0b00000100)

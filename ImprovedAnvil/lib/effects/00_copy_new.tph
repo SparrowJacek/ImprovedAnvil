@@ -83,3 +83,4 @@ COPY ~ImprovedAnvil\resources/effects/S!MVM0.eff~ ~override/S!MVM0.eff~
 COPY ~ImprovedAnvil\resources/effects/S!MVM50.eff~ ~override/S!MVM50.eff~
 COPY ~ImprovedAnvil\resources/effects/S!CRTMIC.eff~ ~override/S!CRTMIC.eff~
 COPY ~ImprovedAnvil\resources/effects/S!0frres.eff~ ~override/S!0frres.eff~
+COPY ~ImprovedAnvil\resources/effects/S!60mres.eff~ ~override/S!60mres.eff~
