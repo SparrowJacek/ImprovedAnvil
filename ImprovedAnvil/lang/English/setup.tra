@@ -7844,7 +7844,29 @@ Hunter: when the spell affects an ally of the caster, it gives +2 to thaco and d
 Prey: when the spell affects a demon, it increases its chance of Critical Miss by 5% and each time the demon scores a Critical Miss, it suffers 10 points of magical damage.~
 
 @12102 = ~Hunter~
+
 @12103 = ~Prey~
 
 @12104 = ~Critical Miss chance increased~
+
 @12105 = ~Critical Miss Damage~
+
+@12106 = ~Spiritual Link~
+
+@12107 = ~Spiritual Link
+(Alteration)
+
+Level: 7
+Range: 0
+Duration: 15 rounds
+Casting Time: 8
+Area of Effect: The caster
+Saving Throw: None
+
+By opening a direct link between the caster and <PRO_HISHER> god, the caster is able to draw divine energies faster, than normally. This results in <PRO_HIMHER> needing less time to cast spells, which require longer incantations and more focus. The more experience the caster has, the stronger the link and in result, the quicker the casting.
+
+This spell sets casting time of all spells, which have this value higher than 7 to 7. At level 18 this value is reduced to 6, then to 5 and finally to 4 at levels 22 and 26 respectively. Due to direct contact with divine energies, all other means of lowering casting time become useless, however the caster can sever the link at any moment, without wasting <PRO_HISHER> action this round.~
+
+@12108 = ~Break Spiritual Link~
+
+@12109 = ~This ability allows the caster to cancel Spiritual Link spell without losing the ability to perform some action in current round.~
