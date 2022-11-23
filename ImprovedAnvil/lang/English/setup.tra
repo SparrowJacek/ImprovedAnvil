@@ -7872,3 +7872,14 @@ This spell sets casting time of all spells, which have this value higher than 7 
 @12109 = ~This ability allows the caster to cancel Spiritual Link spell without losing the ability to perform some action in current round.~
 
 @12110 = ~Improved Spiritual Link~
+
+@12111 = ~False Dawn (Evocation)
+Sphere: Sun
+Level: 6
+Range: 0
+Duration: Instant
+Casting Time: 9
+Area of Effect: 15-foot radius sphere
+Saving Throw: None
+
+False dawn calls into existence a bright reddish light, as if a sunrise were occurring, within the area of effect. All vampires and shadows within a false dawn suffer 6d4 points of fire damage. There is no saving throw against this damage. This spell bypasses both Magic Resistance and Fire Resistance (innate or magical) of the affected creatures.~

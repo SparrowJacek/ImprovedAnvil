@@ -538,6 +538,57 @@ COPY_EXISTING ~SPPR550.spl~ ~override/SPPR550.spl~
   // update casting speed
   LPF ~ALTER_SPELL_HEADER~ INT_VAR speed = 6 END
 
+COPY_EXISTING ~SPPR609.spl~ ~override/SPPR609.spl~
+  SAY UNIDENTIFIED_DESC @12111
+
+  LPF ~ALTER_SPELL_HEADER~ INT_VAR projectile = ~%S!FALSED%~ END
+  
+  // modify current effects to bypass magic resistance
+  LPF ~ALTER_SPELL_EFFECT~
+    INT_VAR
+      check_globals = 0
+      match_opcode = 177
+	  resist_dispel = 2
+	  timing = 0
+	  parameter1 = 125
+	  parameter2 = 4
+	END
+  // add another effect, which sets fire resistance to 0
+  LPF ~CLONE_EFFECT~
+    INT_VAR
+      check_globals = 0
+      match_opcode = 177
+	  timing = 0
+	STR_VAR
+	  match_resource = ~DAWNDAM~
+	  resource = ~S!0frres~
+	END
+  // clone all effects and make them work only on shadows
+  LPF ~CLONE_EFFECT~
+    INT_VAR
+      check_globals = 0
+      match_opcode = 177
+	  parameter1 = 132
+	STR_VAR
+	  match_resource = ~S!0frres~
+	END
+  LPF ~CLONE_EFFECT~
+    INT_VAR
+      check_globals = 0
+      match_opcode = 177
+	  parameter1 = 132
+	STR_VAR
+	  match_resource = ~DAWNDAM~
+	END
+  LPF ~CLONE_EFFECT~
+    INT_VAR
+      check_globals = 0
+      match_opcode = 177
+	  parameter1 = 132
+	STR_VAR
+	  match_resource = ~DAWNVIS2~
+	END
+
 COPY_EXISTING ~SPPR705.spl~ ~override/SPPR705.spl~
   READ_BYTE 0x19 "splflags"
   WRITE_BYTE 0x19 ("%splflags%" BOR 0b00000100)
