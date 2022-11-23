@@ -419,3 +419,11 @@ COPY_EXISTING ~clastext.2da~ ~override/clastext.2da~
 // Add projectiles //
 
 ADD_PROJECTILE ~ImprovedAnvil\resources\projectiles\S!IWD298.PRO~
+
+// Update conditions for splprot //
+COPY_EXISTING ~splprot.2da~ ~override/splprot.2da~
+  COUNT_2DA_COLS ~colcount~
+  COUNT_2DA_ROWS ~colcount~ ~kit_equals~
+  // Add a condition to specify kits //
+  INSERT_2DA_ROW ~kit_equals~ ~colcount~ ~%kit_equals%_kit=n 152 -1 1~
+  PRETTY_PRINT_2DA

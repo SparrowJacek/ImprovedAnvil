@@ -462,6 +462,27 @@ COPY ~ImprovedAnvil\resources\spells\SPPR649.spl~ ~override/SPPR649.spl~
       parameter2 = ~%immune_fear_state%~
   END
 
+COPY ~ImprovedAnvil\resources\spells\SPPR734.spl~ ~override/SPPR734.spl~
+  SAY NAME1 @12106
+  SAY UNIDENTIFIED_DESC @12107
+
+  LPF ~ALTER_SPELL_EFFECT~
+    INT_VAR
+      check_headers = 1
+      match_opcode = 326
+	  parameter1 = 16403
+      parameter2 = ~%kit_equals%~
+  END
+
+COPY ~ImprovedAnvil\resources\spells\SPPR734D.spl~ ~override/SPPR734D.spl~
+  SAY NAME1 @12108
+  SAY UNIDENTIFIED_DESC @12109
+  
+COPY ~ImprovedAnvil\resources\spells\SPPR734.spl~ ~override/SPPR734.spl~
+  SAY NAME1 @12106
+  SAY UNIDENTIFIED_DESC @12107
+
+
 COPY ~ImprovedAnvil\resources\spells\SPPR749.spl~ ~override/SPPR749.spl~
   SAY NAME1 @10351
   SAY UNIDENTIFIED_DESC @10352
