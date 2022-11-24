@@ -201,28 +201,18 @@ COPY_EXISTING ~SPPR101.spl~ ~override/SPPR101.spl~
 
 // Armor of Faith
 COPY_EXISTING ~SPPR111.spl~ ~override/SPPR111.spl~
-  PATCH_FOR_EACH ~min_lvl_val~ IN "12" "24" BEGIN
-    LPF  ~S!CLONE_SPELL_HEADER~
+  PATCH_FOR_EACH ~cleric_kit~ IN "16404" "16405" "16403" "16425" "16424" BEGIN
+    LAUNCH_PATCH_FUNCTION ~ADD_SPELL_EFFECT~ 
       INT_VAR
-        header_to_copy = (%min_lvl_val% - 12)/12
-        level_req = %min_lvl_val%
-	END
-    // additional 5% resistance if caster is Priest of Lathander
-    PATCH_FOR_EACH ~res_name~ IN "S!MDR5" "S!SLDR5" "S!CRDR5" "S!PIDR5" "S!MIDR5" BEGIN
-      LAUNCH_PATCH_FUNCTION ~ADD_SPELL_EFFECT~ 
-        INT_VAR
-		  header = %min_lvl_val%/12 + 1
-	      insert_point = 7
-    	  opcode = 177
-	      target = 1
-	      power = 1
-	      parameter1 = 16405
-	      parameter2 = 9
-	      duration = 90
-	      resist_dispel = 3
-        STR_VAR
-	      resource = EVALUATE_BUFFER "%res_name%"
-      END
+        opcode = 326
+	    target = 1
+	    power = 1
+	    parameter1 = %cleric_kit%
+	    parameter2 = 144
+	    duration = 90
+	    resist_dispel = 3
+      STR_VAR
+	    resource = EVALUATE_BUFFER "SPPR111D"
 	END
   END
 
