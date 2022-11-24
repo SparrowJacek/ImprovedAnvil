@@ -420,6 +420,7 @@ COPY_EXISTING ~clastext.2da~ ~override/clastext.2da~
 
 ADD_PROJECTILE ~ImprovedAnvil\resources\projectiles\S!IWD298.PRO~
 ADD_PROJECTILE ~ImprovedAnvil\resources\projectiles\S!FALSED.PRO~
+ADD_PROJECTILE ~ImprovedAnvil\resources\projectiles\S!HARMON.PRO~
 
 // Update conditions for splprot //
 COPY_EXISTING ~splprot.2da~ ~override/splprot.2da~

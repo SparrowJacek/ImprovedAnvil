@@ -7905,4 +7905,17 @@ Creature Type                       Damage
 
 Additionally demons suffer damage as if they had only 60% of their current Magic Damage Resistance, so a demon with 50% initial resistance would suffer damage as if it had only 30% resistance.~
 
-@12113 = ~Improved Armor of Faith~
+@12113 = ~Defensive Harmony
+(Enchantment/Charm)
+
+Level: 4
+Sphere: Law
+Range: 0
+Duration: 6 rounds
+Casting Time: 1
+Area of Effect: 15-ft. radius
+Saving Throw: None
+
+Defensive Harmony grants affected creatures a defensive bonus by bestowing an enchanted coordination on their attacks and defenses. This allows a group of creatures to act as a single unit for a single battle or encounter. The effect is always centered on the caster, but affects all allies within a 15-ft. radius. Those affected can move outside of this area after the spell is cast and still enjoy the benefits of the harmony. While the spell is in effect, each affected creature gains a +2 bonus to <PRO_HISHER> Armor Class. This lasts for 6 rounds or until dispelled.
+
+Clerics who decided to devote their lives to a single deity get additional benefits from this spell. Every 6 seconds all party members in 15-ft. radius gain additional physical resistance for 6 seconds and the caster gets the same bonus for each party member affected. This bonus is equal to 2% from level 12 and increases to 3 and 4, at levels 18 and 24 respectively.~

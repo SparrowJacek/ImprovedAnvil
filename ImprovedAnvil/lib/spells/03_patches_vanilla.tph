@@ -205,6 +205,7 @@ COPY_EXISTING ~SPPR111.spl~ ~override/SPPR111.spl~
     LAUNCH_PATCH_FUNCTION ~ADD_SPELL_EFFECT~ 
       INT_VAR
         opcode = 326
+        insert_point = 10
 	    target = 1
 	    power = 1
 	    parameter1 = %cleric_kit%
@@ -215,6 +216,7 @@ COPY_EXISTING ~SPPR111.spl~ ~override/SPPR111.spl~
 	    resource = EVALUATE_BUFFER "SPPR111D"
 	END
   END
+
 
 // Spirit Ward
 COPY_EXISTING ~SPPR150.spl~ ~override/SPPR150.spl~
@@ -291,6 +293,25 @@ COPY_EXISTING ~SPPR402.spl~ ~override/SPPR402.spl~
               ~SPPR602.spl~ ~override/SPPR602.spl~
               ~SPPR604.spl~ ~override/SPPR604.spl~
   WRITE_BYTE  0x21      0x40
+
+// Defensive Harmony
+COPY_EXISTING ~SPPR406.spl~ ~override/SPPR406.spl~
+  SAY UNIDENTIFIED_DESC @12113
+  PATCH_FOR_EACH ~cleric_kit~ IN "16404" "16405" "16403" "16425" "16424" BEGIN
+    LAUNCH_PATCH_FUNCTION ~ADD_SPELL_EFFECT~ 
+      INT_VAR
+        opcode = 326
+		insert_point = 10
+	    target = 9
+	    power = 4
+	    parameter1 = %cleric_kit%
+	    parameter2 = 144
+	    duration = 37
+	    resist_dispel = 3
+      STR_VAR
+	    resource = EVALUATE_BUFFER "SPPR406D"
+	END
+  END
 
 // Cause Serious Wounds
 COPY_EXISTING ~SPPR414.spl~ ~override/SPPR414.spl~

@@ -387,7 +387,13 @@ COPY ~ImprovedAnvil\resources\spells\SPPRI25.spl~ ~override/SPPRI25.spl~
   SAY NAME1 @9525
 
 COPY ~ImprovedAnvil\resources\spells\sppr111D.spl~ ~override/sppr111D.spl~
-  SAY NAME1 @12113
+
+COPY ~ImprovedAnvil\resources\spells\SPPR406D.spl~ ~override/SPPR406D.spl~
+
+COPY ~ImprovedAnvil\resources\spells\SPPR406E.spl~ ~override/SPPR406E.spl~
+  LPF ~ALTER_SPELL_HEADER~ INT_VAR projectile = ~%S!HARMON%~ END
+
+COPY ~ImprovedAnvil\resources\spells\SPPR406G.spl~ ~override/SPPR406G.spl~
 
 COPY ~ImprovedAnvil\resources\spells\SPPR445.spl~ ~override/SPPR445.spl~
   SAY NAME1 @10357
@@ -482,7 +488,6 @@ COPY ~ImprovedAnvil\resources\spells\SPPR734D.spl~ ~override/SPPR734D.spl~
   SAY UNIDENTIFIED_DESC @12109
   
 COPY ~ImprovedAnvil\resources\spells\SPPR734E.spl~ ~override/SPPR734E.spl~
-  SAY NAME1 @12110
   SAY UNIDENTIFIED_DESC @12107
 
 
