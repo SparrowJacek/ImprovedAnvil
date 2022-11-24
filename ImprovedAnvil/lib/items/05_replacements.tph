@@ -74,3 +74,15 @@ COPY_EXISTING ~scrl1e.itm~ ~override/scrl6g.itm~
 COPY_EXISTING ~scrlam.itm~ ~override/scrl9j.itm~
 
 COPY_EXISTING ~scrl1x.itm~ ~override/scrl5j.itm~
+
+COPY_EXISTING_REGEXP GLOB ~.+\.itm~ ~override~
+  READ_SHORT 0x1c item_category
+  PATCH_IF (item_category = 12)
+    THEN BEGIN
+      LPF ~ADD_ITEM_EQEFFECT~
+	    INT_VAR
+		  opcode = 335
+		  parameter1 = %shield_equipped_state%
+		  timing = 2  
+	  END
+    END
