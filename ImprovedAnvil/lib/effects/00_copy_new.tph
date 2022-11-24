@@ -85,3 +85,4 @@ COPY ~ImprovedAnvil\resources/effects/S!CRTMIC.eff~ ~override/S!CRTMIC.eff~
 COPY ~ImprovedAnvil\resources/effects/S!0frres.eff~ ~override/S!0frres.eff~
 COPY ~ImprovedAnvil\resources/effects/S!60mres.eff~ ~override/S!60mres.eff~
 COPY ~ImprovedAnvil\resources/effects/S!harmon.eff~ ~override/S!harmon.eff~
+COPY ~ImprovedAnvil\resources/effects/S!hvshld.eff~ ~override/S!hvshld.eff~

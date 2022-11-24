@@ -425,7 +425,15 @@ ADD_PROJECTILE ~ImprovedAnvil\resources\projectiles\S!HARMON.PRO~
 // Update conditions for splprot //
 COPY_EXISTING ~splprot.2da~ ~override/splprot.2da~
   COUNT_2DA_COLS ~colcount~
-  COUNT_2DA_ROWS ~colcount~ ~kit_equals~
+  COUNT_2DA_ROWS ~colcount~ ~rowcount~
   // Add a condition to specify kits //
-  INSERT_2DA_ROW ~kit_equals~ ~colcount~ ~%kit_equals%_kit=n 152 -1 1~
+  SET kit_equals = %rowcount%
+  INSERT_2DA_ROW ~rowcount~ ~colcount~ ~%rowcount%_kit=n 152 -1 1~
+  // Add a condition checking if a shield is worn
+  SET is_shield_equipped = %rowcount% + 1
+  INSERT_2DA_ROW ~rowcount~ + 1 ~colcount~ ~%is_shield_equipped%_shield_equipped 0x112 %shield_equipped_state% 1~
+  // Add a condition to specify number of stars in Sword and Shield style //
+  SET sw_sh_style = %rowcount% + 2
+  INSERT_2DA_ROW ~rowcount~ + 2 ~colcount~ ~%sw_sh_style%_s&s_style_stars=n 112 -1 1~
   PRETTY_PRINT_2DA
+  

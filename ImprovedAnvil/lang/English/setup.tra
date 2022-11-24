@@ -7919,3 +7919,22 @@ Saving Throw: None
 Defensive Harmony grants affected creatures a defensive bonus by bestowing an enchanted coordination on their attacks and defenses. This allows a group of creatures to act as a single unit for a single battle or encounter. The effect is always centered on the caster, but affects all allies within a 15-ft. radius. Those affected can move outside of this area after the spell is cast and still enjoy the benefits of the harmony. While the spell is in effect, each affected creature gains a +2 bonus to <PRO_HISHER> Armor Class. This lasts for 6 rounds or until dispelled.
 
 Clerics who decided to devote their lives to a single deity get additional benefits from this spell. Every 6 seconds all party members in 15-ft. radius gain additional physical resistance for 6 seconds and the caster gets the same bonus for each party member affected. This bonus is equal to 2% from level 12 and increases to 3 and 4, at levels 18 and 24 respectively.~
+
+@12114 = ~Heavenly Shield~
+
+@12115 = ~Heavenly Shield
+(Conjuration)
+
+Level: 6
+Sphere: Law
+Range: 0
+Duration: 1 turn
+Casting Time: 5
+Area of Effect: Caster
+Saving Throw: None
+
+By casting this spell the Cleric makes <PRO_HISHER> shield fell lighter in <PRO_HISHER> hand and additional agility. This allows the caster to use the shield offensively, by searching for openings in enemy's defences and striking when the time is right. The better the caster's ability to fight using a shield, the greater the benefits of this spell.
+
+Each first hit per round for the next turn deals additional crushing damage. The base value is 2d3 plus additional 2d4 per each point in Sword and Shield style.~
+
+@12116 = ~Shield Bash~

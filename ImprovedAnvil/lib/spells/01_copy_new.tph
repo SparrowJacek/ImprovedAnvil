@@ -460,6 +460,37 @@ COPY ~ImprovedAnvil\resources\spells\SPPR616D.spl~ ~override/SPPR616D.spl~
   SAY NAME1 @12085
   SAY UNIDENTIFIED_DESC @12086
 
+COPY ~ImprovedAnvil\resources\spells\SPPR617.spl~ ~override/SPPR617.spl~
+  SAY NAME1 @12114
+  SAY UNIDENTIFIED_DESC @12115
+
+COPY ~ImprovedAnvil\resources\spells\SPPR617D.spl~ ~override/SPPR617D.spl~
+
+COPY ~ImprovedAnvil\resources\spells\SPPR617E.spl~ ~override/SPPR617E.spl~
+  LPF ~ALTER_SPELL_EFFECT~
+    INT_VAR
+      check_headers = 1
+      match_opcode = 326
+      parameter2 = ~%is_shield_equipped%~
+  END
+
+COPY ~ImprovedAnvil\resources\spells\SPPR617F.spl~ ~override/SPPR617F.spl~
+  SAY NAME1 @12116
+  LPF ~ALTER_SPELL_EFFECT~
+    INT_VAR
+      check_headers = 1
+      match_opcode = 326
+      parameter2 = ~%sw_sh_style%~
+  END
+
+COPY ~ImprovedAnvil\resources\spells\SPPR617G.spl~ ~override/SPPR617G.spl~
+
+COPY ~ImprovedAnvil\resources\spells\SPPR617H.spl~ ~override/SPPR617H.spl~
+
+COPY ~ImprovedAnvil\resources\spells\SPPR617I.spl~ ~override/SPPR617I.spl~
+
+COPY ~ImprovedAnvil\resources\spells\SPPR617J.spl~ ~override/SPPR617J.spl~
+
 COPY ~ImprovedAnvil\resources\spells\SPPR649.spl~ ~override/SPPR649.spl~
   SAY NAME1 @10354
   SAY UNIDENTIFIED_DESC @10355
