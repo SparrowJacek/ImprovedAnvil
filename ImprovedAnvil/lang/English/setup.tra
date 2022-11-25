@@ -7951,3 +7951,16 @@ Area of Effect: 15-ft. radius
 Saving Throw: Special
 
 When this spell is cast, it causes a ray of sunlight to beam down upon the caster and everyone within a 15-ft. radius. All creatures within the area of effect take 3d6 points of damage and must save vs. Spell or be blinded for 1 turn. Undead that are hit by the sunray take additional 6d6 damage, which bypasses Magic Resistance and during the impact their Fire Resistance is reduced by 25% of their current value. Creatures that by some means achieved values of Fire Resistance higher than 100 are completely immune to the effects of this spell.~
+
+@12118 = ~Strength of One
+(Alteration)
+
+Level: 3
+Sphere: Law
+Range: 0 
+Duration: 1 turn 
+Casting Time: 3 
+Area of Effect: 15-ft. radius
+Saving Throw: None
+
+When this spell is cast, party members within the area of effect are given a Strength score of 18/75. If a party member has a Strength score higher than this (either naturally, or through a magical item), then the spell has no effect. The spell lasts for 1 turn, whereupon everyone's Strength returns to normal.~

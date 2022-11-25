@@ -254,6 +254,36 @@ COPY_EXISTING ~SPPR214.spl~ ~override/SPPR214.spl~
       parameter2 = 25
   END
 
+// Strength of One
+COPY_EXISTING ~SPPR312.spl~ ~override/SPPR312.spl~
+  SAY UNIDENTIFIED_DESC @12118
+  // Add immunity to this spell if strength is higher than 18/75
+  LAUNCH_PATCH_FUNCTION ~ADD_SPELL_EFFECT~ 
+    INT_VAR
+      opcode = 318
+      insert_point = 0
+	  target = 2
+	  power = 3
+	  parameter2 = %str_higher_than_18_75%
+	  duration = 0
+	  resist_dispel = 0
+    STR_VAR
+	  resource = "SPPR312"
+  END
+  LAUNCH_PATCH_FUNCTION ~ADD_SPELL_EFFECT~ 
+    INT_VAR
+      opcode = 318
+      insert_point = 0
+	  target = 2
+	  power = 3
+	  parameter1 = 19
+	  parameter2 = 124
+	  duration = 0
+	  resist_dispel = 0
+    STR_VAR
+	  resource = "SPPR312"
+  END
+
 COPY_EXISTING ~SPPR318.spl~ ~override/SPPR318.spl~
   WRITE_SHORT  0x20      0 // Priest Type
 
@@ -619,6 +649,7 @@ COPY_EXISTING ~SPPR705.spl~ ~override/SPPR705.spl~
 
 // Sunray
 COPY_EXISTING ~SPPR707.spl~ ~override/SPPR707.spl~
+  SAY UNIDENTIFIED_DESC @12117
   PATCH_FOR_EACH ~min_lvl_val~ IN "15" "16" "17" "18" "19" "20" BEGIN
     LAUNCH_PATCH_FUNCTION ~DELETE_SPELL_HEADER~ 
       INT_VAR
