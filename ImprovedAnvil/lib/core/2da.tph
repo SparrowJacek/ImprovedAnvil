@@ -435,5 +435,8 @@ COPY_EXISTING ~splprot.2da~ ~override/splprot.2da~
   // Add a condition to specify number of stars in Sword and Shield style //
   SET sw_sh_style = %rowcount% + 2
   INSERT_2DA_ROW ~rowcount~ + 2 ~colcount~ ~%sw_sh_style%_s&s_style_stars=n 112 -1 1~
+  // Add a condition to check if fire resistance is higher than given value//
+  SET fire_res_higher = %rowcount% + 3
+  INSERT_2DA_ROW ~rowcount~ + 3 ~colcount~ ~%fire_res_higher%_fire_res>n 14 -1 3~
   PRETTY_PRINT_2DA
   

@@ -7938,3 +7938,16 @@ By casting this spell the Cleric makes <PRO_HISHER> shield fell lighter in <PRO_
 Each first hit per round for the next turn deals additional crushing damage. The base value is 2d3 plus additional 2d4 per each point in Sword and Shield style.~
 
 @12116 = ~Shield Bash~
+
+@12117 = ~Sunray
+(Evocation, Alteration)
+
+Level: 7
+Sphere: Sun
+Range: 20 ft.
+Duration: Instant
+Casting Time: 4
+Area of Effect: 15-ft. radius
+Saving Throw: Special
+
+When this spell is cast, it causes a ray of sunlight to beam down upon the caster and everyone within a 15-ft. radius. All creatures within the area of effect take 3d6 points of damage and must save vs. Spell or be blinded for 1 turn. Undead that are hit by the sunray take additional 6d6 damage, which bypasses Magic Resistance and during the impact their Fire Resistance is reduced by 25% of their current value. Creatures that by some means achieved values of Fire Resistance higher than 100 are completely immune to the effects of this spell.~

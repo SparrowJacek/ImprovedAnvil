@@ -86,3 +86,5 @@ COPY ~ImprovedAnvil\resources/effects/S!0frres.eff~ ~override/S!0frres.eff~
 COPY ~ImprovedAnvil\resources/effects/S!60mres.eff~ ~override/S!60mres.eff~
 COPY ~ImprovedAnvil\resources/effects/S!harmon.eff~ ~override/S!harmon.eff~
 COPY ~ImprovedAnvil\resources/effects/S!hvshld.eff~ ~override/S!hvshld.eff~
+COPY ~ImprovedAnvil\resources/effects/S!75fres.eff~ ~override/S!75fres.eff~
+COPY ~ImprovedAnvil\resources/effects/S!sunray.eff~ ~override/S!sunray.eff~

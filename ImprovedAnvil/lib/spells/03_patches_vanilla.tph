@@ -617,6 +617,67 @@ COPY_EXISTING ~SPPR705.spl~ ~override/SPPR705.spl~
   READ_BYTE 0x19 "splflags"
   WRITE_BYTE 0x19 ("%splflags%" BOR 0b00000100)
 
+// Sunray
+COPY_EXISTING ~SPPR707.spl~ ~override/SPPR707.spl~
+  PATCH_FOR_EACH ~min_lvl_val~ IN "15" "16" "17" "18" "19" "20" BEGIN
+    LAUNCH_PATCH_FUNCTION ~DELETE_SPELL_HEADER~ 
+      INT_VAR
+	    header_type = ~-1~
+        min_level = ~%min_lvl_val%~
+	END
+  END
+  // Change damage to fire
+  LAUNCH_PATCH_FUNCTION ~ALTER_SPELL_EFFECT~ 
+    INT_VAR
+	  match_opcode  = 12
+      parameter2 = 0x00080000
+  END
+  // Remove original effects to undead
+  LAUNCH_PATCH_FUNCTION ~DELETE_SPELL_EFFECT~ 
+    INT_VAR
+	  opcode_to_delete = 177
+  END
+  LAUNCH_PATCH_FUNCTION ~ADD_SPELL_EFFECT~ 
+    INT_VAR
+      opcode = 177
+      insert_point = 0
+	  target = 2
+	  power = 7
+	  parameter1 = 4
+	  parameter2 = 3
+	  duration = 0
+	  resist_dispel = 0
+    STR_VAR
+	  resource = "S!75fres"
+  END
+  LAUNCH_PATCH_FUNCTION ~ADD_SPELL_EFFECT~ 
+    INT_VAR
+      opcode = 177
+      insert_point = 1
+	  target = 2
+	  power = 7
+	  parameter1 = 4
+	  parameter2 = 3
+	  timing = 1
+	  duration = 0
+	  resist_dispel = 0
+    STR_VAR
+	  resource = "S!sunray"
+  END
+  LAUNCH_PATCH_FUNCTION ~ADD_SPELL_EFFECT~ 
+    INT_VAR
+      opcode = 318
+      insert_point = 0
+	  target = 2
+	  power = 7
+	  parameter1 = 100
+	  parameter2 = %fire_res_higher%
+	  duration = 0
+	  resist_dispel = 0
+    STR_VAR
+	  resource = "SPPR707"
+  END
+
 COPY_EXISTING ~SPPR709.spl~ ~override/SPPR709.spl~
   READ_BYTE 0x19 "splflags"
   WRITE_BYTE 0x19 ("%splflags%" BOR 0b00000100)
