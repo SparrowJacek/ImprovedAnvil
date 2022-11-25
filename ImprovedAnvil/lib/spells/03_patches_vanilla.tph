@@ -74,6 +74,27 @@ COPY_EXISTING ~SPIN999.spl~ ~override/SPIN999.spl~
   WRITE_BYTE  0x27    0xb // secondary type
 
 // class level abilities //
+
+// Boon of Lathander
+COPY_EXISTING ~SPCL741.spl~ ~override/SPCL741.spl~
+  SAY UNIDENTIFIED_DESC @12120
+  // Give additional +1 thaco/dmg from lvl 11 up
+  PATCH_FOR_EACH ~ability_num~ IN "2" "3" "4" "5" "6" "7" "8" "9" "10" "11" BEGIN
+    LAUNCH_PATCH_FUNCTION ~ALTER_SPELL_EFFECT~ 
+      INT_VAR
+	    header = %ability_num%
+        match_opcode = 73
+		parameter1 = 2
+	END
+    LAUNCH_PATCH_FUNCTION ~ALTER_SPELL_EFFECT~ 
+      INT_VAR
+	    header = %ability_num%
+        match_opcode = 54
+		parameter1 = 2
+	END
+  END  
+
+// Weaken Undead
 COPY_EXISTING ~SPCL742.spl~ ~override/SPCL742.spl~
   SAY UNIDENTIFIED_DESC @12089
   // remove all but one spell abilities
