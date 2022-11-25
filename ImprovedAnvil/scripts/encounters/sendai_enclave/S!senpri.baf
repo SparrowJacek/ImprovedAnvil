@@ -11,6 +11,7 @@ THEN
     ReallyForceSpell(Myself,CLERIC_ARMOR_OF_FAITH)
     ReallyForceSpell(Myself,NPC_BLADE_BARRIER)
     ReallyForceSpell(Myself,CLERIC_CHAOTIC_COMMANDS)
+    ReallyForceSpell(Myself,CLERIC_HEAVENLY_SHIELD)
     ReallyForceSpell(Myself,CLERIC_DRAW_UPON_HOLY_MIGHT)
     ReallyForceSpell(Myself,CLERIC_FREE_ACTION)
     ReallyForceSpell(Myself,CLERIC_HOLY_POWER)
@@ -639,7 +640,7 @@ IF
   !StateCheck(LastSeenBy(Myself),STATE_MIRRORIMAGE)
   CheckStatLT(LastSeenBy(Myself),90,RESISTMISSILE)
   !CheckStat(LastSeenBy(Myself),4,SCRIPTINGSTATE7)
-  GlobalLT("Iasenpri12","LOCALS",3)
+  GlobalLT("Iasenpri12","LOCALS",2)
 THEN
   RESPONSE #100
     IncrementGlobal("Iasenpri12","LOCALS",1)
@@ -656,7 +657,7 @@ IF
   !StateCheck(LastSeenBy(Myself),STATE_MIRRORIMAGE)
   CheckStatLT(LastSeenBy(Myself),90,RESISTMISSILE)
   !CheckStat(LastSeenBy(Myself),4,SCRIPTINGSTATE7)
-  GlobalLT("Iasenpri12","LOCALS",3)
+  GlobalLT("Iasenpri12","LOCALS",2)
 THEN
   RESPONSE #100
     IncrementGlobal("Iasenpri12","LOCALS",1)
@@ -673,7 +674,7 @@ IF
   !StateCheck(LastSeenBy(Myself),STATE_MIRRORIMAGE)
   CheckStatLT(LastSeenBy(Myself),90,RESISTMISSILE)
   !CheckStat(LastSeenBy(Myself),4,SCRIPTINGSTATE7)
-  GlobalLT("Iasenpri12","LOCALS",3)
+  GlobalLT("Iasenpri12","LOCALS",2)
 THEN
   RESPONSE #100
     IncrementGlobal("Iasenpri12","LOCALS",1)
