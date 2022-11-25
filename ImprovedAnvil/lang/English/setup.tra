@@ -7879,7 +7879,7 @@ Level: 6
 Range: 0
 Duration: Instant
 Casting Time: 9
-Area of Effect: 15-foot radius sphere
+Area of Effect: 10-foot radius sphere
 Saving Throw: None
 
 False dawn calls into existence a bright reddish light, as if a sunrise were occurring, within the area of effect. All vampires and shadows within a false dawn suffer 6d4 points of fire damage. There is no saving throw against this damage. This spell bypasses both Magic Resistance and Fire Resistance (innate or magical) of the affected creatures.~
