@@ -7705,7 +7705,9 @@ By means of this spell, the caster fills <PRO_HISHER> body with healing energies
 
 Proficient (1 slot): The wielder gets a -1 bonus to AC and additional -1 against missile weapons.
 
-Proficient (1 slot): The wielder gets a -2 bonus to AC and additional -2 against missile weapons.
+Specialized (2 slots): The wielder gets a -2 bonus to AC and additional -2 against missile weapons.
+
+Master (3 slots): The wielder gets a -3 bonus to AC and additional -3 against missile weapons.
 
 NOTE: Despite the name of this style, any one-handed melee weapon in combination with a shield will receive the aforementioned bonuses.~
 
