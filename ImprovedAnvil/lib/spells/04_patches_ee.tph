@@ -198,3 +198,13 @@ COPY_EXISTING ~SPCL238.spl~ ~override/SPCL238.spl~
   END
 
   BUT_ONLY
+
+// Divine Favor, Priest of Tyr kit ability
+COPY_EXISTING ~OHTYR.spl~ ~override/OHTYR.spl~
+  SAY UNIDENTIFIED_DESC @12122  
+  LPF ALTER_SPELL_EFFECT INT_VAR
+    check_headers = 1
+    duration = 36
+  END
+
+  BUT_ONLY
