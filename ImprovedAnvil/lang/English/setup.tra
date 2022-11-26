@@ -7980,3 +7980,13 @@ Saving Throw: None
 Through this spell, the caster imbues <PRO_HIMHER>self with the strength and skill of a Fighter of the same level. The priest's Strength score is set to 18/00—unless it is higher—<PRO_HISHER> THAC0 becomes that of a Fighter of the same level, and <PRO_HESHE> gains 1 temporary Hit Point per level. This will last for the duration of the spell or until dispelled.~
 
 @12120 = ~BOON OF LATHANDER: This spell lasts for 1 turn till level 10 plus additional 1 round for each level after that. It gives the caster a +1 bonus to all Saving Throws, and 1 extra attack per round. It also protects the recipient from level drain. At levels 1-10 it gives a +1 bonus to attack and damage rolls, at higher levels this bonus increases to +2.~
+
+@12121 = ~SEEKING SWORD: This spell creates a long sword in the Cleric's hand that cannot be dropped or unequipped, it stays in <PRO_HISHER> hand for 1 round per level, up to 20 rounds. To wield the weapon better, the caster must know how to use Long Swords. The sword gets more powerful as the caster gains experience, however wielding it requires intense focus, so the Cleric won't be able to use another weapon in the offhand and spells cast when the sword is equipped have weaker effects.
+
+The sword has the following statistics based on levels:
+1 - 9 : 1-8 + 2 dmg, +2 thaco, 1,5APR, priest caster level -1
+10-11: 2-8 + 2 dmg, +2 thaco, 2  APR, priest caster level -2
+12-14: 2-8 + 3 dmg, +3 thaco, 2  APR, priest caster level -2
+15-19: 2-8 + 3 dmg, +3 thaco, 2  APR, priest caster level -3, range increased to 2 feet
+20-24: 2-8 + 4 dmg, +4 thaco, 2,5APR, priest caster level -4, range increased to 2 feet
+25-40: 2-8 + 5 dmg, +5 thaco, 2,5APR, priest caster level -5, range increased to 2 feet, +5% chance for critical hit~

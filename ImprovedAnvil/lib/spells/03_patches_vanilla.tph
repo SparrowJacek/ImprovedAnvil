@@ -75,6 +75,72 @@ COPY_EXISTING ~SPIN999.spl~ ~override/SPIN999.spl~
 
 // class level abilities //
 
+// Seeking Sword
+COPY_EXISTING ~SPCL731.spl~ ~override/SPCL731.spl~
+  SAY UNIDENTIFIED_DESC @12121
+  // Set proper weapon per level
+  PATCH_FOR_EACH ~ability_num~ IN "1" "2" "3" "4" "5" "6" "7" "8" "9" BEGIN
+    LAUNCH_PATCH_FUNCTION ~ALTER_SPELL_EFFECT~ 
+      INT_VAR
+	    header = %ability_num%
+        match_opcode = 111
+      STR_VAR
+	    resource = ~S!seek01~
+	END
+  END  
+  PATCH_FOR_EACH ~ability_num~ IN "10" "11" BEGIN
+    LAUNCH_PATCH_FUNCTION ~ALTER_SPELL_EFFECT~ 
+      INT_VAR
+	    header = %ability_num%
+        match_opcode = 111
+      STR_VAR
+	    resource = ~S!seek02~
+	END
+  END  
+  PATCH_FOR_EACH ~ability_num~ IN "12" "13" "14" BEGIN
+    LAUNCH_PATCH_FUNCTION ~ALTER_SPELL_EFFECT~ 
+      INT_VAR
+	    header = %ability_num%
+        match_opcode = 111
+      STR_VAR
+	    resource = ~S!seek03~
+	END
+  END 
+  PATCH_FOR_EACH ~ability_num~ IN "15" "16" "17" "18" "19" BEGIN
+    LAUNCH_PATCH_FUNCTION ~ALTER_SPELL_EFFECT~ 
+      INT_VAR
+	    header = %ability_num%
+        match_opcode = 111
+      STR_VAR
+	    resource = ~S!seek04~
+	END
+  END 
+  LAUNCH_PATCH_FUNCTION ~ALTER_SPELL_EFFECT~ 
+    INT_VAR
+	  header = 20
+      match_opcode = 111
+    STR_VAR
+	  resource = ~S!seek05~
+  END
+  LPF ~S!CLONE_SPELL_HEADER~
+    INT_VAR
+      header_to_copy = 19
+      level_req = 25
+  END
+  LAUNCH_PATCH_FUNCTION ~ALTER_SPELL_EFFECT~ 
+    INT_VAR
+	  header = 21
+      match_opcode = 111
+    STR_VAR
+	  resource = ~S!seek06~
+  END
+  // Make the spell undispellable
+  LPF ~ALTER_SPELL_EFFECT~
+    INT_VAR
+      match_opcode = ~-1~
+	  resist_dispel = 0
+  END
+
 // Boon of Lathander
 COPY_EXISTING ~SPCL741.spl~ ~override/SPCL741.spl~
   SAY UNIDENTIFIED_DESC @12120
