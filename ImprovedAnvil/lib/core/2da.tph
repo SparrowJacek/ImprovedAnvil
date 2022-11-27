@@ -457,6 +457,20 @@ COPY_EXISTING ~clastext.2da~ ~override/clastext.2da~
   // Priest of Tempus class
   SET_2DA_ENTRY 71 4 ~colcount~ RESOLVE_STR_REF (@12129)
 
+// update kit description for Clerics
+COPY_EXISTING ~kitlist.2da~ ~override/kitlist.2da~
+  COUNT_2DA_COLS ~colcount~
+  // Priest of Talos class
+  SET_2DA_ENTRY 19 4 ~colcount~ RESOLVE_STR_REF (@12126)  
+  // Priest of Helm class
+  SET_2DA_ENTRY 20 4 ~colcount~ RESOLVE_STR_REF (@12127)  
+  // Priest of Lathander class
+  SET_2DA_ENTRY 21 4 ~colcount~ RESOLVE_STR_REF (@12092)
+  // Priest of Tyr class
+  SET_2DA_ENTRY 40 4 ~colcount~ RESOLVE_STR_REF (@12128)
+  // Priest of Tempus class
+  SET_2DA_ENTRY 41 4 ~colcount~ RESOLVE_STR_REF (@12129)
+
 // Add projectiles //
 
 ADD_PROJECTILE ~ImprovedAnvil\resources\projectiles\S!IWD298.PRO~
