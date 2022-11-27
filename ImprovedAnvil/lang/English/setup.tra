@@ -7990,3 +7990,6 @@ The sword has the following statistics based on levels:
 15-19: 2-8 + 3 dmg, +3 thaco, 2  APR, priest caster level -3, range increased to 2 feet
 20-24: 2-8 + 4 dmg, +4 thaco, 2,5APR, priest caster level -4, range increased to 2 feet
 25-40: 2-8 + 5 dmg, +5 thaco, 2,5APR, priest caster level -5, range increased to 2 feet, +5% chance for critical hit~
+
+@12122 = ~Divine Favor
+This spell grants the caster a +1 bonus to hit and damage rolls every 3 levels of the caster. The spell lasts for 6 rounds.~
