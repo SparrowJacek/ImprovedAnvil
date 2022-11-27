@@ -7759,10 +7759,11 @@ Initially the spell increases Magic Damage Resistance of all affected by 50%, ho
 
 Advantages:
 – May cast a special version of Hold Undead once per day. Gains one use at level 1 and an additional use every 5 levels thereafter.
-- Armor of Faith cast by Priests of Lathander gains additional 5% damage reduction at levels 12 and 24
-– May cast Boon of Lathander once per day. Gains one use at level 1 and an additional use every 10 levels thereafter.
+- Draw Upon Holy Might cast by Priest of Lathander lasts for 15 rounds and is undispellable.
+- Gains access to 1 new spell of level 5, 6 and 2 new spells of level 7.
+– May cast Boon of Lathander once per day. Gains one use at level 1 and an additional use level 6, 11 and every 10 levels thereafter.
 
-BOON OF LATHANDER: This spell lasts 1 round per level of the caster. It gives the caster a +1 bonus to attack and damage rolls, a +1 bonus to all Saving Throws, and 1 extra attack per round. It also protects the recipient from level drain.
+BOON OF LATHANDER: This spell lasts for 1 turn till level 10 plus additional 1 round for each level after that. It gives the caster a +1 bonus to all Saving Throws, and 1 extra attack per round. It also protects the recipient from level drain. At levels 1-10 it gives a +1 bonus to attack and damage rolls, at higher levels this bonus increases to +2.
 
 Disadvantages:
 – Alignment restricted to lawful good, neutral good, chaotic good, and true neutral.~
