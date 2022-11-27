@@ -324,6 +324,10 @@ COPY ~ImprovedAnvil\resources\spells\SPCL943.spl~ ~override/spcl943.spl~
   SAY NAME1 @12098
   SAY UNIDENTIFIED_DESC @12099
 
+COPY ~ImprovedAnvil\resources\spells\SPCL944.spl~ ~override/spcl944.spl~
+  SAY NAME1 @12130
+  SAY UNIDENTIFIED_DESC @12131
+
 // priest spells //
 
 COPY ~ImprovedAnvil\resources\spells\SPPRI01.spl~ ~override/SPPRI01.spl~
