@@ -453,9 +453,9 @@ COPY_EXISTING ~clastext.2da~ ~override/clastext.2da~
   // Priest of Lathander class
   SET_2DA_ENTRY 26 4 ~colcount~ RESOLVE_STR_REF (@12092)
   // Priest of Tyr class
-  SET_2DA_ENTRY 71 4 ~colcount~ RESOLVE_STR_REF (@12128)
+  SET_2DA_ENTRY 70 4 ~colcount~ RESOLVE_STR_REF (@12128)
   // Priest of Tempus class
-  SET_2DA_ENTRY 72 4 ~colcount~ RESOLVE_STR_REF (@12129)
+  SET_2DA_ENTRY 71 4 ~colcount~ RESOLVE_STR_REF (@12129)
 
 // Add projectiles //
 
