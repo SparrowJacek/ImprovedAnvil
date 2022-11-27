@@ -240,6 +240,7 @@ COPY ~ImprovedAnvil\resources\bam\SPCL942B.BAM~ ~override/spcl942B.BAM~
 COPY ~ImprovedAnvil\resources\bam\SPCL942C.BAM~ ~override/spcl942c.BAM~
 COPY ~ImprovedAnvil\resources\bam\SPCL943B.BAM~ ~override/spcl943B.BAM~
 COPY ~ImprovedAnvil\resources\bam\SPCL943C.BAM~ ~override/spcl943c.BAM~
+COPY ~ImprovedAnvil\resources\bam\SPCL944C.BAM~ ~override/spcl944c.BAM~
 COPY ~ImprovedAnvil\resources\bam\S!misc36.BAM~ ~override/S!misc36.BAM~
 COPY ~ImprovedAnvil\resources\bam\IYETI.BAM~ ~override/IYETI.BAM~
 COPY ~ImprovedAnvil\resources\bam\GYETI.BAM~ ~override/GYETI.BAM~
