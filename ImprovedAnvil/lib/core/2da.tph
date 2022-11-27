@@ -425,8 +425,16 @@ COPY_EXISTING ~clastext.2da~ ~override/clastext.2da~
   COUNT_2DA_COLS ~colcount~
   // Pure Cleric class
   SET_2DA_ENTRY 23 4 ~colcount~ RESOLVE_STR_REF (@12088)
+  // Priest of Talos class
+  SET_2DA_ENTRY 24 4 ~colcount~ RESOLVE_STR_REF (@12126)  
+  // Priest of Helm class
+  SET_2DA_ENTRY 25 4 ~colcount~ RESOLVE_STR_REF (@12127)  
   // Priest of Lathander class
   SET_2DA_ENTRY 26 4 ~colcount~ RESOLVE_STR_REF (@12092)
+  // Priest of Tyr class
+  SET_2DA_ENTRY 71 4 ~colcount~ RESOLVE_STR_REF (@12128)
+  // Priest of Tempus class
+  SET_2DA_ENTRY 72 4 ~colcount~ RESOLVE_STR_REF (@12129)
 
 // Add projectiles //
 
