@@ -314,6 +314,8 @@ COPY ~ImprovedAnvil\resources\spells\SPCLI20.spl~ ~override/SPCLI20.spl~
 
 COPY ~ImprovedAnvil\resources\spells\SPCLI21.spl~ ~override/SPCLI21.spl~
 
+COPY ~ImprovedAnvil\resources\spells\SPCL733.spl~ ~override/spcl733.spl~
+
 COPY ~ImprovedAnvil\resources\spells\SPCL942.spl~ ~override/spcl942.spl~
   SAY NAME1 @12093
   SAY UNIDENTIFIED_DESC @12094
