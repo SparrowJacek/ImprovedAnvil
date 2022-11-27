@@ -314,6 +314,9 @@ COPY_EXISTING ~statdesc.2da~ ~override/statdesc.2da~
   INSERT_2DA_ROW 213 ~colcount~ ~213         0         SPPR734D~
   SET_2DA_ENTRY 213 1 ~colcount~ RESOLVE_STR_REF (@12106)
 
+  INSERT_2DA_ROW 214 ~colcount~ ~214         0         SPPR735D~
+  SET_2DA_ENTRY 214 1 ~colcount~ RESOLVE_STR_REF (@12123)
+
   PRETTY_PRINT_2DA
 
 // allow ZoSA to dispel certain projectiles

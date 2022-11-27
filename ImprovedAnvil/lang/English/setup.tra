@@ -7993,3 +7993,18 @@ The sword has the following statistics based on levels:
 
 @12122 = ~Divine Favor
 This spell grants the caster a +1 bonus to hit and damage rolls every 3 levels of the caster. The spell lasts for 6 rounds.~
+
+@12123 = ~Spare the Dying~
+
+@12124 = ~Spare the Dying
+(Necromancy)
+
+Level: 7
+Sphere: Healing
+Range: 0
+Duration: Special
+Casting Time: 7
+Area of Effect: 15-ft. radius
+Saving Throw: None
+
+By casting this spell, the priest strengthens the bond between body and soul of all allies affected. For the next 1 turn those allies will be able to withstand one hit, that would normally kill them, leaving them 1 HP left. When that happens, the spell ends, however for the next 10 seconds those allies won't suffer permanent death from normal damage (though, they still might be petrified, imprisoned or frozen solid).~
