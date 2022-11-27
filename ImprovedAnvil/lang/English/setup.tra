@@ -8008,3 +8008,5 @@ Area of Effect: 15-ft. radius
 Saving Throw: None
 
 By casting this spell, the priest strengthens the bond between body and soul of all allies affected. For the next 1 turn those allies will be able to withstand one hit, that would normally kill them, leaving them 1 HP left. When that happens, the spell ends, however for the next 10 seconds those allies won't suffer permanent death from normal damage (though, they still might be petrified, imprisoned or frozen solid).~
+
+@12125 = ~Withstood a deadly hit~

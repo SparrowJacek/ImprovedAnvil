@@ -521,6 +521,21 @@ COPY ~ImprovedAnvil\resources\spells\SPPR734D.spl~ ~override/SPPR734D.spl~
 COPY ~ImprovedAnvil\resources\spells\SPPR734E.spl~ ~override/SPPR734E.spl~
   SAY UNIDENTIFIED_DESC @12107
 
+COPY ~ImprovedAnvil\resources\spells\SPPR735.spl~ ~override/SPPR735.spl~
+  SAY NAME1 @12123
+  SAY UNIDENTIFIED_DESC @12124
+
+COPY ~ImprovedAnvil\resources\spells\SPPR735D.spl~ ~override/SPPR735D.spl~
+  LPF ~ALTER_SPELL_EFFECT~
+    INT_VAR
+      check_headers = 1
+      match_opcode = 326
+	  parameter1 = 2
+      parameter2 = ~%HP_lower_than%~
+  END
+
+COPY ~ImprovedAnvil\resources\spells\SPPR735E.spl~ ~override/SPPR735E.spl~
+  SAY NAME1 @12125
 
 COPY ~ImprovedAnvil\resources\spells\SPPR749.spl~ ~override/SPPR749.spl~
   SAY NAME1 @10351
