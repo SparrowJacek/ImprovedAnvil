@@ -206,5 +206,14 @@ COPY_EXISTING ~OHTYR2.spl~ ~override/OHTYR2.spl~
     check_headers = 1
     duration = 36
   END
+  LPF ~ADD_SPELL_EFFECT~
+    INT_VAR
+	  opcode = 321
+	  target = 1
+	  insert_point = 0
+	  resist_dispel = 0
+  STR_VAR
+	resource = ~OHTYR2~
+  END
 
   BUT_ONLY
