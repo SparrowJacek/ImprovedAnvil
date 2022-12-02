@@ -80,9 +80,9 @@ COPY_EXISTING_REGEXP GLOB ~.+\.itm~ ~override~
   PATCH_IF (item_category = 12)
     THEN BEGIN
       LPF ~ADD_ITEM_EQEFFECT~
-	    INT_VAR
-		  opcode = 335
-		  parameter1 = %shield_equipped_state%
-		  timing = 2  
-	  END
+        INT_VAR
+          opcode = 335
+          parameter1 = %shield_equipped_state%
+          timing = 2  
+      END
     END

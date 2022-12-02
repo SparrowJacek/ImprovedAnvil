@@ -82,45 +82,45 @@ COPY_EXISTING ~SPCL731.spl~ ~override/SPCL731.spl~
   PATCH_FOR_EACH ~ability_num~ IN "1" "2" "3" "4" "5" "6" "7" "8" "9" BEGIN
     LAUNCH_PATCH_FUNCTION ~ALTER_SPELL_EFFECT~ 
       INT_VAR
-	    header = %ability_num%
+        header = %ability_num%
         match_opcode = 111
       STR_VAR
-	    resource = ~S!seek01~
-	END
+        resource = ~S!seek01~
+    END
   END  
   PATCH_FOR_EACH ~ability_num~ IN "10" "11" BEGIN
     LAUNCH_PATCH_FUNCTION ~ALTER_SPELL_EFFECT~ 
       INT_VAR
-	    header = %ability_num%
+        header = %ability_num%
         match_opcode = 111
       STR_VAR
-	    resource = ~S!seek02~
-	END
+        resource = ~S!seek02~
+    END
   END  
   PATCH_FOR_EACH ~ability_num~ IN "12" "13" "14" BEGIN
     LAUNCH_PATCH_FUNCTION ~ALTER_SPELL_EFFECT~ 
       INT_VAR
-	    header = %ability_num%
+        header = %ability_num%
         match_opcode = 111
       STR_VAR
-	    resource = ~S!seek03~
-	END
+        resource = ~S!seek03~
+    END
   END 
   PATCH_FOR_EACH ~ability_num~ IN "15" "16" "17" "18" "19" BEGIN
     LAUNCH_PATCH_FUNCTION ~ALTER_SPELL_EFFECT~ 
       INT_VAR
-	    header = %ability_num%
+        header = %ability_num%
         match_opcode = 111
       STR_VAR
-	    resource = ~S!seek04~
-	END
+        resource = ~S!seek04~
+    END
   END 
   LAUNCH_PATCH_FUNCTION ~ALTER_SPELL_EFFECT~ 
     INT_VAR
-	  header = 20
+      header = 20
       match_opcode = 111
     STR_VAR
-	  resource = ~S!seek05~
+      resource = ~S!seek05~
   END
   LPF ~S!CLONE_SPELL_HEADER~
     INT_VAR
@@ -129,16 +129,16 @@ COPY_EXISTING ~SPCL731.spl~ ~override/SPCL731.spl~
   END
   LAUNCH_PATCH_FUNCTION ~ALTER_SPELL_EFFECT~ 
     INT_VAR
-	  header = 21
+      header = 21
       match_opcode = 111
     STR_VAR
-	  resource = ~S!seek06~
+      resource = ~S!seek06~
   END
   // Make the spell undispellable
   LPF ~ALTER_SPELL_EFFECT~
     INT_VAR
       match_opcode = ~-1~
-	  resist_dispel = 0
+      resist_dispel = 0
   END
 
 // Boon of Lathander
@@ -148,16 +148,16 @@ COPY_EXISTING ~SPCL741.spl~ ~override/SPCL741.spl~
   PATCH_FOR_EACH ~ability_num~ IN "2" "3" "4" "5" "6" "7" "8" "9" "10" "11" BEGIN
     LAUNCH_PATCH_FUNCTION ~ALTER_SPELL_EFFECT~ 
       INT_VAR
-	    header = %ability_num%
+        header = %ability_num%
         match_opcode = 73
-		parameter1 = 2
-	END
+        parameter1 = 2
+    END
     LAUNCH_PATCH_FUNCTION ~ALTER_SPELL_EFFECT~ 
       INT_VAR
-	    header = %ability_num%
+        header = %ability_num%
         match_opcode = 54
-		parameter1 = 2
-	END
+        parameter1 = 2
+    END
   END  
 
 // Weaken Undead
@@ -167,9 +167,9 @@ COPY_EXISTING ~SPCL742.spl~ ~override/SPCL742.spl~
   PATCH_FOR_EACH ~min_lvl_val~ IN "2" "3" "4" "5" "6" "7" "8" "9" "10" "11" "12" "13" "14" "15" "16" "17" "18" "19" BEGIN
     LAUNCH_PATCH_FUNCTION ~DELETE_SPELL_HEADER~ 
       INT_VAR
-	    header_type = ~-1~
+        header_type = ~-1~
         min_level = ~%min_lvl_val%~
-	END
+    END
   END
   // change projectile to None, to make it single target
   LPF ~ALTER_SPELL_HEADER~
@@ -186,49 +186,49 @@ COPY_EXISTING ~SPCL742.spl~ ~override/SPCL742.spl~
     INT_VAR
       check_globals = 0
       resist_dispel = 3
-	  savingthrow = 0
+      savingthrow = 0
   END
   // Add effects slowing movements and reducing physical resistances with no saving throw
   PATCH_FOR_EACH ~eff_name~ IN "S!SLD-10" "S!CRD-10" "S!SLD-10" "S!CRD-10" "S!MVM50" BEGIN
     LAUNCH_PATCH_FUNCTION ~CLONE_EFFECT~ 
-	  INT_VAR
-	    timing = 0
-	  STR_VAR
-	    match_resource = ~HOLDSND~
-		resource = EVALUATE_BUFFER ~%eff_name%~
-	END
+      INT_VAR
+        timing = 0
+      STR_VAR
+        match_resource = ~HOLDSND~
+        resource = EVALUATE_BUFFER ~%eff_name%~
+    END
   END
   // Add additional 10% of physical resistances reduction with no saving throw
   PATCH_FOR_EACH ~eff_name~ IN "S!SLD-10" "S!CRD-10" BEGIN
     LAUNCH_PATCH_FUNCTION ~CLONE_EFFECT~ 
-	  INT_VAR
-	  header = 1
-	    timing = 0
-	  STR_VAR
-	    match_resource = ~HOLDSND~
-		resource = EVALUATE_BUFFER ~%eff_name%~
-	END
+      INT_VAR
+        header = 1
+        timing = 0
+      STR_VAR
+        match_resource = ~HOLDSND~
+        resource = EVALUATE_BUFFER ~%eff_name%~
+    END
   END
 
   // Add effects slowing movements with saving throw
   LAUNCH_PATCH_FUNCTION ~CLONE_EFFECT~ 
-	INT_VAR
-	  savingthrow = 1
+    INT_VAR
+      savingthrow = 1
       savebonus = ~-2~
       timing = 0
-	STR_VAR
-	  match_resource = ~HOLDSND~
+    STR_VAR
+      match_resource = ~HOLDSND~
       resource = "S!MVM0"
-	END
+  END
 
   // prevent stacking
   LPF ~ADD_SPELL_EFFECT~
     INT_VAR
       opcode = 206
-	  target = 2
-	  resist_dispel = 3
-	  insert_point = ~-1~
-	STR_VAR
+      target = 2
+      resist_dispel = 3
+      insert_point = ~-1~
+    STR_VAR
       resource = ~SPCL742~
   END  
   // update duration for all effects
@@ -236,7 +236,7 @@ COPY_EXISTING ~SPCL742.spl~ ~override/SPCL742.spl~
     INT_VAR
       check_globals = 0
       match_opcode = ~-1~
-	  duration = 18
+      duration = 18
   END
 
 
@@ -325,15 +325,15 @@ COPY_EXISTING ~SPPR214.spl~ ~override/SPPR214.spl~
   LAUNCH_PATCH_FUNCTION ~ADD_SPELL_EFFECT~ 
     INT_VAR
       opcode = 326
-	  insert_point = ~-1~
-	  target = 1
-	  power = 2
-	  parameter1 = 16405
-	  parameter2 = %kit_equals%
-	  duration = 0
-	  resist_dispel = 0
+      insert_point = ~-1~
+      target = 1
+      power = 2
+      parameter1 = 16405
+      parameter2 = %kit_equals%
+      duration = 0
+      resist_dispel = 0
     STR_VAR
-	  resource = "SPPR214D"
+      resource = "SPPR214D"
   END
 
 // Lathander Draw Upon Holy Might
@@ -341,12 +341,12 @@ COPY_EXISTING ~SPPR214.spl~ ~override/SPPR214D.spl~
   // Remove spell states to avoid AI problems
   LPF ~ADD_SPELL_EFFECT~
     INT_VAR
-	  opcode = 321
-	  target = 1
-	  insert_point = 0
-	  resist_dispel = 0
-  STR_VAR
-	resource = ~SPPR214~
+      opcode = 321
+      target = 1
+      insert_point = 0
+      resist_dispel = 0
+    STR_VAR
+      resource = ~SPPR214~
   END
   LPF ~DELETE_SPELL_EFFECT~
     INT_VAR
@@ -359,12 +359,12 @@ COPY_EXISTING ~SPPR214.spl~ ~override/SPPR214D.spl~
   LPF ~ALTER_SPELL_EFFECT~
     INT_VAR
       match_opcode = ~-1~
-	  resist_dispel = 0
+      resist_dispel = 0
   END
   LPF ~ALTER_SPELL_EFFECT~
     INT_VAR
       match_opcode = ~-1~
-	  duration_high = 90
+      duration_high = 90
   END
 
 // Strength of One
@@ -375,26 +375,26 @@ COPY_EXISTING ~SPPR312.spl~ ~override/SPPR312.spl~
     INT_VAR
       opcode = 318
       insert_point = 0
-	  target = 2
-	  power = 3
-	  parameter2 = %str_higher_than_18_75%
-	  duration = 0
-	  resist_dispel = 0
+      target = 2
+      power = 3
+      parameter2 = %str_higher_than_18_75%
+      duration = 0
+      resist_dispel = 0
     STR_VAR
-	  resource = "SPPR312"
+      resource = "SPPR312"
   END
   LAUNCH_PATCH_FUNCTION ~ADD_SPELL_EFFECT~ 
     INT_VAR
       opcode = 318
       insert_point = 0
-	  target = 2
-	  power = 3
-	  parameter1 = 19
-	  parameter2 = 124
-	  duration = 0
-	  resist_dispel = 0
+      target = 2
+      power = 3
+      parameter1 = 19
+      parameter2 = 124
+      duration = 0
+      resist_dispel = 0
     STR_VAR
-	  resource = "SPPR312"
+      resource = "SPPR312"
   END
 
 COPY_EXISTING ~SPPR318.spl~ ~override/SPPR318.spl~
@@ -444,16 +444,16 @@ COPY_EXISTING ~SPPR406.spl~ ~override/SPPR406.spl~
     LAUNCH_PATCH_FUNCTION ~ADD_SPELL_EFFECT~ 
       INT_VAR
         opcode = 326
-		insert_point = 10
-	    target = 9
-	    power = 4
-	    parameter1 = %cleric_kit%
-	    parameter2 = %kit_equals%
-	    duration = 37
-	    resist_dispel = 3
+        insert_point = 10
+        target = 9
+        power = 4
+        parameter1 = %cleric_kit%
+        parameter2 = %kit_equals%
+        duration = 37
+        resist_dispel = 3
       STR_VAR
-	    resource = EVALUATE_BUFFER "SPPR406D"
-	END
+        resource = EVALUATE_BUFFER "SPPR406D"
+    END
   END
 
 // Holy Power
@@ -466,29 +466,29 @@ COPY_EXISTING ~SPPR412.spl~ ~override/SPPR412.spl~
   LAUNCH_PATCH_FUNCTION ~ADD_SPELL_EFFECT~ 
     INT_VAR
       opcode = 326
-	  insert_point = ~-1~
-	  target = 1
-	  power = 4
-	  parameter1 = 16425
-	  parameter2 = %kit_equals%
-	  duration = 0
-	  resist_dispel = 0
+      insert_point = ~-1~
+      target = 1
+      power = 4
+      parameter1 = 16425
+      parameter2 = %kit_equals%
+      duration = 0
+      resist_dispel = 0
     STR_VAR
-	  resource = "SPPR412D"
+      resource = "SPPR412D"
   END
   // Protect from last effect if str > 18
   LAUNCH_PATCH_FUNCTION ~ADD_SPELL_EFFECT~ 
     INT_VAR
       opcode = 318
       insert_point = ~-1~
-	  target = 1
-	  power = 4
-	  parameter1 = 19
-	  parameter2 = 124
-	  duration = 1
-	  resist_dispel = 0
+      target = 1
+      power = 4
+      parameter1 = 19
+      parameter2 = 124
+      duration = 1
+      resist_dispel = 0
     STR_VAR
-	  resource = "SPPR412"
+      resource = "SPPR412"
   END
   LPF ~CLONE_EFFECT~
     INT_VAR
@@ -496,8 +496,8 @@ COPY_EXISTING ~SPPR412.spl~ ~override/SPPR412.spl~
       match_opcode = 97
       opcode = 44
       parameter1 = 18
-	STR_VAR
-	  insert = ~last~
+    STR_VAR
+      insert = ~last~
   END
 
 // Tempus Holy Power
@@ -514,31 +514,31 @@ COPY_EXISTING ~SPPR412.spl~ ~override/SPPR412D.spl~
   LPF ~ALTER_SPELL_EFFECT~
     INT_VAR
       match_opcode = ~-1~
-	  resist_dispel = 0
+      resist_dispel = 0
   END
   LPF ~ALTER_SPELL_EFFECT~
     INT_VAR
       match_opcode = 318
-	STR_VAR
-	  resource = ~SPPR412D~
+    STR_VAR
+      resource = ~SPPR412D~
   END
   PATCH_FOR_EACH ~ability_num~ IN "5" "6" "7" "8" "9" "10" "11" "12" BEGIN
     LAUNCH_PATCH_FUNCTION ~CLONE_EFFECT~ 
       INT_VAR
-	    header = %ability_num%
+        header = %ability_num%
         match_opcode = 54
-		opcode = 1
-		parameter1 = 6
-		parameter2 = 0
-	END
+        opcode = 1
+        parameter1 = 6
+        parameter2 = 0
+    END
   END
   LAUNCH_PATCH_FUNCTION ~CLONE_EFFECT~ 
     INT_VAR
-	  header = 13
+      header = 13
       match_opcode = 54
-	  opcode = 1
-	  parameter1 = 1
-	  parameter2 = 0
+      opcode = 1
+      parameter1 = 1
+      parameter2 = 0
   END
 
 // Cause Serious Wounds
@@ -549,7 +549,7 @@ COPY_EXISTING ~SPPR414.spl~ ~override/SPPR414.spl~
   LPF ~ALTER_SPELL_EFFECT~
     INT_VAR
       match_opcode = 111
-	  duration = 60
+      duration = 60
   END
   LPF ~S!CLONE_SPELL_HEADER~
     INT_VAR
@@ -558,10 +558,10 @@ COPY_EXISTING ~SPPR414.spl~ ~override/SPPR414.spl~
   END
   LPF ~ALTER_SPELL_EFFECT~
     INT_VAR
-	  header = 2
-	  match_opcode = 111
-	STR_VAR
-	  resource = ~S!serio1~
+      header = 2
+      match_opcode = 111
+    STR_VAR
+      resource = ~S!serio1~
   END
   LPF ~S!CLONE_SPELL_HEADER~
     INT_VAR
@@ -570,10 +570,10 @@ COPY_EXISTING ~SPPR414.spl~ ~override/SPPR414.spl~
   END
   LPF ~ALTER_SPELL_EFFECT~
     INT_VAR
-	  header = 3
-	  match_opcode = 111
-	STR_VAR
-	  resource = ~S!serio2~
+      header = 3
+      match_opcode = 111
+    STR_VAR
+      resource = ~S!serio2~
   END
 
 // Spirit Fire
@@ -609,7 +609,7 @@ COPY_EXISTING ~SPPR510.spl~ ~override/SPPR510.spl~
   LPF ~ALTER_SPELL_EFFECT~
     INT_VAR
       match_opcode = 111
-	  duration = 60
+      duration = 60
   END
   LPF ~S!CLONE_SPELL_HEADER~
     INT_VAR
@@ -618,10 +618,10 @@ COPY_EXISTING ~SPPR510.spl~ ~override/SPPR510.spl~
   END
   LPF ~ALTER_SPELL_EFFECT~
     INT_VAR
-	  header = 2
-	  match_opcode = 111
-	STR_VAR
-	  resource = ~S!criti1~
+      header = 2
+      match_opcode = 111
+    STR_VAR
+      resource = ~S!criti1~
   END
   LPF ~S!CLONE_SPELL_HEADER~
     INT_VAR
@@ -630,10 +630,10 @@ COPY_EXISTING ~SPPR510.spl~ ~override/SPPR510.spl~
   END
   LPF ~ALTER_SPELL_EFFECT~
     INT_VAR
-	  header = 3
-	  match_opcode = 111
-	STR_VAR
-	  resource = ~S!criti2~
+      header = 3
+      match_opcode = 111
+    STR_VAR
+      resource = ~S!criti2~
   END
 
 // Righteous Magic
@@ -649,27 +649,27 @@ COPY_EXISTING ~SPPR513.spl~ ~override/SPPR513.spl~
   LAUNCH_PATCH_FUNCTION ~ADD_SPELL_EFFECT~ 
     INT_VAR
       opcode = 326
-	  insert_point = ~-1~
-	  target = 1
-	  power = 5
-	  parameter1 = 16425
-	  parameter2 = %kit_equals%
-	  duration = 0
-	  resist_dispel = 0
+      insert_point = ~-1~
+      target = 1
+      power = 5
+      parameter1 = 16425
+      parameter2 = %kit_equals%
+      duration = 0
+      resist_dispel = 0
     STR_VAR
-	  resource = "SPPR513D"
+      resource = "SPPR513D"
   END
 
 // Tempus Righteous Magic
 COPY_EXISTING ~SPPR513.spl~ ~override/SPPR513D.spl~
   LPF ~ADD_SPELL_EFFECT~
     INT_VAR
-	  opcode = 321
-	  target = 1
-	  insert_point = 0
-	  resist_dispel = 0
-  STR_VAR
-	resource = ~SPPR513~
+      opcode = 321
+      target = 1
+      insert_point = 0
+      resist_dispel = 0
+    STR_VAR
+      resource = ~SPPR513~
   END
   // Remove spell states to avoid AI problems
   LPF ~DELETE_SPELL_EFFECT~
@@ -683,7 +683,7 @@ COPY_EXISTING ~SPPR513.spl~ ~override/SPPR513D.spl~
   LPF ~ALTER_SPELL_EFFECT~
     INT_VAR
       match_opcode = ~-1~
-	  resist_dispel = 0
+      resist_dispel = 0
   END
 
 // Weaken Undead
@@ -695,14 +695,14 @@ COPY_EXISTING ~SPPR515.spl~ ~override/SPPR515.spl~
     INT_VAR
       check_globals = 0
       match_opcode = ~-1~
-	  duration = 36
+      duration = 36
   END
   // update icon effect to bypass MR
   LPF ~ALTER_SPELL_EFFECT~
     INT_VAR
       check_globals = 0
       match_opcode = 142
-	  resist_dispel = 2
+      resist_dispel = 2
   END
   // Remove original "cast spell on condition", since it's affected by slow/haste
   LPF ~DELETE_SPELL_EFFECT~
@@ -712,16 +712,16 @@ COPY_EXISTING ~SPPR515.spl~ ~override/SPPR515.spl~
   PATCH_FOR_EACH ~weaken_wave~ IN "0" "1" "2" "3" "4" "5" "6" BEGIN
     LAUNCH_PATCH_FUNCTION ~ADD_SPELL_EFFECT~ 
       INT_VAR
-	    opcode = 146
-	    target = 1
-		parameter2 = 1
-	    resist_dispel = 2
-		timing = 3
-		duration = 6 * %weaken_wave%
-		power = 5
+        opcode = 146
+        target = 1
+        parameter2 = 1
+        resist_dispel = 2
+        timing = 3
+        duration = 6 * %weaken_wave%
+        power = 5
       STR_VAR
-	    resource = ~SPPR515D~
-	END
+        resource = ~SPPR515D~
+    END
   END
 
 // Weaken Undead subspell
@@ -733,16 +733,16 @@ COPY_EXISTING ~SPPR515D.spl~ ~override/SPPR515D.spl~
     INT_VAR
       check_globals = 0
       match_opcode = ~-1~
-	  duration = 38
+      duration = 38
   END
   LPF ~ADD_SPELL_EFFECT~
     INT_VAR
-	  opcode = 321
-	  target = 2
-	  insert_point = 0
-	  resist_dispel = 3
-  STR_VAR
-	resource = ~SPPR515D~
+      opcode = 321
+      target = 2
+      insert_point = 0
+      resist_dispel = 3
+    STR_VAR
+      resource = ~SPPR515D~
   END
   // Delete Wing Buffet effect
   LPF ~DELETE_EFFECT~
@@ -757,9 +757,9 @@ COPY_EXISTING ~SPPR515D.spl~ ~override/SPPR515D.spl~
     INT_VAR
       check_globals = 0
       match_opcode = 177
-	  duration = 7
-	  timing = 0
-	  resist_dispel = 3
+      duration = 7
+      timing = 0
+      resist_dispel = 3
     STR_VAR
       match_resource = ~REPVISU~
   END
@@ -768,46 +768,46 @@ COPY_EXISTING ~SPPR515D.spl~ ~override/SPPR515D.spl~
     INT_VAR
       check_globals = 0
       match_opcode = 177
-	  resist_dispel = 3
-	  timing = 0
+      resist_dispel = 3
+      timing = 0
     STR_VAR
       match_resource = ~COLDHIT~
   END
   // Add weakening effects
   LPF ~CLONE_EFFECT~
     INT_VAR
-	  match_opcode = 177
+      match_opcode = 177
     STR_VAR
-	  match_resource = ~COLDHIT~
-	  resource = ~S!CRTHDC~
+      match_resource = ~COLDHIT~
+      resource = ~S!CRTHDC~
   END
   LPF ~CLONE_EFFECT~
     INT_VAR
-	  match_opcode = 177
+      match_opcode = 177
     STR_VAR
-	  match_resource = ~COLDHIT~
-	  resource = ~S!SLDMDC~
+      match_resource = ~COLDHIT~
+      resource = ~S!SLDMDC~
   END
   LPF ~CLONE_EFFECT~
     INT_VAR
-	  match_opcode = 177
+      match_opcode = 177
     STR_VAR
-	  match_resource = ~COLDHIT~
-	  resource = ~S!CRDMDC~
+      match_resource = ~COLDHIT~
+      resource = ~S!CRDMDC~
   END
   LPF ~CLONE_EFFECT~
     INT_VAR
-	  match_opcode = 177
+      match_opcode = 177
     STR_VAR
-	  match_resource = ~COLDHIT~
-	  resource = ~S!PIDMDC~
+      match_resource = ~COLDHIT~
+      resource = ~S!PIDMDC~
   END  
   LPF ~CLONE_EFFECT~
     INT_VAR
-	  match_opcode = 177
+      match_opcode = 177
     STR_VAR
-	  match_resource = ~COLDHIT~
-	  resource = ~S!MIDMDC~
+      match_resource = ~COLDHIT~
+      resource = ~S!MIDMDC~
   END
   
 // Recall Spirit
@@ -827,46 +827,46 @@ COPY_EXISTING ~SPPR609.spl~ ~override/SPPR609.spl~
     INT_VAR
       check_globals = 0
       match_opcode = 177
-	  resist_dispel = 2
-	  timing = 0
-	  parameter1 = 125
-	  parameter2 = 4
-	END
+      resist_dispel = 2
+      timing = 0
+      parameter1 = 125
+      parameter2 = 4
+  END
   // add another effect, which sets fire resistance to 0
   LPF ~CLONE_EFFECT~
     INT_VAR
       check_globals = 0
       match_opcode = 177
-	  timing = 0
-	STR_VAR
-	  match_resource = ~DAWNDAM~
-	  resource = ~S!0frres~
-	END
+      timing = 0
+    STR_VAR
+      match_resource = ~DAWNDAM~
+      resource = ~S!0frres~
+  END
   // clone all effects and make them work only on shadows
   LPF ~CLONE_EFFECT~
     INT_VAR
       check_globals = 0
       match_opcode = 177
-	  parameter1 = 132
-	STR_VAR
-	  match_resource = ~S!0frres~
-	END
+      parameter1 = 132
+    STR_VAR
+      match_resource = ~S!0frres~
+  END
   LPF ~CLONE_EFFECT~
     INT_VAR
       check_globals = 0
       match_opcode = 177
-	  parameter1 = 132
-	STR_VAR
-	  match_resource = ~DAWNDAM~
-	END
+      parameter1 = 132
+    STR_VAR
+      match_resource = ~DAWNDAM~
+  END
   LPF ~CLONE_EFFECT~
     INT_VAR
       check_globals = 0
       match_opcode = 177
-	  parameter1 = 132
-	STR_VAR
-	  match_resource = ~DAWNVIS2~
-	END
+      parameter1 = 132
+    STR_VAR
+      match_resource = ~DAWNVIS2~
+  END
 
 COPY_EXISTING ~SPPR612.spl~ ~override/SPPR612.spl~
   SAY UNIDENTIFIED_DESC @12112
@@ -875,11 +875,11 @@ COPY_EXISTING ~SPPR612.spl~ ~override/SPPR612.spl~
     INT_VAR
       check_globals = 0
       match_opcode = 177
-	  timing = 0
-	STR_VAR
-	  match_resource = ~BOLTDEM~
-	  resource = ~S!60mres~
-	END
+      timing = 0
+    STR_VAR
+      match_resource = ~BOLTDEM~
+      resource = ~S!60mres~
+  END
 
 COPY_EXISTING ~SPPR705.spl~ ~override/SPPR705.spl~
   READ_BYTE 0x19 "splflags"
@@ -891,60 +891,60 @@ COPY_EXISTING ~SPPR707.spl~ ~override/SPPR707.spl~
   PATCH_FOR_EACH ~min_lvl_val~ IN "15" "16" "17" "18" "19" "20" BEGIN
     LAUNCH_PATCH_FUNCTION ~DELETE_SPELL_HEADER~ 
       INT_VAR
-	    header_type = ~-1~
+        header_type = ~-1~
         min_level = ~%min_lvl_val%~
-	END
+    END
   END
   // Change damage to fire
   LAUNCH_PATCH_FUNCTION ~ALTER_SPELL_EFFECT~ 
     INT_VAR
-	  match_opcode  = 12
+      match_opcode  = 12
       parameter2 = 0x00080000
   END
   // Remove original effects to undead
   LAUNCH_PATCH_FUNCTION ~DELETE_SPELL_EFFECT~ 
     INT_VAR
-	  opcode_to_delete = 177
+      opcode_to_delete = 177
   END
   LAUNCH_PATCH_FUNCTION ~ADD_SPELL_EFFECT~ 
     INT_VAR
       opcode = 177
       insert_point = 0
-	  target = 2
-	  power = 7
-	  parameter1 = 4
-	  parameter2 = 3
-	  duration = 0
-	  resist_dispel = 0
+      target = 2
+      power = 7
+      parameter1 = 4
+      parameter2 = 3
+      duration = 0
+      resist_dispel = 0
     STR_VAR
-	  resource = "S!75fres"
+      resource = "S!75fres"
   END
   LAUNCH_PATCH_FUNCTION ~ADD_SPELL_EFFECT~ 
     INT_VAR
       opcode = 177
       insert_point = 1
-	  target = 2
-	  power = 7
-	  parameter1 = 4
-	  parameter2 = 3
-	  timing = 1
-	  duration = 0
-	  resist_dispel = 0
+      target = 2
+      power = 7
+      parameter1 = 4
+      parameter2 = 3
+      timing = 1
+      duration = 0
+      resist_dispel = 0
     STR_VAR
-	  resource = "S!sunray"
+      resource = "S!sunray"
   END
   LAUNCH_PATCH_FUNCTION ~ADD_SPELL_EFFECT~ 
     INT_VAR
       opcode = 318
       insert_point = 0
-	  target = 2
-	  power = 7
-	  parameter1 = 100
-	  parameter2 = %fire_res_higher%
-	  duration = 0
-	  resist_dispel = 0
+      target = 2
+      power = 7
+      parameter1 = 100
+      parameter2 = %fire_res_higher%
+      duration = 0
+      resist_dispel = 0
     STR_VAR
-	  resource = "SPPR707"
+      resource = "SPPR707"
   END
 
 COPY_EXISTING ~SPPR709.spl~ ~override/SPPR709.spl~
@@ -957,7 +957,7 @@ COPY_EXISTING ~sppr710.spl~ ~override/sppr710.spl~
   LAUNCH_PATCH_FUNCTION ~ALTER_SPELL_HEADER~ INT_VAR
     header = 1
     projectile = 209
-	range = 15
+    range = 15
   END
 
 COPY_EXISTING ~sppr715.spl~ ~override/sppr715.spl~

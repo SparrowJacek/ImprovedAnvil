@@ -516,7 +516,7 @@ COPY ~ImprovedAnvil\resources\spells\SPPR734.spl~ ~override/SPPR734.spl~
     INT_VAR
       check_headers = 1
       match_opcode = 326
-	  parameter1 = 16403
+      parameter1 = 16403
       parameter2 = ~%kit_equals%~
   END
 
@@ -536,7 +536,7 @@ COPY ~ImprovedAnvil\resources\spells\SPPR735D.spl~ ~override/SPPR735D.spl~
     INT_VAR
       check_headers = 1
       match_opcode = 326
-	  parameter1 = 2
+      parameter1 = 2
       parameter2 = ~%HP_lower_than%~
   END
 
