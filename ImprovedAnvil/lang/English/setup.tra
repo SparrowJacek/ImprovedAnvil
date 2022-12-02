@@ -7699,7 +7699,7 @@ Casting Time: 5
 Area of Effect: The caster
 Saving Throw: None
 
-By means of this spell, the caster fills <PRO_HISHER> body with healing energies. Each time <PRO_HESHE> is hit, a part of this energy is immediately directed to the injured part of the body, mitigating the pain and closing the wounds. Each time the caster suffers any damage, <PRO_HISHER> HP is restored. At level 11 the amount is equal to 4, then it increases to 6 at level 17 and finally at level 25 it heals 8HP. It is worth noting, that this spell can not prevent death, and will not allow to heal from any fatal injuries.~
+By means of this spell, the caster fills <PRO_HISHER> body with healing energies. Each time <PRO_HESHE> is hit, a part of this energy is directed to the injured part of the body, mitigating the pain and closing the wounds. Each time the caster suffers any damage, <PRO_HISHER> HP is restored one second later. At level 11 the amount is equal to 4, then it increases to 6 at level 17 and finally at level 25 it heals 8HP. It is worth noting, that this spell can not prevent death, and will not allow to heal from any fatal injuries.~
 
 @12087 = ~SWORD AND SHIELD: Anyone can pick up a shield and get its basic protection bonuses, but by spending slots on this fighting style, an adventurer can maximize the benefits received.
 
