@@ -7630,7 +7630,7 @@ Casting Time: 5
 Area of Effect: The caster
 Saving Throw: None
 
-This powerful spell creates waves of anti-negative energy that sweep outward from the caster. These waves disrupt any undead that attempt to attack the caster, reducing the physical damage they deal by 10% and decreasing their chance for critical hit by 5% for 7 seconds. There is one wave per round for the duration of the spell, which renews the effects, but does not stack with itself. All undead are affected with no Saving Throw, this spell bypasses Magic Resistance.~
+This powerful spell creates waves of positive energy that sweep outward from the caster. These waves disrupt any undead that attempt to attack the caster, reducing the physical damage they deal by 10% and decreasing their chance for critical hit by 5% for 7 seconds. There is one wave per round for the duration of the spell, which renews the effects, but does not stack with itself. All undead are affected with no Saving Throw, this spell bypasses Magic Resistance.~
 
 @12082 = ~Disrupt Undead (Necromancy)
 Level: 7
@@ -7640,7 +7640,7 @@ Casting Time: 7
 Area of Effect: One Undead Creature
 Saving Throw: None
 
-By means of this powerful spell, the pries uses his divine powers to disturb the negative forces floating inside an undead creature. The spell bypasses the target's magic resistance (if any) and inflicts a huge amount of damage, which varies depending on the undead type:
+By means of this powerful spell, the priest uses <PRO_HISHER> divine powers to disturb the negative forces floating inside an undead creature. The spell bypasses the target's magic resistance (if any) and inflicts a huge amount of damage, which varies depending on the undead type:
 
 - Skeleton Lords (and lesser undead creatures): 10D6 +10
 - Skeleton Warlords: 8D6 +8
@@ -7664,7 +7664,7 @@ The spell covers the priest's hand with magical energies, that provide some bene
 - number of attacks per round set to 2,5
 - +4 bonus to hit
 - a successful hit releases the magic not only inside the enemy but also around the caster, cleansing <PRO_HISHER> aura
-- at level 15 bonuses from strength stat are also counted, when determinig caster's chance to hit
+- at level 15 bonuses from strength stat are also counted, when determining caster's chance to hit
 - at level 20 the caster can direct the energy through a punch, instead of a touch, thus enabling <PRO_HIMHER> to deal additional crushing damage, based on <PRO_HISHER> strength stat~
 
 @12084 = ~Cause Critical Wounds
@@ -7684,7 +7684,7 @@ The spell covers the priest's hand with magical energies, that provide some bene
 - number of attacks per round set to 2,5
 - +4 bonus to hit
 - a successful hit releases the magic not only inside the enemy but also around the caster, cleansing <PRO_HISHER> aura
-- at level 15 bonuses from strength stat are also counted, when determinig caster's chance to hit
+- at level 15 bonuses from strength stat are also counted, when determining caster's chance to hit
 - at level 20 the caster can direct the energy through a punch, instead of a touch, thus enabling <PRO_HIMHER> to deal additional crushing damage, based on <PRO_HISHER> strength stat~
 
 @12085 = ~Guardian Angel~
