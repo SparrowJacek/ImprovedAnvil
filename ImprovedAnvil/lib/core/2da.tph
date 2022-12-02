@@ -210,29 +210,12 @@ COPY_EXISTING ~luabbr.2da~  ~override/luabbr.2da~
   REPLACE_TEXTUALLY ~BEAST_FRIEND.+Dr0~ ~BEAST_FRIEND              Dr3~
   PRETTY_PRINT_2DA
 
-// assign new ludr file to the Priest of Talos kit
+// assign new ludr files to Priest kits
 COPY_EXISTING ~luabbr.2da~  ~override/luabbr.2da~
   REPLACE_TEXTUALLY ~TALOS.+Cl0~ ~TALOS           Cl4~
-  PRETTY_PRINT_2DA
-
-// assign new ludr file to the Priest of Helm kit
-COPY_EXISTING ~luabbr.2da~  ~override/luabbr.2da~
   REPLACE_TEXTUALLY ~HELM.+Cl0~ ~HELM           Cl3~
-  PRETTY_PRINT_2DA
-
-
-// assign new ludr file to the Priest of Lathander kit
-COPY_EXISTING ~luabbr.2da~  ~override/luabbr.2da~
   REPLACE_TEXTUALLY ~LATHANDER.+Cl0~ ~LATHANDER           Cl4~
-  PRETTY_PRINT_2DA
-
-// assign new ludr file to the Priest of Tyr kit
-COPY_EXISTING ~luabbr.2da~  ~override/luabbr.2da~
   REPLACE_TEXTUALLY ~OHTYR.+Cl0~ ~OHTYR           Cl4~
-  PRETTY_PRINT_2DA
-
-// assign new ludr file to the Priest of Tempus kit
-COPY_EXISTING ~luabbr.2da~  ~override/luabbr.2da~
   REPLACE_TEXTUALLY ~OHTEMPUS.+Cl0~ ~OHTEMPUS           Cl4~
   PRETTY_PRINT_2DA
 
