@@ -78,6 +78,7 @@ COPY_EXISTING ~SPIN999.spl~ ~override/SPIN999.spl~
 // Seeking Sword
 COPY_EXISTING ~SPCL731.spl~ ~override/SPCL731.spl~
   SAY UNIDENTIFIED_DESC @12121
+
   // Set proper weapon per level
   PATCH_FOR_EACH ~ability_num~ IN "1" "2" "3" "4" "5" "6" "7" "8" "9" BEGIN
     LAUNCH_PATCH_FUNCTION ~ALTER_SPELL_EFFECT~ 
@@ -88,6 +89,7 @@ COPY_EXISTING ~SPCL731.spl~ ~override/SPCL731.spl~
         resource = ~S!seek01~
     END
   END  
+
   PATCH_FOR_EACH ~ability_num~ IN "10" "11" BEGIN
     LAUNCH_PATCH_FUNCTION ~ALTER_SPELL_EFFECT~ 
       INT_VAR
@@ -97,6 +99,7 @@ COPY_EXISTING ~SPCL731.spl~ ~override/SPCL731.spl~
         resource = ~S!seek02~
     END
   END  
+
   PATCH_FOR_EACH ~ability_num~ IN "12" "13" "14" BEGIN
     LAUNCH_PATCH_FUNCTION ~ALTER_SPELL_EFFECT~ 
       INT_VAR
@@ -106,6 +109,7 @@ COPY_EXISTING ~SPCL731.spl~ ~override/SPCL731.spl~
         resource = ~S!seek03~
     END
   END 
+
   PATCH_FOR_EACH ~ability_num~ IN "15" "16" "17" "18" "19" BEGIN
     LAUNCH_PATCH_FUNCTION ~ALTER_SPELL_EFFECT~ 
       INT_VAR
@@ -115,6 +119,7 @@ COPY_EXISTING ~SPCL731.spl~ ~override/SPCL731.spl~
         resource = ~S!seek04~
     END
   END 
+
   LAUNCH_PATCH_FUNCTION ~ALTER_SPELL_EFFECT~ 
     INT_VAR
       header = 20
@@ -122,11 +127,13 @@ COPY_EXISTING ~SPCL731.spl~ ~override/SPCL731.spl~
     STR_VAR
       resource = ~S!seek05~
   END
+
   LPF ~S!CLONE_SPELL_HEADER~
     INT_VAR
       header_to_copy = 19
       level_req = 25
   END
+
   LAUNCH_PATCH_FUNCTION ~ALTER_SPELL_EFFECT~ 
     INT_VAR
       header = 21
@@ -134,6 +141,7 @@ COPY_EXISTING ~SPCL731.spl~ ~override/SPCL731.spl~
     STR_VAR
       resource = ~S!seek06~
   END
+
   // Make the spell undispellable
   LPF ~ALTER_SPELL_EFFECT~
     INT_VAR
@@ -144,6 +152,7 @@ COPY_EXISTING ~SPCL731.spl~ ~override/SPCL731.spl~
 // Boon of Lathander
 COPY_EXISTING ~SPCL741.spl~ ~override/SPCL741.spl~
   SAY UNIDENTIFIED_DESC @12120
+
   // Give additional +1 thaco/dmg from lvl 11 up
   PATCH_FOR_EACH ~ability_num~ IN "2" "3" "4" "5" "6" "7" "8" "9" "10" "11" BEGIN
     LAUNCH_PATCH_FUNCTION ~ALTER_SPELL_EFFECT~ 
@@ -152,6 +161,7 @@ COPY_EXISTING ~SPCL741.spl~ ~override/SPCL741.spl~
         match_opcode = 73
         parameter1 = 2
     END
+
     LAUNCH_PATCH_FUNCTION ~ALTER_SPELL_EFFECT~ 
       INT_VAR
         header = %ability_num%
@@ -160,10 +170,11 @@ COPY_EXISTING ~SPCL741.spl~ ~override/SPCL741.spl~
     END
   END  
 
-// Weaken Undead
+// Hold Undead Lathander ability
 COPY_EXISTING ~SPCL742.spl~ ~override/SPCL742.spl~
   SAY UNIDENTIFIED_DESC @12089
-  // remove all but one spell abilities
+
+  // remove all but one spell ability
   PATCH_FOR_EACH ~min_lvl_val~ IN "2" "3" "4" "5" "6" "7" "8" "9" "10" "11" "12" "13" "14" "15" "16" "17" "18" "19" BEGIN
     LAUNCH_PATCH_FUNCTION ~DELETE_SPELL_HEADER~ 
       INT_VAR
@@ -171,16 +182,19 @@ COPY_EXISTING ~SPCL742.spl~ ~override/SPCL742.spl~
         min_level = ~%min_lvl_val%~
     END
   END
+
   // change projectile to None, to make it single target
   LPF ~ALTER_SPELL_HEADER~
     INT_VAR
       projectile  = 1
   END
+
   // remove Hold EFF
   LPF ~DELETE_SPELL_EFFECT~
     INT_VAR
       opcode_to_delete = 185
   END
+
   // make all initial effects bypass MR and allow no saving throw
   LPF ~ALTER_SPELL_EFFECT~
     INT_VAR
@@ -188,6 +202,7 @@ COPY_EXISTING ~SPCL742.spl~ ~override/SPCL742.spl~
       resist_dispel = 3
       savingthrow = 0
   END
+
   // Add effects slowing movements and reducing physical resistances with no saving throw
   PATCH_FOR_EACH ~eff_name~ IN "S!SLD-10" "S!CRD-10" "S!SLD-10" "S!CRD-10" "S!MVM50" BEGIN
     LAUNCH_PATCH_FUNCTION ~CLONE_EFFECT~ 
@@ -198,7 +213,8 @@ COPY_EXISTING ~SPCL742.spl~ ~override/SPCL742.spl~
         resource = EVALUATE_BUFFER ~%eff_name%~
     END
   END
-  // Add additional 10% of physical resistances reduction with no saving throw
+
+  // Add additional 10% of physical resistances reduction with no saving throw from level 20
   PATCH_FOR_EACH ~eff_name~ IN "S!SLD-10" "S!CRD-10" BEGIN
     LAUNCH_PATCH_FUNCTION ~CLONE_EFFECT~ 
       INT_VAR
@@ -231,6 +247,7 @@ COPY_EXISTING ~SPCL742.spl~ ~override/SPCL742.spl~
     STR_VAR
       resource = ~SPCL742~
   END  
+
   // update duration for all effects
   LPF ~ALTER_SPELL_EFFECT~
     INT_VAR
@@ -270,6 +287,7 @@ COPY_EXISTING ~SPPR102.spl~ ~override/SPPR102.spl~
 // Bless
 COPY_EXISTING ~SPPR101.spl~ ~override/SPPR101.spl~
   SAY UNIDENTIFIED_DESC @12097
+
   // add spell state
   LPF ~CLONE_EFFECT~
     INT_VAR
@@ -279,6 +297,7 @@ COPY_EXISTING ~SPPR101.spl~ ~override/SPPR101.spl~
       parameter2 = 22
       special = 1
   END
+
   // increase duration to 1 turn
   LPF ~ALTER_SPELL_EFFECT~
     INT_VAR
@@ -303,6 +322,7 @@ COPY_EXISTING ~SPPR150.spl~ ~override/SPPR150.spl~
 // Aid
 COPY_EXISTING ~SPPR201.spl~ ~override/SPPR201.spl~
   SAY UNIDENTIFIED_DESC @12096
+
   // make the spell AoE from lvl 15
   PATCH_FOR_EACH ~spell_level~ IN "15" "16" "17" "18" "19" "20" BEGIN
     LPF ~ALTER_SPELL_HEADER~
@@ -322,6 +342,7 @@ COPY_EXISTING ~SPPR214.spl~ ~override/SPPR214.spl~
       parameter2 = 25
   END
 
+  // Cast improved version if caster is Lathander
   LAUNCH_PATCH_FUNCTION ~ADD_SPELL_EFFECT~ 
     INT_VAR
       opcode = 326
@@ -348,19 +369,25 @@ COPY_EXISTING ~SPPR214.spl~ ~override/SPPR214D.spl~
     STR_VAR
       resource = ~SPPR214~
   END
+
   LPF ~DELETE_SPELL_EFFECT~
     INT_VAR
       opcode_to_delete = 328
   END
+
   LPF ~DELETE_SPELL_EFFECT~
     INT_VAR
       opcode_to_delete = 326
   END
+
+  // Make undispellable
   LPF ~ALTER_SPELL_EFFECT~
     INT_VAR
       match_opcode = ~-1~
       resist_dispel = 0
   END
+
+  // Increase duration to 90s
   LPF ~ALTER_SPELL_EFFECT~
     INT_VAR
       match_opcode = ~-1~
@@ -370,6 +397,7 @@ COPY_EXISTING ~SPPR214.spl~ ~override/SPPR214D.spl~
 // Strength of One
 COPY_EXISTING ~SPPR312.spl~ ~override/SPPR312.spl~
   SAY UNIDENTIFIED_DESC @12118
+
   // Add immunity to this spell if strength is higher than 18/75
   LAUNCH_PATCH_FUNCTION ~ADD_SPELL_EFFECT~ 
     INT_VAR
@@ -383,6 +411,7 @@ COPY_EXISTING ~SPPR312.spl~ ~override/SPPR312.spl~
     STR_VAR
       resource = "SPPR312"
   END
+
   LAUNCH_PATCH_FUNCTION ~ADD_SPELL_EFFECT~ 
     INT_VAR
       opcode = 318
@@ -440,6 +469,8 @@ COPY_EXISTING ~SPPR402.spl~ ~override/SPPR402.spl~
 // Defensive Harmony
 COPY_EXISTING ~SPPR406.spl~ ~override/SPPR406.spl~
   SAY UNIDENTIFIED_DESC @12113
+
+  // Cast improved version if caster is Cleric kit
   PATCH_FOR_EACH ~cleric_kit~ IN "16404" "16405" "16403" "16425" "16424" BEGIN
     LAUNCH_PATCH_FUNCTION ~ADD_SPELL_EFFECT~ 
       INT_VAR
@@ -459,10 +490,14 @@ COPY_EXISTING ~SPPR406.spl~ ~override/SPPR406.spl~
 // Holy Power
 COPY_EXISTING ~SPPR412.spl~ ~override/SPPR412.spl~
   SAY UNIDENTIFIED_DESC @12119
+
+  // Remove original strength bonus
   LPF ~DELETE_SPELL_EFFECT~
     INT_VAR
       opcode_to_delete = 44
   END
+
+  // Cast improved version if caster is Tempus
   LAUNCH_PATCH_FUNCTION ~ADD_SPELL_EFFECT~ 
     INT_VAR
       opcode = 326
@@ -476,6 +511,7 @@ COPY_EXISTING ~SPPR412.spl~ ~override/SPPR412.spl~
     STR_VAR
       resource = "SPPR412D"
   END
+
   // Protect from last effect if str > 18
   LAUNCH_PATCH_FUNCTION ~ADD_SPELL_EFFECT~ 
     INT_VAR
@@ -490,6 +526,8 @@ COPY_EXISTING ~SPPR412.spl~ ~override/SPPR412.spl~
     STR_VAR
       resource = "SPPR412"
   END
+
+  // Add strength bonus as the last effect
   LPF ~CLONE_EFFECT~
     INT_VAR
       check_globals = 0
@@ -507,21 +545,28 @@ COPY_EXISTING ~SPPR412.spl~ ~override/SPPR412D.spl~
     INT_VAR
       opcode_to_delete = 328
   END
+
   LPF ~DELETE_SPELL_EFFECT~
     INT_VAR
       opcode_to_delete = 326
   END
+
+  // Make undispellable
   LPF ~ALTER_SPELL_EFFECT~
     INT_VAR
       match_opcode = ~-1~
       resist_dispel = 0
   END
+
+  // Add protection from self
   LPF ~ALTER_SPELL_EFFECT~
     INT_VAR
       match_opcode = 318
     STR_VAR
       resource = ~SPPR412D~
   END
+
+  // Add 1/2 APR for levels 12-19
   PATCH_FOR_EACH ~ability_num~ IN "5" "6" "7" "8" "9" "10" "11" "12" BEGIN
     LAUNCH_PATCH_FUNCTION ~CLONE_EFFECT~ 
       INT_VAR
@@ -532,6 +577,8 @@ COPY_EXISTING ~SPPR412.spl~ ~override/SPPR412D.spl~
         parameter2 = 0
     END
   END
+
+  // Add 1 APR from level 20
   LAUNCH_PATCH_FUNCTION ~CLONE_EFFECT~ 
     INT_VAR
       header = 13
@@ -544,18 +591,24 @@ COPY_EXISTING ~SPPR412.spl~ ~override/SPPR412D.spl~
 // Cause Serious Wounds
 COPY_EXISTING ~SPPR414.spl~ ~override/SPPR414.spl~
   SAY UNIDENTIFIED_DESC @12083
-  // update casting speed
+
+  // Update casting speed
   LPF ~ALTER_SPELL_HEADER~ INT_VAR speed = 2 END
+
+  // Increase duration to 60s
   LPF ~ALTER_SPELL_EFFECT~
     INT_VAR
       match_opcode = 111
       duration = 60
   END
+
+  // Improve the spell from lvl 15
   LPF ~S!CLONE_SPELL_HEADER~
     INT_VAR
       header_to_copy = 0
       level_req = 15
   END
+
   LPF ~ALTER_SPELL_EFFECT~
     INT_VAR
       header = 2
@@ -563,11 +616,14 @@ COPY_EXISTING ~SPPR414.spl~ ~override/SPPR414.spl~
     STR_VAR
       resource = ~S!serio1~
   END
+
+  // Improve the spell from lvl 20
   LPF ~S!CLONE_SPELL_HEADER~
     INT_VAR
       header_to_copy = 0
       level_req = 20
   END
+
   LPF ~ALTER_SPELL_EFFECT~
     INT_VAR
       header = 3
@@ -588,6 +644,7 @@ COPY_EXISTING ~SPPR450.spl~ ~override/SPPR450.spl~
     savingthrow = 0
   END
 
+// Iron Skins
 COPY_EXISTING ~sppr506.spl~ ~override/sppr506.spl~
   SAY UNIDENTIFIED_DESC @10189
   WRITE_BYTE  0x27      7 // secondary type
@@ -604,18 +661,24 @@ COPY_EXISTING ~sppr506.spl~ ~override/sppr506.spl~
 // Cause Critical Wounds
 COPY_EXISTING ~SPPR510.spl~ ~override/SPPR510.spl~
   SAY UNIDENTIFIED_DESC @12084
-  // update casting speed
+
+  // Update casting speed
   LPF ~ALTER_SPELL_HEADER~ INT_VAR speed = 3 END
+
+  // Increase duration to 60s
   LPF ~ALTER_SPELL_EFFECT~
     INT_VAR
       match_opcode = 111
       duration = 60
   END
+
+  // Improve the spell from lvl 15
   LPF ~S!CLONE_SPELL_HEADER~
     INT_VAR
       header_to_copy = 0
       level_req = 15
   END
+
   LPF ~ALTER_SPELL_EFFECT~
     INT_VAR
       header = 2
@@ -623,11 +686,14 @@ COPY_EXISTING ~SPPR510.spl~ ~override/SPPR510.spl~
     STR_VAR
       resource = ~S!criti1~
   END
+
+  // Improve the spell from lvl 20
   LPF ~S!CLONE_SPELL_HEADER~
     INT_VAR
       header_to_copy = 0
       level_req = 20
   END
+
   LPF ~ALTER_SPELL_EFFECT~
     INT_VAR
       header = 3
@@ -638,7 +704,7 @@ COPY_EXISTING ~SPPR510.spl~ ~override/SPPR510.spl~
 
 // Righteous Magic
 COPY_EXISTING ~SPPR513.spl~ ~override/SPPR513.spl~
-  // add spell state
+  // Add spell state
   LPF ~CLONE_EFFECT~
     INT_VAR
       check_globals = 0
@@ -646,6 +712,7 @@ COPY_EXISTING ~SPPR513.spl~ ~override/SPPR513.spl~
       parameter2 = ~%righteous_magic_state%~
   END
 
+  // Cast improved version if caster is Tempus
   LAUNCH_PATCH_FUNCTION ~ADD_SPELL_EFFECT~ 
     INT_VAR
       opcode = 326
@@ -662,6 +729,7 @@ COPY_EXISTING ~SPPR513.spl~ ~override/SPPR513.spl~
 
 // Tempus Righteous Magic
 COPY_EXISTING ~SPPR513.spl~ ~override/SPPR513D.spl~
+  // Remove original Righteous Might spell
   LPF ~ADD_SPELL_EFFECT~
     INT_VAR
       opcode = 321
@@ -671,15 +739,19 @@ COPY_EXISTING ~SPPR513.spl~ ~override/SPPR513D.spl~
     STR_VAR
       resource = ~SPPR513~
   END
+
   // Remove spell states to avoid AI problems
   LPF ~DELETE_SPELL_EFFECT~
     INT_VAR
       opcode_to_delete = 328
   END
+
   LPF ~DELETE_SPELL_EFFECT~
     INT_VAR
       opcode_to_delete = 326
   END
+
+  // Make undispellable
   LPF ~ALTER_SPELL_EFFECT~
     INT_VAR
       match_opcode = ~-1~
@@ -690,25 +762,30 @@ COPY_EXISTING ~SPPR513.spl~ ~override/SPPR513D.spl~
 COPY_EXISTING ~SPPR515.spl~ ~override/SPPR515.spl~
   SAY NAME1 @12080
   SAY UNIDENTIFIED_DESC @12081
-  // update duration for all effects
+
+  // Update duration for all effects
   LPF ~ALTER_SPELL_EFFECT~
     INT_VAR
       check_globals = 0
       match_opcode = ~-1~
       duration = 36
   END
-  // update icon effect to bypass MR
+
+  // Update icon effect to bypass MR
   LPF ~ALTER_SPELL_EFFECT~
     INT_VAR
       check_globals = 0
       match_opcode = 142
       resist_dispel = 2
   END
+
   // Remove original "cast spell on condition", since it's affected by slow/haste
   LPF ~DELETE_SPELL_EFFECT~
     INT_VAR
       opcode_to_delete = 232
   END
+
+  // Make the spell apply its effects every 6s like True Sight
   PATCH_FOR_EACH ~weaken_wave~ IN "0" "1" "2" "3" "4" "5" "6" BEGIN
     LAUNCH_PATCH_FUNCTION ~ADD_SPELL_EFFECT~ 
       INT_VAR
@@ -728,13 +805,16 @@ COPY_EXISTING ~SPPR515.spl~ ~override/SPPR515.spl~
 COPY_EXISTING ~SPPR515D.spl~ ~override/SPPR515D.spl~
   SAY NAME1 @12080
   SAY UNIDENTIFIED_DESC @12081
-  // update duration for all effects
+
+  // Update duration for all effects
   LPF ~ALTER_SPELL_EFFECT~
     INT_VAR
       check_globals = 0
       match_opcode = ~-1~
       duration = 38
   END
+
+  // Remove previous instance of this spell to prevent stacking
   LPF ~ADD_SPELL_EFFECT~
     INT_VAR
       opcode = 321
@@ -744,6 +824,7 @@ COPY_EXISTING ~SPPR515D.spl~ ~override/SPPR515D.spl~
     STR_VAR
       resource = ~SPPR515D~
   END
+
   // Delete Wing Buffet effect
   LPF ~DELETE_EFFECT~
     INT_VAR
@@ -752,6 +833,7 @@ COPY_EXISTING ~SPPR515D.spl~ ~override/SPPR515D.spl~
     STR_VAR
       match_resource = ~REPDEAD~
   END
+
   // Modify visual effect
   LPF ~ALTER_SPELL_EFFECT~
     INT_VAR
@@ -763,6 +845,7 @@ COPY_EXISTING ~SPPR515D.spl~ ~override/SPPR515D.spl~
     STR_VAR
       match_resource = ~REPVISU~
   END
+
   // Modify sound effect
   LPF ~ALTER_SPELL_EFFECT~
     INT_VAR
@@ -773,6 +856,7 @@ COPY_EXISTING ~SPPR515D.spl~ ~override/SPPR515D.spl~
     STR_VAR
       match_resource = ~COLDHIT~
   END
+
   // Add weakening effects
   LPF ~CLONE_EFFECT~
     INT_VAR
@@ -781,6 +865,7 @@ COPY_EXISTING ~SPPR515D.spl~ ~override/SPPR515D.spl~
       match_resource = ~COLDHIT~
       resource = ~S!CRTHDC~
   END
+
   LPF ~CLONE_EFFECT~
     INT_VAR
       match_opcode = 177
@@ -788,6 +873,7 @@ COPY_EXISTING ~SPPR515D.spl~ ~override/SPPR515D.spl~
       match_resource = ~COLDHIT~
       resource = ~S!SLDMDC~
   END
+
   LPF ~CLONE_EFFECT~
     INT_VAR
       match_opcode = 177
@@ -795,6 +881,7 @@ COPY_EXISTING ~SPPR515D.spl~ ~override/SPPR515D.spl~
       match_resource = ~COLDHIT~
       resource = ~S!CRDMDC~
   END
+
   LPF ~CLONE_EFFECT~
     INT_VAR
       match_opcode = 177
@@ -802,6 +889,7 @@ COPY_EXISTING ~SPPR515D.spl~ ~override/SPPR515D.spl~
       match_resource = ~COLDHIT~
       resource = ~S!PIDMDC~
   END  
+
   LPF ~CLONE_EFFECT~
     INT_VAR
       match_opcode = 177
@@ -814,15 +902,16 @@ COPY_EXISTING ~SPPR515D.spl~ ~override/SPPR515D.spl~
 COPY_EXISTING ~SPPR550.spl~ ~override/SPPR550.spl~
   SAY UNIDENTIFIED_DESC @10324
 
-  // update casting speed
+  // Update casting speed
   LPF ~ALTER_SPELL_HEADER~ INT_VAR speed = 6 END
 
+// False Dawn
 COPY_EXISTING ~SPPR609.spl~ ~override/SPPR609.spl~
   SAY UNIDENTIFIED_DESC @12111
 
   LPF ~ALTER_SPELL_HEADER~ INT_VAR projectile = ~%S!FALSED%~ END
   
-  // modify current effects to bypass magic resistance
+  // Modify current effects to bypass magic resistance
   LPF ~ALTER_SPELL_EFFECT~
     INT_VAR
       check_globals = 0
@@ -832,7 +921,8 @@ COPY_EXISTING ~SPPR609.spl~ ~override/SPPR609.spl~
       parameter1 = 125
       parameter2 = 4
   END
-  // add another effect, which sets fire resistance to 0
+
+  // Add another effect, which sets fire resistance to 0
   LPF ~CLONE_EFFECT~
     INT_VAR
       check_globals = 0
@@ -842,7 +932,8 @@ COPY_EXISTING ~SPPR609.spl~ ~override/SPPR609.spl~
       match_resource = ~DAWNDAM~
       resource = ~S!0frres~
   END
-  // clone all effects and make them work only on shadows
+
+  // Clone all effects and make them work only on Shadows
   LPF ~CLONE_EFFECT~
     INT_VAR
       check_globals = 0
@@ -851,6 +942,7 @@ COPY_EXISTING ~SPPR609.spl~ ~override/SPPR609.spl~
     STR_VAR
       match_resource = ~S!0frres~
   END
+
   LPF ~CLONE_EFFECT~
     INT_VAR
       check_globals = 0
@@ -859,6 +951,7 @@ COPY_EXISTING ~SPPR609.spl~ ~override/SPPR609.spl~
     STR_VAR
       match_resource = ~DAWNDAM~
   END
+
   LPF ~CLONE_EFFECT~
     INT_VAR
       check_globals = 0
@@ -868,9 +961,11 @@ COPY_EXISTING ~SPPR609.spl~ ~override/SPPR609.spl~
       match_resource = ~DAWNVIS2~
   END
 
+// Bolt of Glory
 COPY_EXISTING ~SPPR612.spl~ ~override/SPPR612.spl~
   SAY UNIDENTIFIED_DESC @12112
-  // add effect, which sets magic damage resistance of demons to 0
+
+  // add effect, which sets magic damage resistance of demons to 60% of their current value
   LPF ~CLONE_EFFECT~
     INT_VAR
       check_globals = 0
@@ -888,6 +983,8 @@ COPY_EXISTING ~SPPR705.spl~ ~override/SPPR705.spl~
 // Sunray
 COPY_EXISTING ~SPPR707.spl~ ~override/SPPR707.spl~
   SAY UNIDENTIFIED_DESC @12117
+
+  // Remove level progression from the spell
   PATCH_FOR_EACH ~min_lvl_val~ IN "15" "16" "17" "18" "19" "20" BEGIN
     LAUNCH_PATCH_FUNCTION ~DELETE_SPELL_HEADER~ 
       INT_VAR
@@ -895,17 +992,21 @@ COPY_EXISTING ~SPPR707.spl~ ~override/SPPR707.spl~
         min_level = ~%min_lvl_val%~
     END
   END
-  // Change damage to fire
+
+  // Change damage from magic to fire
   LAUNCH_PATCH_FUNCTION ~ALTER_SPELL_EFFECT~ 
     INT_VAR
       match_opcode  = 12
       parameter2 = 0x00080000
   END
+
   // Remove original effects to undead
   LAUNCH_PATCH_FUNCTION ~DELETE_SPELL_EFFECT~ 
     INT_VAR
       opcode_to_delete = 177
   END
+
+  // -25% of current fire resistance to Undead
   LAUNCH_PATCH_FUNCTION ~ADD_SPELL_EFFECT~ 
     INT_VAR
       opcode = 177
@@ -919,6 +1020,8 @@ COPY_EXISTING ~SPPR707.spl~ ~override/SPPR707.spl~
     STR_VAR
       resource = "S!75fres"
   END
+
+  // Additional damage to undead
   LAUNCH_PATCH_FUNCTION ~ADD_SPELL_EFFECT~ 
     INT_VAR
       opcode = 177
@@ -933,6 +1036,8 @@ COPY_EXISTING ~SPPR707.spl~ ~override/SPPR707.spl~
     STR_VAR
       resource = "S!sunray"
   END
+
+  // Add immunity to this spell if fire res > 100
   LAUNCH_PATCH_FUNCTION ~ADD_SPELL_EFFECT~ 
     INT_VAR
       opcode = 318
