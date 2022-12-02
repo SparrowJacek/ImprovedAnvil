@@ -7618,9 +7618,9 @@ Requires:
 
 Weight: 28~
 
-@12080 = ~Weaken Undead~
+@13000 = ~Weaken Undead~
 
-@12081 = ~Weaken Undead
+@13001 = ~Weaken Undead
 (Abjuration)
 
 Level: 5
@@ -7632,7 +7632,7 @@ Saving Throw: None
 
 This powerful spell creates waves of positive energy that sweep outward from the caster. These waves disrupt any undead that attempt to attack the caster, reducing the physical damage they deal by 10% and decreasing their chance for critical hit by 5% for 7 seconds. There is one wave per round for the duration of the spell, which renews the effects, but does not stack with itself. All undead are affected with no Saving Throw, this spell bypasses Magic Resistance.~
 
-@12082 = ~Disrupt Undead (Necromancy)
+@13002 = ~Disrupt Undead (Necromancy)
 Level: 7
 Range: 15 feet
 Duration: Instantaneous
@@ -7647,7 +7647,7 @@ By means of this powerful spell, the priest uses <PRO_HISHER> divine powers to d
 - Skeleton Grandlords: 6D6 +6
 - Liches, Master Vampires and Vampire Lords: 5D6 +5~
 
-@12083 = ~Cause Serious Wounds
+@13003 = ~Cause Serious Wounds
 (Necromancy)
 
 Level: 4
@@ -7667,7 +7667,7 @@ The spell covers the priest's hand with magical energies, that provide some bene
 - at level 15 bonuses from strength stat are also counted, when determining caster's chance to hit
 - at level 20 the caster can direct the energy through a punch, instead of a touch, thus enabling <PRO_HIMHER> to deal additional crushing damage, based on <PRO_HISHER> strength stat~
 
-@12084 = ~Cause Critical Wounds
+@13004 = ~Cause Critical Wounds
 (Necromancy)
 
 Level: 5
@@ -7687,9 +7687,9 @@ The spell covers the priest's hand with magical energies, that provide some bene
 - at level 15 bonuses from strength stat are also counted, when determining caster's chance to hit
 - at level 20 the caster can direct the energy through a punch, instead of a touch, thus enabling <PRO_HIMHER> to deal additional crushing damage, based on <PRO_HISHER> strength stat~
 
-@12085 = ~Guardian Angel~
+@13005 = ~Guardian Angel~
 
-@12086 = ~Guardian Angel
+@13006 = ~Guardian Angel
 (Necromancy)
 
 Level: 6
@@ -7701,7 +7701,7 @@ Saving Throw: None
 
 By means of this spell, the caster fills <PRO_HISHER> body with healing energies. Each time <PRO_HESHE> is hit, a part of this energy is directed to the injured part of the body, mitigating the pain and closing the wounds. Each time the caster suffers any damage, <PRO_HISHER> HP is restored one second later. At level 11 the amount is equal to 4, then it increases to 6 at level 17 and finally at level 25 it heals 8HP. It is worth noting, that this spell can not prevent death, and will not allow to heal from any fatal injuries.~
 
-@12087 = ~SWORD AND SHIELD: Anyone can pick up a shield and get its basic protection bonuses, but by spending slots on this fighting style, an adventurer can maximize the benefits received.
+@13007 = ~SWORD AND SHIELD: Anyone can pick up a shield and get its basic protection bonuses, but by spending slots on this fighting style, an adventurer can maximize the benefits received.
 
 Proficient (1 slot): The wielder gets a -1 bonus to AC and additional -1 against missile weapons.
 
@@ -7711,7 +7711,7 @@ Master (3 slots): The wielder gets a -3 bonus to AC and additional -3 against mi
 
 NOTE: Despite the name of this style, any one-handed melee weapon in combination with a shield will receive the aforementioned bonuses.~
 
-@12088 = ~CLERIC: The Cleric is a generic priest (of any mythos) who tends to the spiritual needs of a community. Though <PRO_HESHE> is both protector and healer, <PRO_HESHE> is not purely defensive—when evil threatens, the Cleric is well suited to seek it out on its own ground and destroy it. The opposite is true of evil Clerics as well, and there are also many variations in between.
+@13008 = ~CLERIC: The Cleric is a generic priest (of any mythos) who tends to the spiritual needs of a community. Though <PRO_HESHE> is both protector and healer, <PRO_HESHE> is not purely defensive—when evil threatens, the Cleric is well suited to seek it out on its own ground and destroy it. The opposite is true of evil Clerics as well, and there are also many variations in between.
 
 CLASS FEATURES:
 
@@ -7727,7 +7727,7 @@ CLASS FEATURES:
 
 Prime Requisites For Dual-Classing: Wisdom~
 
-@12089 = ~Hold Undead
+@13009 = ~Hold Undead
 (Necromancy)
 
 Level: 3
@@ -7739,9 +7739,9 @@ Saving Throw: Special
 
 This spell affects movements of one undead creature. It focuses around lower parts of the body, attempting to hold the enemy in place and making it more vulnerable to damage. If the creature does fail a Saving Throw against Spell at -2, its movement speed will be reduced by 100%. A successful Saving Throw will reduce both of those effects by half. Additionally the target's resistance to slashing and crushing damage will be reduced by 20% at first and by 30% from level 20. Magic Resistance does not protect from this spell, however it is still a 3rd level spell, so powerful Undead like Liches and Demiliches are not affected.~
 
-@12090 = ~Protective Chant~
+@13010 = ~Protective Chant~
 
-@12091 = ~Protective Chant
+@13011 = ~Protective Chant
 (Abjuration)
 
 Level: 5
@@ -7755,7 +7755,7 @@ This chant provides means of protection against powerful magics. The caster utte
 
 Initially the spell increases Magic Damage Resistance of all affected by 50%, however at 20'th level of the caster this value is increased to 75%~
 
-@12092 = ~PRIEST OF LATHANDER: Lathander is the good god of renewal, creativity, and youth, and is celebrated nearly everywhere. His followers are very popular throughout the realms, and there are numerous wealthy temples devoted to him.
+@13012 = ~PRIEST OF LATHANDER: Lathander is the good god of renewal, creativity, and youth, and is celebrated nearly everywhere. His followers are very popular throughout the realms, and there are numerous wealthy temples devoted to him.
 
 Advantages:
 – May cast a special version of Hold Undead once per day. Gains one use at level 1 and an additional use every 5 levels thereafter.
@@ -7768,9 +7768,9 @@ BOON OF LATHANDER: This spell lasts for 1 turn till level 10 plus additional 1 r
 Disadvantages:
 – Alignment restricted to lawful good, neutral good, chaotic good, and true neutral.~
 
-@12093 = ~Divine Intervention~
+@13013 = ~Divine Intervention~
 
-@12094 = ~Divine Intervention
+@13014 = ~Divine Intervention
 (Necromancy)
 
 Level: Quest
@@ -7782,9 +7782,9 @@ Saving Throw: None
 
 This spell connects the caster directly to <PRO_HISHER> god, granting <PRO_HIMHER> and <PRO_HISHER> party a level of healing, unlike any other spell. Divine Intervention has similar effect to Greater Restoration, however the effect is applied to whole party and it does not wind the caster.~
 
-@12095 = ~Weakening Undead~
+@13015 = ~Weakening Undead~
 
-@12096 = ~Aid
+@13016 = ~Aid
 (Necromancy, Conjuration)
 
 Level: 2
@@ -7801,7 +7801,7 @@ Example: A 1st-level Fighter has 8 Hit Points, suffers 2 points of damage (8 - 2
 
 At levels 1 to 14 this spell targets only 1 creature, from level 15 it works on every ally of the caster in 15 ft. radius.~
 
-@12097 = ~Bless
+@13017 = ~Bless
 (Conjuration/Summoning)
 
 Level: 1
@@ -7814,9 +7814,9 @@ Saving Throw: None
 
 Upon uttering the Bless spell, the caster raises the morale of friendly creatures by +1. Furthermore, it raises their attack and damage rolls by +1. The caster determines at what range (up to 40 ft.) the spell will be cast. At the instant the spell is completed, it affects all creatures in a 15-ft. radius centered on the point selected by the caster (thus, affected creatures leaving the area are still subject to the spell's effects; those entering the area after the casting is completed are not).~
 
-@12098 = ~Purify Aura~
+@13018 = ~Purify Aura~
 
-@12099 = ~Purify Aura
+@13019 = ~Purify Aura
 (Generalist)
 
 Level: Quest
@@ -7830,9 +7830,9 @@ Experienced Clerics can send a vast amount of energy from the Positive Energy Pl
 
 The ability is instantaneous but can only be used once every 3 rounds, this time is reduced to 2 rounds and 1 round at levels 20 and 25 and finally at level 30 it has no cooldown.~
 
-@12100 = ~Demon Hunt~
+@13020 = ~Demon Hunt~
 
-@12101 = ~Demon Hunt
+@13021 = ~Demon Hunt
 (Alteration)
 
 Level: 5
@@ -7846,17 +7846,17 @@ This powerful spell was designed specifically to fight against demons and fiends
 Hunter: when the spell affects an ally of the caster, it gives +2 to thaco and damage against demons. Additionally, each hit done to demons has a 10% chance to increase the demon's chance for Critical Miss by 5% for 2 rounds, this effect is cumulative.
 Prey: when the spell affects a demon, it increases its chance of Critical Miss by 5% and each time the demon scores a Critical Miss, it suffers 10 points of magical damage.~
 
-@12102 = ~Hunter~
+@13022 = ~Hunter~
 
-@12103 = ~Prey~
+@13023 = ~Prey~
 
-@12104 = ~Critical Miss chance increased~
+@13024 = ~Critical Miss chance increased~
 
-@12105 = ~Critical Miss Damage~
+@13025 = ~Critical Miss Damage~
 
-@12106 = ~Spiritual Link~
+@13026 = ~Spiritual Link~
 
-@12107 = ~Spiritual Link
+@13027 = ~Spiritual Link
 (Alteration)
 
 Level: 7
@@ -7870,13 +7870,13 @@ By opening a direct link between the caster and <PRO_HISHER> god, the caster is 
 
 This spell sets casting time of all spells, which have this value higher than 7 to 7. At level 18 this value is reduced to 6, then to 5 and finally to 4 at levels 22 and 26 respectively. Due to direct contact with divine energies, all other means of lowering casting time become useless, however the caster can sever the link at any moment, without wasting <PRO_HISHER> action this round.~
 
-@12108 = ~Break Spiritual Link~
+@13028 = ~Break Spiritual Link~
 
-@12109 = ~This ability allows the caster to cancel Spiritual Link spell without losing the ability to perform some action in current round.~
+@13029 = ~This ability allows the caster to cancel Spiritual Link spell without losing the ability to perform some action in current round.~
 
-@12110 = ~Improved Spiritual Link~
+@13030 = ~Improved Spiritual Link~
 
-@12111 = ~False Dawn (Evocation)
+@13031 = ~False Dawn (Evocation)
 Sphere: Sun
 Level: 6
 Range: 0
@@ -7887,7 +7887,7 @@ Saving Throw: None
 
 False dawn calls into existence a bright reddish light, as if a sunrise were occurring, within the area of effect. All vampires and shadows within a false dawn suffer 6d4 points of fire damage. There is no saving throw against this damage. This spell bypasses both Magic Resistance and Fire Resistance (innate or magical) of the affected creatures.~
 
-@12112 = ~Bolt of Glory
+@13032 = ~Bolt of Glory
 (Invocation/Evocation)
 
 Level: 6
@@ -7908,7 +7908,7 @@ Creature Type                       Damage
 
 Additionally demons suffer damage as if they had only 60% of their current Magic Damage Resistance, so a demon with 50% initial resistance would suffer damage as if it had only 30% resistance.~
 
-@12113 = ~Defensive Harmony
+@13033 = ~Defensive Harmony
 (Enchantment/Charm)
 
 Level: 4
@@ -7923,9 +7923,9 @@ Defensive Harmony grants affected creatures a defensive bonus by bestowing an en
 
 Clerics who decided to devote their lives to a single deity get additional benefits from this spell. Every 6 seconds all party members in 15-ft. radius gain additional physical resistance for 6 seconds and the caster gets the same bonus for each party member affected. This bonus is equal to 2% from level 12 and increases to 3 and 4, at levels 18 and 24 respectively.~
 
-@12114 = ~Heavenly Shield~
+@13034 = ~Heavenly Shield~
 
-@12115 = ~Heavenly Shield
+@13035 = ~Heavenly Shield
 (Conjuration)
 
 Level: 6
@@ -7940,9 +7940,9 @@ By casting this spell the Cleric makes <PRO_HISHER> shield fell lighter in <PRO_
 
 Each first hit per round for the next turn deals additional crushing damage if the caster is using a shield. The base value is 2d3 plus additional 2d4 per each point in Sword and Shield style.~
 
-@12116 = ~Shield Bash~
+@13036 = ~Shield Bash~
 
-@12117 = ~Sunray
+@13037 = ~Sunray
 (Evocation, Alteration)
 
 Level: 7
@@ -7955,7 +7955,7 @@ Saving Throw: Special
 
 When this spell is cast, it causes a ray of sunlight to beam down upon the caster and everyone within a 15-ft. radius. All creatures within the area of effect take 3d6 points of damage and must save vs. Spell or be blinded for 1 turn. Undead that are hit by the sunray take additional 6d6 damage, which bypasses Magic Resistance and during the impact their Fire Resistance is reduced by 25% of their current value. Creatures that by some means achieved values of Fire Resistance higher than 100 are completely immune to the effects of this spell.~
 
-@12118 = ~Strength of One
+@13038 = ~Strength of One
 (Alteration)
 
 Level: 3
@@ -7968,7 +7968,7 @@ Saving Throw: None
 
 When this spell is cast, party members within the area of effect are given a Strength score of 18/75. If a party member has a Strength score higher than this (either naturally, or through a magical item), then the spell has no effect. The spell lasts for 1 turn, whereupon everyone's Strength returns to normal.~
 
-@12119 = ~Holy Power
+@13039 = ~Holy Power
 (Evocation)
 
 Level: 4
@@ -7980,9 +7980,9 @@ Saving Throw: None
 
 Through this spell, the caster imbues <PRO_HIMHER>self with the strength and skill of a Fighter of the same level. The priest's Strength score is set to 18/00—unless it is higher—<PRO_HISHER> THAC0 becomes that of a Fighter of the same level, and <PRO_HESHE> gains 1 temporary Hit Point per level. This will last for the duration of the spell or until dispelled.~
 
-@12120 = ~BOON OF LATHANDER: This spell lasts for 1 turn till level 10 plus additional 1 round for each level after that. It gives the caster a +1 bonus to all Saving Throws, and 1 extra attack per round. It also protects the recipient from level drain. At levels 1-10 it gives a +1 bonus to attack and damage rolls, at higher levels this bonus increases to +2.~
+@13040 = ~BOON OF LATHANDER: This spell lasts for 1 turn till level 10 plus additional 1 round for each level after that. It gives the caster a +1 bonus to all Saving Throws, and 1 extra attack per round. It also protects the recipient from level drain. At levels 1-10 it gives a +1 bonus to attack and damage rolls, at higher levels this bonus increases to +2.~
 
-@12121 = ~SEEKING SWORD: This spell creates a long sword in the Cleric's hand that cannot be dropped or unequipped, it stays in <PRO_HISHER> hand for 1 round per level, up to 20 rounds. To wield the weapon better, the caster must know how to use Long Swords. The sword gets more powerful as the caster gains experience, however wielding it requires intense focus, so the Cleric won't be able to use another weapon in the offhand and spells cast when the sword is equipped have weaker effects.
+@13041 = ~SEEKING SWORD: This spell creates a long sword in the Cleric's hand that cannot be dropped or unequipped, it stays in <PRO_HISHER> hand for 1 round per level, up to 20 rounds. To wield the weapon better, the caster must know how to use Long Swords. The sword gets more powerful as the caster gains experience, however wielding it requires intense focus, so the Cleric won't be able to use another weapon in the offhand and spells cast when the sword is equipped have weaker effects.
 
 The sword has the following statistics based on levels:
 1 - 9 : 1-8 + 2 dmg, +2 thaco, 1,5APR, priest caster level -1
@@ -7992,12 +7992,12 @@ The sword has the following statistics based on levels:
 20-24: 2-8 + 4 dmg, +4 thaco, 2,5APR, priest caster level -4, range increased to 2 feet
 25-40: 2-8 + 5 dmg, +5 thaco, 2,5APR, priest caster level -5, range increased to 2 feet, +5% chance for critical hit~
 
-@12122 = ~Divine Favor
+@13042 = ~Divine Favor
 This spell grants the caster a +1 bonus to hit and damage rolls every 3 levels of the caster. The spell lasts for 6 rounds.~
 
-@12123 = ~Spare the Dying~
+@13043 = ~Spare the Dying~
 
-@12124 = ~Spare the Dying
+@13044 = ~Spare the Dying
 (Necromancy)
 
 Level: 7
@@ -8010,9 +8010,9 @@ Saving Throw: None
 
 By casting this spell, the priest strengthens the bond between body and soul of all allies affected. For the next 1 turn those allies will be able to withstand one hit, that would normally kill them, leaving them 1 HP left. When that happens, the spell ends, however for the next 10 seconds those allies won't suffer permanent death from normal damage (though, they still might be petrified, imprisoned or frozen solid).~
 
-@12125 = ~Withstood a deadly hit~
+@13045 = ~Withstood a deadly hit~
 
-@12126 = ~PRIEST OF TALOS: Talos is the evil god of storms, destruction, and rebellion. Clerics of the Stormlord warn that Talos must be appeased or he will rain destruction upon the land.
+@13046 = ~PRIEST OF TALOS: Talos is the evil god of storms, destruction, and rebellion. Clerics of the Stormlord warn that Talos must be appeased or he will rain destruction upon the land.
 
 Advantages:
 – May cast Lightning Bolt once per day. Gains one use at level 1 and an additional use every 5 levels thereafter.
@@ -8026,7 +8026,7 @@ STORM SHIELD: This spell lasts 1 round per level of the caster. It protects the 
 Disadvantages:
 – Alignment restricted to neutral evil, chaotic evil, and chaotic neutral.~
 
-@12127 = ~PRIEST OF HELM: Followers of the neutral god of watchers and protectors are warriors in their own right and are often seen as defenders of the innocent.
+@13047 = ~PRIEST OF HELM: Followers of the neutral god of watchers and protectors are warriors in their own right and are often seen as defenders of the innocent.
 
 Advantages:
 – May cast True Sight once per day. Gains one use at level 1 and an additional use every 5 levels thereafter.
@@ -8047,7 +8047,7 @@ The sword has the following statistics based on levels:
 Disadvantages:
 – Alignment restricted to lawful good, lawful neutral, lawful evil, and true neutral.~
 
-@12128 = ~PRIEST OF TYR: Tyr is the deity of law and justice and is primarily concerned with the punishment of wrongdoers and the general furthering of law and good in the world. The belief in justice through (benevolent) force, or at least armed vigilance, is the reason for Tyr's existence. Tyr holds great prominence in the pantheon due to his position as leader of the Triad, a trio of lawful good gods that are collectively devoted to the concepts of courage, justice, perseverance, relief of suffering, duty, obedience, honor, and to some extent, righteous martyrdom.
+@13048 = ~PRIEST OF TYR: Tyr is the deity of law and justice and is primarily concerned with the punishment of wrongdoers and the general furthering of law and good in the world. The belief in justice through (benevolent) force, or at least armed vigilance, is the reason for Tyr's existence. Tyr holds great prominence in the pantheon due to his position as leader of the Triad, a trio of lawful good gods that are collectively devoted to the concepts of courage, justice, perseverance, relief of suffering, duty, obedience, honor, and to some extent, righteous martyrdom.
 
 Advantages:
 - May become Master at Sword and Shield style.
@@ -8063,7 +8063,7 @@ DIVINE FAVOR: This spell grants the caster a +1 bonus to hit and damage rolls ev
 Disadvantages:
 – Alignment restricted to lawful good, neutral good, or lawful neutral.~
 
-@12129 = ~PRIEST OF TEMPUS: Tempus, also known as the Lord of Battles or the Foehammer, is random in his favors, yet his chaotic nature favors all sides equally. Lord Tempus may be on an army's side one day and against them the next; such is the nature of war. Tempuran clergy can be found on both sides of a conflict, as none can ever truly know whom the war god will favor.
+@13049 = ~PRIEST OF TEMPUS: Tempus, also known as the Lord of Battles or the Foehammer, is random in his favors, yet his chaotic nature favors all sides equally. Lord Tempus may be on an army's side one day and against them the next; such is the nature of war. Tempuran clergy can be found on both sides of a conflict, as none can ever truly know whom the war god will favor.
 
 Advantages:
 - Holy Power cast by Priest of Tempus gives additional 1/2 APR at level 20 and 1 APR from level 20, additionally it becomes undispellable.
@@ -8076,6 +8076,6 @@ CHAOS OF BATTLE: Chaos of Battle applies bonuses to all allies and penalties to 
 Disadvantages:
 – Alignment restricted to chaotic good, chaotic neutral, chaotic evil, or true neutral.~
 
-@12130 = ~Add Long Sword Proficiency~
+@13050 = ~Add Long Sword Proficiency~
 
-@12131 = ~After many hours of training with Seeking Sword, the priest can gain even more prowess with the weapon. This passive skill gives additional Long Sword Proficiency~
+@13051 = ~After many hours of training with Seeking Sword, the priest can gain even more prowess with the weapon. This passive skill gives additional Long Sword Proficiency~

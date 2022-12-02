@@ -277,7 +277,7 @@ COPY_EXISTING ~weapprof.2da~  ~override/weapprof.2da~
 // change Sword and Shield description
 COPY_EXISTING ~weapprof.2da~  ~override/weapprof.2da~
   COUNT_2DA_COLS ~colcount~
-  SET_2DA_ENTRY 29 3 ~colcount~ RESOLVE_STR_REF (@12087)
+  SET_2DA_ENTRY 29 3 ~colcount~ RESOLVE_STR_REF (@13007)
   PRETTY_PRINT_2DA
 
 // enable ** in Sword and Shield for Cleric and all kits and *** for Tyr
@@ -298,7 +298,7 @@ COPY_EXISTING ~statdesc.2da~ ~override/statdesc.2da~
   COUNT_2DA_ROWS ~colcount~ ~rowcount~
 
   SET_2DA_ENTRY 125 2 ~colcount~ ~SPINI27D~
-  SET_2DA_ENTRY 66 1 ~colcount~ RESOLVE_STR_REF (@12095)
+  SET_2DA_ENTRY 66 1 ~colcount~ RESOLVE_STR_REF (@13015)
 
   INSERT_2DA_ROW 167 ~colcount~ ~167         0         SPINI90D~
   SET_2DA_ENTRY 167 1 ~colcount~ RESOLVE_STR_REF (@10230)
@@ -327,16 +327,16 @@ COPY_EXISTING ~statdesc.2da~ ~override/statdesc.2da~
   SET_2DA_ENTRY 210 1 ~colcount~ RESOLVE_STR_REF (@12041)
 
   INSERT_2DA_ROW 211 ~colcount~ ~211         0         SPPR520D~
-  SET_2DA_ENTRY 211 1 ~colcount~ RESOLVE_STR_REF (@12090)
+  SET_2DA_ENTRY 211 1 ~colcount~ RESOLVE_STR_REF (@13010)
 
   INSERT_2DA_ROW 212 ~colcount~ ~212         0         SPPR616D~
-  SET_2DA_ENTRY 212 1 ~colcount~ RESOLVE_STR_REF (@12085)
+  SET_2DA_ENTRY 212 1 ~colcount~ RESOLVE_STR_REF (@13005)
 
   INSERT_2DA_ROW 213 ~colcount~ ~213         0         SPPR734D~
-  SET_2DA_ENTRY 213 1 ~colcount~ RESOLVE_STR_REF (@12106)
+  SET_2DA_ENTRY 213 1 ~colcount~ RESOLVE_STR_REF (@13026)
 
   INSERT_2DA_ROW 214 ~colcount~ ~214         0         SPPR735D~
-  SET_2DA_ENTRY 214 1 ~colcount~ RESOLVE_STR_REF (@12123)
+  SET_2DA_ENTRY 214 1 ~colcount~ RESOLVE_STR_REF (@13043)
 
   PRETTY_PRINT_2DA
 
@@ -445,31 +445,31 @@ COPY_EXISTING ~stylbonu.2da~  ~override/stylbonu.2da~
 COPY_EXISTING ~clastext.2da~ ~override/clastext.2da~
   COUNT_2DA_COLS ~colcount~
   // Pure Cleric class
-  SET_2DA_ENTRY 23 4 ~colcount~ RESOLVE_STR_REF (@12088)
+  SET_2DA_ENTRY 23 4 ~colcount~ RESOLVE_STR_REF (@13008)
   // Priest of Talos class
-  SET_2DA_ENTRY 24 4 ~colcount~ RESOLVE_STR_REF (@12126)  
+  SET_2DA_ENTRY 24 4 ~colcount~ RESOLVE_STR_REF (@13046)  
   // Priest of Helm class
-  SET_2DA_ENTRY 25 4 ~colcount~ RESOLVE_STR_REF (@12127)  
+  SET_2DA_ENTRY 25 4 ~colcount~ RESOLVE_STR_REF (@13047)  
   // Priest of Lathander class
-  SET_2DA_ENTRY 26 4 ~colcount~ RESOLVE_STR_REF (@12092)
+  SET_2DA_ENTRY 26 4 ~colcount~ RESOLVE_STR_REF (@13012)
   // Priest of Tyr class
-  SET_2DA_ENTRY 70 4 ~colcount~ RESOLVE_STR_REF (@12128)
+  SET_2DA_ENTRY 70 4 ~colcount~ RESOLVE_STR_REF (@13048)
   // Priest of Tempus class
-  SET_2DA_ENTRY 71 4 ~colcount~ RESOLVE_STR_REF (@12129)
+  SET_2DA_ENTRY 71 4 ~colcount~ RESOLVE_STR_REF (@13049)
 
 // update kit description for Clerics
 COPY_EXISTING ~kitlist.2da~ ~override/kitlist.2da~
   COUNT_2DA_COLS ~colcount~
   // Priest of Talos class
-  SET_2DA_ENTRY 19 4 ~colcount~ RESOLVE_STR_REF (@12126)  
+  SET_2DA_ENTRY 19 4 ~colcount~ RESOLVE_STR_REF (@13046)  
   // Priest of Helm class
-  SET_2DA_ENTRY 20 4 ~colcount~ RESOLVE_STR_REF (@12127)  
+  SET_2DA_ENTRY 20 4 ~colcount~ RESOLVE_STR_REF (@13047)  
   // Priest of Lathander class
-  SET_2DA_ENTRY 21 4 ~colcount~ RESOLVE_STR_REF (@12092)
+  SET_2DA_ENTRY 21 4 ~colcount~ RESOLVE_STR_REF (@13012)
   // Priest of Tyr class
-  SET_2DA_ENTRY 40 4 ~colcount~ RESOLVE_STR_REF (@12128)
+  SET_2DA_ENTRY 40 4 ~colcount~ RESOLVE_STR_REF (@13048)
   // Priest of Tempus class
-  SET_2DA_ENTRY 41 4 ~colcount~ RESOLVE_STR_REF (@12129)
+  SET_2DA_ENTRY 41 4 ~colcount~ RESOLVE_STR_REF (@13049)
 
 // Add projectiles //
 

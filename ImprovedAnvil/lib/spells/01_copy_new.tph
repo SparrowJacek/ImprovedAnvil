@@ -317,16 +317,16 @@ COPY ~ImprovedAnvil\resources\spells\SPCLI21.spl~ ~override/SPCLI21.spl~
 COPY ~ImprovedAnvil\resources\spells\SPCL733.spl~ ~override/spcl733.spl~
 
 COPY ~ImprovedAnvil\resources\spells\SPCL942.spl~ ~override/spcl942.spl~
-  SAY NAME1 @12093
-  SAY UNIDENTIFIED_DESC @12094
+  SAY NAME1 @13013
+  SAY UNIDENTIFIED_DESC @13014
 
 COPY ~ImprovedAnvil\resources\spells\SPCL943.spl~ ~override/spcl943.spl~
-  SAY NAME1 @12098
-  SAY UNIDENTIFIED_DESC @12099
+  SAY NAME1 @13018
+  SAY UNIDENTIFIED_DESC @13019
 
 COPY ~ImprovedAnvil\resources\spells\SPCL944.spl~ ~override/spcl944.spl~
-  SAY NAME1 @12130
-  SAY UNIDENTIFIED_DESC @12131
+  SAY NAME1 @13050
+  SAY UNIDENTIFIED_DESC @13051
 
 // priest spells //
 
@@ -418,29 +418,29 @@ COPY ~ImprovedAnvil\resources\spells\SPPR449.spl~ ~override/SPPR449.spl~
   SAY NAME1 #6350
 
 COPY ~ImprovedAnvil\resources\spells\SPPR520.spl~ ~override/SPPR520.spl~
-  SAY NAME1 @12090
-  SAY UNIDENTIFIED_DESC @12091
+  SAY NAME1 @13010
+  SAY UNIDENTIFIED_DESC @13011
 
 COPY ~ImprovedAnvil\resources\spells\SPPR521.spl~ ~override/SPPR521.spl~
-  SAY NAME1 @12100
-  SAY UNIDENTIFIED_DESC @12101
+  SAY NAME1 @13020
+  SAY UNIDENTIFIED_DESC @13021
 
 COPY ~ImprovedAnvil\resources\spells\SPPR521D.spl~ ~override/SPPR521D.spl~
-  SAY NAME1 @12102
+  SAY NAME1 @13022
   
 COPY ~ImprovedAnvil\resources\spells\SPPR521E.spl~ ~override/SPPR521E.spl~
-  SAY NAME1 @12103
+  SAY NAME1 @13023
 
 COPY ~ImprovedAnvil\resources\spells\SPPR521F.spl~ ~override/SPPR521F.spl~
-  SAY NAME1 @12104
+  SAY NAME1 @13024
   LPF ~ALTER_SPELL_EFFECT~ INT_VAR
     check_headers = 1
     match_opcode = 139
-    parameter1 = RESOLVE_STR_REF (@12104)
+    parameter1 = RESOLVE_STR_REF (@13024)
   END
   
 COPY ~ImprovedAnvil\resources\spells\SPPR521G.spl~ ~override/SPPR521G.spl~
-  SAY NAME1 @12105
+  SAY NAME1 @13025
 
 COPY ~ImprovedAnvil\resources\spells\SPPR545.spl~ ~override/SPPR545.spl~
   SAY NAME1 @10345
@@ -459,16 +459,16 @@ COPY ~ImprovedAnvil\resources\spells\SPPR549.spl~ ~override/SPPR549.spl~
   SAY NAME1 @10350
 
 COPY ~ImprovedAnvil\resources\spells\SPPR616.spl~ ~override/SPPR616.spl~
-  SAY NAME1 @12085
-  SAY UNIDENTIFIED_DESC @12086
+  SAY NAME1 @13005
+  SAY UNIDENTIFIED_DESC @13006
 
 COPY ~ImprovedAnvil\resources\spells\SPPR616D.spl~ ~override/SPPR616D.spl~
-  SAY NAME1 @12085
-  SAY UNIDENTIFIED_DESC @12086
+  SAY NAME1 @13005
+  SAY UNIDENTIFIED_DESC @13006
 
 COPY ~ImprovedAnvil\resources\spells\SPPR617.spl~ ~override/SPPR617.spl~
-  SAY NAME1 @12114
-  SAY UNIDENTIFIED_DESC @12115
+  SAY NAME1 @13034
+  SAY UNIDENTIFIED_DESC @13035
 
 COPY ~ImprovedAnvil\resources\spells\SPPR617D.spl~ ~override/SPPR617D.spl~
 
@@ -481,7 +481,7 @@ COPY ~ImprovedAnvil\resources\spells\SPPR617E.spl~ ~override/SPPR617E.spl~
   END
 
 COPY ~ImprovedAnvil\resources\spells\SPPR617F.spl~ ~override/SPPR617F.spl~
-  SAY NAME1 @12116
+  SAY NAME1 @13036
   LPF ~ALTER_SPELL_EFFECT~
     INT_VAR
       check_headers = 1
@@ -509,8 +509,8 @@ COPY ~ImprovedAnvil\resources\spells\SPPR649.spl~ ~override/SPPR649.spl~
   END
 
 COPY ~ImprovedAnvil\resources\spells\SPPR734.spl~ ~override/SPPR734.spl~
-  SAY NAME1 @12106
-  SAY UNIDENTIFIED_DESC @12107
+  SAY NAME1 @13026
+  SAY UNIDENTIFIED_DESC @13027
 
   LPF ~ALTER_SPELL_EFFECT~
     INT_VAR
@@ -521,15 +521,15 @@ COPY ~ImprovedAnvil\resources\spells\SPPR734.spl~ ~override/SPPR734.spl~
   END
 
 COPY ~ImprovedAnvil\resources\spells\SPPR734D.spl~ ~override/SPPR734D.spl~
-  SAY NAME1 @12108
-  SAY UNIDENTIFIED_DESC @12109
+  SAY NAME1 @13028
+  SAY UNIDENTIFIED_DESC @13029
   
 COPY ~ImprovedAnvil\resources\spells\SPPR734E.spl~ ~override/SPPR734E.spl~
-  SAY UNIDENTIFIED_DESC @12107
+  SAY UNIDENTIFIED_DESC @13027
 
 COPY ~ImprovedAnvil\resources\spells\SPPR735.spl~ ~override/SPPR735.spl~
-  SAY NAME1 @12123
-  SAY UNIDENTIFIED_DESC @12124
+  SAY NAME1 @13043
+  SAY UNIDENTIFIED_DESC @13044
 
 COPY ~ImprovedAnvil\resources\spells\SPPR735D.spl~ ~override/SPPR735D.spl~
   LPF ~ALTER_SPELL_EFFECT~
@@ -541,7 +541,7 @@ COPY ~ImprovedAnvil\resources\spells\SPPR735D.spl~ ~override/SPPR735D.spl~
   END
 
 COPY ~ImprovedAnvil\resources\spells\SPPR735E.spl~ ~override/SPPR735E.spl~
-  SAY NAME1 @12125
+  SAY NAME1 @13045
 
 COPY ~ImprovedAnvil\resources\spells\SPPR749.spl~ ~override/SPPR749.spl~
   SAY NAME1 @10351

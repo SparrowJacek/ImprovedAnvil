@@ -77,7 +77,7 @@ COPY_EXISTING ~SPIN999.spl~ ~override/SPIN999.spl~
 
 // Seeking Sword
 COPY_EXISTING ~SPCL731.spl~ ~override/SPCL731.spl~
-  SAY UNIDENTIFIED_DESC @12121
+  SAY UNIDENTIFIED_DESC @13041
 
   // Set proper weapon per level
   PATCH_FOR_EACH ~ability_num~ IN "1" "2" "3" "4" "5" "6" "7" "8" "9" BEGIN
@@ -151,7 +151,7 @@ COPY_EXISTING ~SPCL731.spl~ ~override/SPCL731.spl~
 
 // Boon of Lathander
 COPY_EXISTING ~SPCL741.spl~ ~override/SPCL741.spl~
-  SAY UNIDENTIFIED_DESC @12120
+  SAY UNIDENTIFIED_DESC @13040
 
   // Give additional +1 thaco/dmg from lvl 11 up
   PATCH_FOR_EACH ~ability_num~ IN "2" "3" "4" "5" "6" "7" "8" "9" "10" "11" BEGIN
@@ -172,7 +172,7 @@ COPY_EXISTING ~SPCL741.spl~ ~override/SPCL741.spl~
 
 // Hold Undead Lathander ability
 COPY_EXISTING ~SPCL742.spl~ ~override/SPCL742.spl~
-  SAY UNIDENTIFIED_DESC @12089
+  SAY UNIDENTIFIED_DESC @13009
 
   // remove all but one spell ability
   PATCH_FOR_EACH ~min_lvl_val~ IN "2" "3" "4" "5" "6" "7" "8" "9" "10" "11" "12" "13" "14" "15" "16" "17" "18" "19" BEGIN
@@ -286,7 +286,7 @@ COPY_EXISTING ~SPPR102.spl~ ~override/SPPR102.spl~
 
 // Bless
 COPY_EXISTING ~SPPR101.spl~ ~override/SPPR101.spl~
-  SAY UNIDENTIFIED_DESC @12097
+  SAY UNIDENTIFIED_DESC @13017
 
   // add spell state
   LPF ~CLONE_EFFECT~
@@ -321,7 +321,7 @@ COPY_EXISTING ~SPPR150.spl~ ~override/SPPR150.spl~
 
 // Aid
 COPY_EXISTING ~SPPR201.spl~ ~override/SPPR201.spl~
-  SAY UNIDENTIFIED_DESC @12096
+  SAY UNIDENTIFIED_DESC @13016
 
   // make the spell AoE from lvl 15
   PATCH_FOR_EACH ~spell_level~ IN "15" "16" "17" "18" "19" "20" BEGIN
@@ -396,7 +396,7 @@ COPY_EXISTING ~SPPR214.spl~ ~override/SPPR214D.spl~
 
 // Strength of One
 COPY_EXISTING ~SPPR312.spl~ ~override/SPPR312.spl~
-  SAY UNIDENTIFIED_DESC @12118
+  SAY UNIDENTIFIED_DESC @13038
 
   // Add immunity to this spell if strength is higher than 18/75
   LAUNCH_PATCH_FUNCTION ~ADD_SPELL_EFFECT~ 
@@ -468,7 +468,7 @@ COPY_EXISTING ~SPPR402.spl~ ~override/SPPR402.spl~
 
 // Defensive Harmony
 COPY_EXISTING ~SPPR406.spl~ ~override/SPPR406.spl~
-  SAY UNIDENTIFIED_DESC @12113
+  SAY UNIDENTIFIED_DESC @13033
 
   // Cast improved version if caster is Cleric kit
   PATCH_FOR_EACH ~cleric_kit~ IN "16404" "16405" "16403" "16425" "16424" BEGIN
@@ -489,7 +489,7 @@ COPY_EXISTING ~SPPR406.spl~ ~override/SPPR406.spl~
 
 // Holy Power
 COPY_EXISTING ~SPPR412.spl~ ~override/SPPR412.spl~
-  SAY UNIDENTIFIED_DESC @12119
+  SAY UNIDENTIFIED_DESC @13039
 
   // Remove original strength bonus
   LPF ~DELETE_SPELL_EFFECT~
@@ -590,7 +590,7 @@ COPY_EXISTING ~SPPR412.spl~ ~override/SPPR412D.spl~
 
 // Cause Serious Wounds
 COPY_EXISTING ~SPPR414.spl~ ~override/SPPR414.spl~
-  SAY UNIDENTIFIED_DESC @12083
+  SAY UNIDENTIFIED_DESC @13003
 
   // Update casting speed
   LPF ~ALTER_SPELL_HEADER~ INT_VAR speed = 2 END
@@ -660,7 +660,7 @@ COPY_EXISTING ~sppr506.spl~ ~override/sppr506.spl~
 
 // Cause Critical Wounds
 COPY_EXISTING ~SPPR510.spl~ ~override/SPPR510.spl~
-  SAY UNIDENTIFIED_DESC @12084
+  SAY UNIDENTIFIED_DESC @13004
 
   // Update casting speed
   LPF ~ALTER_SPELL_HEADER~ INT_VAR speed = 3 END
@@ -760,8 +760,8 @@ COPY_EXISTING ~SPPR513.spl~ ~override/SPPR513D.spl~
 
 // Weaken Undead
 COPY_EXISTING ~SPPR515.spl~ ~override/SPPR515.spl~
-  SAY NAME1 @12080
-  SAY UNIDENTIFIED_DESC @12081
+  SAY NAME1 @13000
+  SAY UNIDENTIFIED_DESC @13001
 
   // Update duration for all effects
   LPF ~ALTER_SPELL_EFFECT~
@@ -803,8 +803,8 @@ COPY_EXISTING ~SPPR515.spl~ ~override/SPPR515.spl~
 
 // Weaken Undead subspell
 COPY_EXISTING ~SPPR515D.spl~ ~override/SPPR515D.spl~
-  SAY NAME1 @12080
-  SAY UNIDENTIFIED_DESC @12081
+  SAY NAME1 @13000
+  SAY UNIDENTIFIED_DESC @13001
 
   // Update duration for all effects
   LPF ~ALTER_SPELL_EFFECT~
@@ -907,7 +907,7 @@ COPY_EXISTING ~SPPR550.spl~ ~override/SPPR550.spl~
 
 // False Dawn
 COPY_EXISTING ~SPPR609.spl~ ~override/SPPR609.spl~
-  SAY UNIDENTIFIED_DESC @12111
+  SAY UNIDENTIFIED_DESC @13031
 
   LPF ~ALTER_SPELL_HEADER~ INT_VAR projectile = ~%S!FALSED%~ END
   
@@ -963,7 +963,7 @@ COPY_EXISTING ~SPPR609.spl~ ~override/SPPR609.spl~
 
 // Bolt of Glory
 COPY_EXISTING ~SPPR612.spl~ ~override/SPPR612.spl~
-  SAY UNIDENTIFIED_DESC @12112
+  SAY UNIDENTIFIED_DESC @13032
 
   // add effect, which sets magic damage resistance of demons to 60% of their current value
   LPF ~CLONE_EFFECT~
@@ -982,7 +982,7 @@ COPY_EXISTING ~SPPR705.spl~ ~override/SPPR705.spl~
 
 // Sunray
 COPY_EXISTING ~SPPR707.spl~ ~override/SPPR707.spl~
-  SAY UNIDENTIFIED_DESC @12117
+  SAY UNIDENTIFIED_DESC @13037
 
   // Remove level progression from the spell
   PATCH_FOR_EACH ~min_lvl_val~ IN "15" "16" "17" "18" "19" "20" BEGIN
