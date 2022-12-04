@@ -1297,9 +1297,63 @@ COPY_EXISTING ~writhing.pro~ ~override/writhing.pro~
 
   BUT_ONLY
 
-// patch in removal of shaman's innate aura cleansing //
+// patch in removal of shaman's innate aura cleansing, cause X wounds and purify aura
 
-COPY_EXISTING_REGEXP GLOB ~.+\.spl~ ~override~
+COPY_EXISTING_REGEXP GLOB ~SPPR[1-7][0-5][0-9]+\.spl~ ~override~
+                          ~SPWI[1-9][0-9][0-9]+\.spl~ ~override~
+                          ~SPDR201.spl~ ~override~
+                          ~SPDR202.spl~ ~override~
+                          ~SPDR302.spl~ ~override~
+                          ~SPDR603.spl~ ~override~
+                          ~SPDR702.spl~ ~override~
+                          ~SPDWD02.spl~ ~override~
+                          ~SPCL940.spl~ ~override~
+                          ~SPCL941.spl~ ~override~
+                          ~SPCL121.spl~ ~override~
+                          ~SPCL144.spl~ ~override~
+                          ~SPCL152.spl~ ~override~
+                          ~SPCL311.spl~ ~override~
+                          ~SPCL321.spl~ ~override~
+                          ~SPCL342.spl~ ~override~
+                          ~SPCL412.spl~ ~override~
+                          ~SPCL414.spl~ ~override~
+                          ~SPCL417.spl~ ~override~
+                          ~SPCL423.spl~ ~override~
+                          ~SPCL52[12]+\.spl~ ~override~
+                          ~SPCL61[1-3]+\.spl~ ~override~
+                          ~SPCL62[1-5]+\.spl~ ~override~
+                          ~SPCL63[2-4]+\.spl~ ~override~
+                          ~SPCL64[134]+\.spl~ ~override~
+                          ~SPCL72[12]+\.spl~ ~override~
+                          ~SPCL73[12]+\.spl~ ~override~
+                          ~SPCL74[12]+\.spl~ ~override~
+                          ~SPCL90[0-9]+\.spl~ ~override~
+                          ~SPCL91[0-4]+\.spl~ ~override~
+                          ~SPCL91[6-9]+\.spl~ ~override~
+                          ~SPCL92[12]+\.spl~ ~override~
+                          ~SPCL93[6-8]+\.spl~ ~override~
+                          ~SPCL94[0-3]+\.spl~ ~override~
+                          ~SPCLI12.spl~ ~override~
+                          ~SPCLI13.spl~ ~override~
+                          ~SPCLI15.spl~ ~override~
+                          ~SPCLI16.spl~ ~override~
+                          ~SPIN001.spl~ ~override~
+                          ~SPIN1[01][0-9].spl~ ~override~
+                          ~SPIN12[0-7].spl~ ~override~
+                          ~SPIN15[0-7].spl~ ~override~
+                          ~SPIN649.spl~ ~override~
+                          ~SPIN667.spl~ ~override~
+                          ~SPIN71[378].spl~ ~override~
+                          ~SPIN82[6-9].spl~ ~override~
+                          ~SPIN853.spl~ ~override~
+                          ~SPRA30[1-6].spl~ ~override~
+                          ~SPSD02.spl~ ~override~
+                          ~SPINI101.spl~ ~override~
+                          ~SPINI2[67].spl~ ~override~
+                          ~SPINI9[0-2].spl~ ~override~
+                          ~OHTMPS[0-9]+\.spl~ ~override~
+                          ~OHTYR[0-9]+\.spl~ ~override~
+
   LPF ADD_SPELL_EFFECT
     INT_VAR
       opcode = 321
@@ -1308,8 +1362,6 @@ COPY_EXISTING_REGEXP GLOB ~.+\.spl~ ~override~
     STR_VAR
       resource = ~SPPRI25~
   END
-
-  BUT_ONLY
 
 // patch on-hit magic shield on Keldorn's items to prevent resonating shield effect //
 
