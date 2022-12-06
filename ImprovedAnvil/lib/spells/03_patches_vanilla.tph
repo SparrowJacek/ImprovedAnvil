@@ -1297,7 +1297,7 @@ COPY_EXISTING ~writhing.pro~ ~override/writhing.pro~
 
   BUT_ONLY
 
-// @todo
+// @todo move this list to a separate .ids file
 // patch in removal of shaman's innate aura cleansing, cause X wounds and purify aura
 
 COPY_EXISTING_REGEXP GLOB ~SPPR[1-7][0-5][0-9]+\.spl~ ~override~
