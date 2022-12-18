@@ -359,6 +359,8 @@ COPY_EXISTING ~SPPR214.spl~ ~override/SPPR214.spl~
 
 // Lathander Draw Upon Holy Might
 COPY_EXISTING ~SPPR214.spl~ ~override/SPPR214D.spl~
+  WRITE_BYTE  0x27      0 // secondary type 
+
   // Remove spell states to avoid AI problems
   LPF ~ADD_SPELL_EFFECT~
     INT_VAR
@@ -540,6 +542,8 @@ COPY_EXISTING ~SPPR412.spl~ ~override/SPPR412.spl~
 
 // Tempus Holy Power
 COPY_EXISTING ~SPPR412.spl~ ~override/SPPR412D.spl~
+  WRITE_BYTE  0x27      0 // secondary type 
+
   // Remove spell states to avoid AI problems
   LPF ~DELETE_SPELL_EFFECT~
     INT_VAR
@@ -729,6 +733,8 @@ COPY_EXISTING ~SPPR513.spl~ ~override/SPPR513.spl~
 
 // Tempus Righteous Magic
 COPY_EXISTING ~SPPR513.spl~ ~override/SPPR513D.spl~
+  WRITE_BYTE  0x27      0 // secondary type 
+
   // Remove original Righteous Might spell
   LPF ~ADD_SPELL_EFFECT~
     INT_VAR
